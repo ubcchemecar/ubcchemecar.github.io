@@ -418,7 +418,35 @@ h1, h2, h3, h4, h5, h6 {
 	display: block;
 	margin-top: 80px;
 	margin-bottom: 80px;
-	background-color: #f3f3f3;
+	background-color: #ffffff;
+}
+
+.carousel-indicators .active {
+  background-color: #c3c3c3 !important;
+}
+
+.carousel-indicators li{
+  border: 1px solid #dfdfdf;
+}
+/*
+#team-4 {
+  background-color: #dfdfdf;
+}
+#team-1 {
+  background-color: #efefef;
+}
+#team-2{
+  background-color: #f3f3f3;
+}
+#team-3{
+  background-color: #f3f3f3;
+}*/
+/* Members Wrap */
+#prospective {
+  background-color: #ffffff;
+  margin-top: 0px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 /* Contact Wrap */
@@ -501,4 +529,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-line {
   text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  line-height: 40px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  color: #ffffff;
 }
