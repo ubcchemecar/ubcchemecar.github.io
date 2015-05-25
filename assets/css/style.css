@@ -365,13 +365,19 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 50px;
 }
 
+#servicewrap i {
+  font-size: 50px;
+}
+
+
 .proc {
 	padding-top: 15px;
 	padding-bottom: 15px;
 	border-bottom: solid 2px transparent;
+  text-align: center;
 }
 
-#portfoliowrap .proc:hover {
+#servicewrap .proc:hover {
 	background-color: #eee;
 	border-bottom: solid 2px #2f2f2f
 }
