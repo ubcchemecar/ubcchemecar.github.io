@@ -279,13 +279,16 @@ h1, h2, h3, h4, h5, h6 {
 	text-shadow: 2px 2px 2px #000;
 }
 
-#headerwrap h1 small{
+#headerwrap img {
+  -webkit-filter: drop-shadow(1px 1px 1px #000);
+  filter:         drop-shadow(1px 1px 1px #000); 
+}
+#headerwrap h2 {
   color:#ffffff;
   margin-top: 10px;
   padding-bottom: 30px;
   letter-spacing: 2px;
   font-size: 30px;
-  font-weight: bold;
   text-shadow: 2px 2px 2px #000;
 }
 
@@ -533,8 +536,8 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: 25px;
 }
 
-.footer-line {
-  text-align: center;
+.footer-line h1 {
+  text-align: left;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-weight: 700;
