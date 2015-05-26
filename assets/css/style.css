@@ -343,6 +343,10 @@ h1, h2, h3, h4, h5, h6 {
 .about {
 	background-image: url(../img/sep-1.jpg);
 }
+.testimonials {
+  background-image: url(../img/sep-4.jpg);
+}
+
 
 /* Portfolio Wrap Section */
 #portfoliowrap {
