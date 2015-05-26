@@ -280,8 +280,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #headerwrap img {
-  -webkit-filter: drop-shadow(1px 1px 1px #000);
-  filter:         drop-shadow(1px 1px 1px #000); 
+  -webkit-filter: drop-shadow(2px 2px 2px #000);
+  filter:         drop-shadow(2px 2px 2px #000); 
 }
 #headerwrap h2 {
   color:#ffffff;
