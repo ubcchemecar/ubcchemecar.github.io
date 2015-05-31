@@ -621,6 +621,18 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #fafafa;
 }
 
+.hidden-team .hidden-team-inner:nth-child(odd){
+  background-color: #f3f3f3;
+}
+
+.hidden-team .hidden-team-inner:nth-child(even){
+  background-color: #f6f6f6;
+}
+
+.hidden-team-inner .a {
+  text-align:right;
+}
+
 .proc-team-6:hover {
   background-color: #eee;
   border-bottom: solid 2px #2f2f2f
