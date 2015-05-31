@@ -431,6 +431,11 @@ h1, h2, h3, h4, h5, h6 {
 	color: #767676
 }
 
+.hidden-team-header i{
+  float: left;
+  margin-right: 15px;
+}
+
 /* Testimonials Wrap */
 #testimonials {
 	display: block;
@@ -450,6 +455,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 12px;
   height: 12px;
 }
+
+
 /*
 #team-4 {
   background-color: #dfdfdf;
@@ -589,4 +596,43 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 20px;
   margin-top: 5px;
   color: #eeeeee;
+  text-transform: uppercase;
+}
+
+#hidden-team-1,
+#hidden-team-2,
+#hidden-team-3,
+#hidden-team-4,
+#hidden-team-5,
+#hidden-team-6 {
+  display: none;
+}
+
+#team-1:hover,
+#team-2:hover,
+#team-3:hover,
+#team-4:hover,
+#team-5:hover,
+#team-6:hover {
+  cursor: pointer;
+}
+
+.hidden-team {
+  background-color: #fafafa;
+}
+
+.proc-team-6:hover {
+  background-color: #eee;
+  border-bottom: solid 2px #2f2f2f
+}
+
+#homenav li{
+display: inline-block;
+list-style-type: none;
+padding-right: 20px;
+width: 10%;
+}
+
+.teams.darker{
+  background-color: #fafafa;
 }
