@@ -620,11 +620,35 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #fafafa;
 }
 
-.hidden-team .hidden-team-inner:nth-child(odd){
+.hidden-team .hidden-team-inner:nth-child(1){
   background-color: #f3f3f3;
 }
 
-.hidden-team .hidden-team-inner:nth-child(even){
+.hidden-team .hidden-team-inner:nth-child(4){
+  background-color: #f3f3f3;
+}
+
+.hidden-team .hidden-team-inner:nth-child(5){
+  background-color: #f3f3f3;
+}
+
+.hidden-team .hidden-team-inner:nth-child(8){
+  background-color: #f3f3f3;
+}
+
+.hidden-team .hidden-team-inner:nth-child(2){
+  background-color: #f6f6f6;
+}
+
+.hidden-team .hidden-team-inner:nth-child(3){
+  background-color: #f6f6f6;
+}
+
+.hidden-team .hidden-team-inner:nth-child(6){
+  background-color: #f6f6f6;
+}
+
+.hidden-team .hidden-team-inner:nth-child(7){
   background-color: #f6f6f6;
 }
 
