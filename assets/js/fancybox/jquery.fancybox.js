@@ -1870,7 +1870,7 @@
 
 	F.helpers.title = {
 		defaults : {
-			type     : 'float', // 'float', 'inside', 'outside' or 'over',
+			type     : 'inside', // 'float', 'inside', 'outside' or 'over',
 			position : 'bottom' // 'top' or 'bottom'
 		},
 
