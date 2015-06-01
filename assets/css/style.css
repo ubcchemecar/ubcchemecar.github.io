@@ -376,6 +376,10 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 50px;
 }
 
+#aichewrap i {
+  font-size: 50px;
+}
+
 .smaller-fa {
   font-size: 20px !important;
 }
@@ -606,14 +610,14 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
-#hidden-team-1,
+/*#hidden-team-1,
 #hidden-team-2,
 #hidden-team-3,
 #hidden-team-4,
 #hidden-team-5,
 #hidden-team-6 {
   display: none;
-}
+}*/
 
 #team-1:hover,
 #team-2:hover,
@@ -624,7 +628,7 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
-.hidden-team {
+/*.hidden-team {
   background-color: #fafafa;
 }
 
@@ -662,7 +666,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hidden-team-inner .a {
   text-align:right;
-}
+}*/
 
 .proc-team-6:hover {
   background-color: #eee;
@@ -678,4 +682,15 @@ width: 10%;
 
 .teams.darker{
   background-color: #fafafa;
+}
+
+.panel-title {
+  font-size: 20px;
+}
+
+.img-margins {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 50%;
+  text-align: center;
 }
