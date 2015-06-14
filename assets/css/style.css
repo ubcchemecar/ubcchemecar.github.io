@@ -22,6 +22,7 @@ input,
 select,
 textarea {
     color: #222;
+    overflow-x: hidden !important;
 }
 
 /*
@@ -87,176 +88,73 @@ h1, h2, h3, h4, h5, h6 {
 /* ==========================================================================
    MENU CONFIGURATION
    ========================================================================== */
-
-.menu {
-	position: fixed;
-	right: -200px;
-	width: 260px;
-	height: 100%;
-	top: 0;
-	z-index: 10;
-	text-align: left;
+.navbar.navbar-fixed-top{
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    font-size: 18px;
 }
 
-.menu.menu-open {
-	right: 0px;
+.navbar-default .navbar-nav > li > a {
+  color: white;
+  }
+
+.navbar-default .navbar-nav > li > a:hover {
+  color: #ccc;
+  }
+
+.navbar-default .navbar-brand {
+  color: white;
+}  
+
+.dropdown-menu {
+  background: rgba(0, 0, 0, 0.9);
+  font-size: 16px;
 }
 
-.menu-wrap {
-	position: absolute;
-	top: 0;
-	left: 60px;
-	background: #1a1a1a;
-	width: 200px;
-	height: 100%;
+.dropdown-menu > li > a {
+  color: white;  
 }
-
-.menu h1.logo a {
-	font-family: "Oswald", sans-serif;
-	font-size: 16px;
-	font-weight: 700;
-	letter-spacing: 0.15em;
-	line-height: 40px;
-	text-transform: uppercase;
-	color: #ffffff;
-	margin-top: 20px;
-}
-
-.menu h1.logo a:hover {
-	color: #f85c37;
-}
-
-.menu img.logo {
-	margin: 20px 0;
-	max-width: 160px;
-}
-
-.menu a {
-	margin-left: 20px;
-	color: #808080;
-	display: block;
-	font-size: 12px;
-	font-weight: 700;
-	line-height: 40px;
-	letter-spacing: 0.1em;
-	text-transform: uppercase;
-}
-
-.menu a:hover {
-	color: #ffffff;
-}
-
-.menu a:active {
-	color: #ffffff;
-}
-
-.menu a > i {
-	float: left;
-	display: inline-block;
-	vertical-align: middle; 
-	text-align: left;
-	width: 25px;
-	font-size: 14px;
-	line-height: 40px;
-	margin: 25px 2px;
-}
-
-.menu-close {
-	cursor: pointer;
-	display: block;
-	position: absolute;
-	font-size: 14px;
-	color: #808080;
-	width: 40px;
-	height: 40px;
-	line-height: 40px;
-	top: 20px;
-	right: 5px;
-	-webkit-transition: all .1s ease-in-out;
-	   -moz-transition: all .1s ease-in-out;
-		-ms-transition: all .1s ease-in-out;
-		 -o-transition: all .1s ease-in-out;
-			transition: all .1s ease-in-out;
-}
-
-.menu-close:hover {
-	color: #ffffff;
-	-webkit-transition: all .1s ease-in-out;
-	   -moz-transition: all .1s ease-in-out;
-		-ms-transition: all .1s ease-in-out;
-		 -o-transition: all .1s ease-in-out;
-			transition: all .1s ease-in-out;
-}
-
-/* Push the body after clicking the menu button */
-.body-push {
-	overflow-x: hidden;
-	position: relative;
-	left: 0;
-}
-
-.body-push-toright {
-	left: 200px;
-}
-
-.body-push-toleft {
-	left: -200px;
-}
-
-.menu,
-.body-push {
-	-webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-		-ms-transition: all .3s ease;
-		 -o-transition: all .3s ease;
-			transition: all .3s ease;
-}
-
-#menuToggle {
-	position: absolute;
-	top: 20px;
-	left: 0;
-	z-index: 11;
-	display: block;
-	text-align: center;
-	font-size: 14px;
-	color: #ffffff;
-	width: 40px;
-	height: 40px;
-	line-height: 40px;
-	cursor: pointer;
-	background: rgba(0,0,0,0.25);
-	-webkit-transition: all .1s ease-in-out;
-	   -moz-transition: all .1s ease-in-out;
-		-ms-transition: all .1s ease-in-out;
-		 -o-transition: all .1s ease-in-out;
-			transition: all .1s ease-in-out;
-}
-
-#menuToggle:hover {
-	color: #ffffff;
-	background: rgba(0,0,0,0.2);
-	-webkit-transition: all .1s ease-in-out;
-	   -moz-transition: all .1s ease-in-out;
-		-ms-transition: all .1s ease-in-out;
-		 -o-transition: all .1s ease-in-out;
-			transition: all .1s ease-in-out;
-}
-
-
 /* ==========================================================================
    Wrap Sections
    ========================================================================== */
+.history p{
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  letter-spacing: .01em;
+} 
+
+.history h1{
+  margin-top: 80px;
+}
+
+.history i{
+  color: #9d9d9d !important;
+}
+
+.history img{
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.headerwrap2 {
+  background: url(../img/back2.jpg) no-repeat center top !important;
+}
+.headerwrap3 {
+  background: url(../img/back3.jpg) no-repeat center top !important;
+}
+
 
 #headerwrap {
 	background: url(../img/back.jpg) no-repeat center top;
 	margin-top: 0px;
-	padding-top:120px;
-	text-align:center;
+	padding-top:80px;
 	background-attachment: relative;
 	background-position: center center;
 	min-height: 700px;
 	width: 100%;
+  overflow: hidden !important;
 	
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -271,24 +169,46 @@ h1, h2, h3, h4, h5, h6 {
 
 #headerwrap h1 {
 	color:#ffffff;
-	margin-top: 90px;
+	margin-top: 80px;
 	padding-bottom: 20px;
-	letter-spacing: 8px;
-	font-size: 100px;
+	letter-spacing: 2px;
+	font-size: 50px;
 	font-weight: bold;
 	text-shadow: 2px 2px 2px #000;
 }
 
 #headerwrap img {
   -webkit-filter: drop-shadow(2px 2px 2px #000);
-  filter:         drop-shadow(2px 2px 2px #000); 
+  filter:         drop-shadow(2px 2px 2px #000);
 }
+
+#chemecarlogo {
+  position:absolute;
+  width: 950px;
+  overflow: hidden !important;
+  left: 180px;
+  bottom: 20px;
+  -webkit-filter: drop-shadow(2px 2px 2px #000);
+  filter:         drop-shadow(2px 2px 2px #000);
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* For IE8 and earlier */    
+}
+
 #headerwrap h2 {
   color:#ffffff;
   margin-top: 10px;
-  padding-bottom: 30px;
-  letter-spacing: 2px;
+  padding-bottom: 5px;
+  letter-spacing: 1px;
   font-size: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px #000;
+}
+
+#headerwrap h3 {
+  color:#ffffff;
+  padding-bottom: 10px;
+  letter-spacing: 1px;
+  font-size: 20px;
   text-shadow: 2px 2px 2px #000;
 }
 
@@ -396,7 +316,7 @@ h1, h2, h3, h4, h5, h6 {
 .proc {
 	padding-top: 15px;
 	padding-bottom: 15px;
-	border-bottom: solid 2px transparent;
+	border-bottom: solid 1px transparent;
   text-align: center;
 }
 
@@ -629,6 +549,10 @@ h1, h2, h3, h4, h5, h6 {
 #team-4:hover,
 #team-5:hover,
 #team-6:hover {
+  cursor: pointer;
+}
+
+.mouse-hover:hover {
   cursor: pointer;
 }
 

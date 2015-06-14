@@ -17,26 +17,76 @@
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href="assets/css/font-awesome-animation.min.css" rel="stylesheet">
     <link href="assets/js/fancybox/jquery.fancybox.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="shortcut icon" href="assets/favicon.ico">
 
 
   </head>
 
   <body data-spy="scroll" data-offset="0" data-target="#theMenu">
-		
-	<!-- Menu -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><b>UBC Chem-E-Car</b></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html#home" class="smoothScroll">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About Us<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="history.html">History</a></li>
+                <li><a href="whatwedo.html">What We Do</a></li>
+                <li><a href="index.html#portfolio" class="smoothScroll">Achievements</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Sponsors<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="sponsors.html">Our Sponsors</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Sponsor Us</li>
+                <li><a href="sponsors.html">Corporate Sponsors</a></li>
+                <li><a href="sponsors.html">Donations</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Team<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="team.html">Current</a></li>
+                <li><a href="team.html">Alumni</a></li>
+              </ul>
+            </li>
+            <li><a href="index.html#contact" class="smoothScroll">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="team.html#prospective" class="smoothScroll"> Join Us </a></li>
+            <li><a href="http://blog.ubcchemecar.com" class="smoothScroll">Blog</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+
+<!-- 	
 	<nav class="menu" id="theMenu">
 		<div class="menu-wrap">
 			<h1 class="logo"><a href="index.html#home">UBC Chem-E-Car</a></h1>
 			<i class="fa fa-times menu-close"></i>
-			<a href="#home" class="smoothScroll">Home</a>
-			<a href="#about" class="smoothScroll">About</a>
+			<a href="index.html#home" class="smoothScroll">Home</a>
 			<a href="#portfolio" class="smoothScroll">Achievements</a>
+			<a href="history.html" class="smoothScroll">History</a>
 			<a href="#funding" class="smoothScroll">Funding</a>
-			<a href="#services" class="smoothScroll">Team</a>
-			<a href="#prospective" class="smoothScroll"> Join Us </a>
+			<a href="team.html" class="smoothScroll">Team</a>
 			<a href="#contact" class="smoothScroll">Contact</a>	
 			<hr>
+			<a href="team.html#prospective" class="smoothScroll"> Join Us </a>
 			<a href="sponsors.html"> Sponsor Us </a>
 			<a href="http://blog.ubcchemecar.com" class="smoothScroll">Blog</a>
 			<a href="https://www.facebook.com/UbcChemECar"><i class="fa fa-lg fa-facebook-square"></i></a>
@@ -44,42 +94,28 @@
 
 		</div>
 		
-		<!-- Menu button -->
+		<!-- Menu button 
 		<div id="menuToggle"><i class="fa fa-bars"></i></div>
 	</nav>
-
+ -->
 	<section id="home" name="home"></section>
 	<div id="headerwrap">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-6 col-md-offset-3">
-					<h1>Chem-E-Car</h1>
-					<h2>University of British Columbia</h2>
-					<p><img src="assets/img/ubc-logo.png" height="120"></p>
+				<div class="col-md-5 col-md-offset-1">
+					<h1>HELLO.</h1>
+					<h2>WE ARE UBC CHEM-E-CAR.</h2>
+					<h3>A UBC Engineering Design Team.</h3>
+					<p><img src="assets/img/ubc-logo.png" height="70"></p>
 				</div>
+				<object id="chemecarlogo" class="animated bounceInRight" data="assets/img/logo-w.svg" type="image/svg+xml">
+				  <!-- <img src="yourfallback.jpg" /> -->
+				</object>
 			</div><! --/row -->
 		</div><! --/container -->
 	</div><! --/headerwrap -->
 
-<!-- 	<section id="navigation" name="navigation"></section>
-	<div class="container">
-		<div class="row centered mt">
-			<h1> University of British Columbia </h1>
-			<h3> Chem-E-Car </h3>
-			<hr>
-			<ul id="homenav">
-			 <li><button type="button" class="btn btn-default btn-block">Blog</button></li>
-			 <li><button type="button" class="btn btn-default btn-block">Resources</button></li>
-			 <li><button type="button" class="btn btn-default btn-block">Sponsors</button></li>
-			 <li><button type="button" class="btn btn-default btn-block">Team</button></li>
-			 <li><button type="button" class="btn btn-default btn-block">Join Us</button></li>
-			 <li><button type="button" class="btn btn-default btn-block">Contact</button></li>
-			</ul>
-			<hr>
-		</div>
-	</div> -->
-	
-	<section id="about" name="about"></section>
+ <section id="about" name="about"></section>
 	<div id="aboutwrap">
 		<div class="container">
 			<div class="row">
@@ -94,34 +130,26 @@
 	              </div>
 	          </div>
 	          <h3 class="centered"> The Dehyrated Water Mobile </h3>
-	      	</div>
-					<div class="project-wrapper mb">
-	          <div class="project">
-	              <div class="photo-wrapper">
-	                  <div class="photo">
-	                  	<a class="fancybox" title="<h3>3D Printed Materials</h3><p>With our 2013 vehicle 'The Deyhdrated Water Mobile,' one of our members has started a tradition of naming our cars with oxymorons (we did however both split and recombine water molecules on our car). Following this newly founded tradition, this year’s name is 'Plastic Metals' (arising from the metal that we use in our batteries and the large amounts of 3D printed plastic parts we used). The car placed 1st in the region at the PWNR Comepition at Washington State University. </p>" href="assets/img/plastic.jpg"><img class="img-responsive" src="assets/img/plastic.jpg" alt=""></a>
-	                  </div>
-	                  <div class="overlay"></div>
-	              </div>
-	          </div>
-	          <h3 class="centered"> Plastic Metals </h3>
-	      	</div>	      		      	
+	      	</div>     		      	
 				</div><!-- col-lg-4 -->
 				<div class="col-lg-9 col-xs-12 name-desc">	
 					<div class="row mt mb">		
 						<div class="col-md-12">
 							<h2 class="centered">Introduction</h2>
-							<h2 class="centered mt mb"><i class="fa fa-flask faa-shake animated"></i> <i class="fa fa-long-arrow-right"></i> <i class="fa fa-cog faa-spin animated"></i> <i class="fa fa-long-arrow-right"></i>  <i class="fa fa-car faa-float animated"></i> </h2>    					
-							<p> <b>UBC Chem-E-Car</b> is one of 22 undergraduate teams recognized as an <a href="http://teams.engineering.ubc.ca/" target="_blank">Engineering Design Team </a> in the University of British Columbia. </p>
+							<h2 class="centered mt mb"><i class="fa fa-lg fa-flask faa-shake animated"></i> <i class="fa fa-lg fa-long-arrow-right"></i> <i class="fa fa-lg fa-cog faa-spin animated"></i> <i class="fa fa-lg fa-long-arrow-right"></i>  <i class="fa fa-lg fa-car faa-float animated"></i> </h2>    					
+							<p> <b>UBC Chem-E-Car</b> is one of 22 undergraduate teams recognized as an <a href="http://teams.engineering.ubc.ca/" target="_blank">Engineering Design Team (EDT) </a> in the University of British Columbia. </p>
 							<p>We specialize in safely transforming potential energy stored in chemicals to mechanical energy as well as accurate control of chemical reactions for use as chemical timing.</p>
-							<p>The UBC Chem-E-Car team is one of the few EDCs that represent chemical engineers. We provide a platform for gaining hands-on experience in clean energy production. Many of our former team members have started exciting careers fuel cell and battery-related work</p>
-							<p class="mb mt centered"><a href="http://www.aiche.org/community/students/chem-e-car" target="_blank"><img src="assets/img/aiche-logo.jpg" alt="AiChE" width="120"></a></p>
-							<p class="centered"> We compete in the annual American Institute of Chemical Engineers (AIChE) Chem-E-Car <a href="http://www.aiche.org/community/students/chem-e-car" target="_blank">competition</a>.</p>	
+							<p>The UBC Chem-E-Car team is one of the few EDTs that represent chemical engineers. We provide a platform for gaining hands-on experience in clean energy production. Many of our former team members have started exciting careers fuel cell and battery-related work</p>
 						</div>
 					</div>
-					<div class="row mb">	
+				</div>
+				<div class="row">
+					<div class="col-lg-9 col-xs-12 name-desc">	
 						<div class="col-md-12">	
 							<div class="row mb" id="aichewrap">
+								<p class="mb mt centered"><a href="http://www.aiche.org/community/students/chem-e-car" target="_blank"><img src="assets/img/aiche-logo.jpg" alt="AiChE" width="120"></a></p>
+								<p class="centered"> We compete in the annual American Institute of Chemical Engineers (AIChE) Chem-E-Car <a href="http://www.aiche.org/community/students/chem-e-car" target="_blank">competition</a>.</p>	
+								<br>
 								<div class="col-lg-4 col-xs-12 proc faa-parent animated-hover">
 									<i class="fa fa-lg fa-gamepad"></i>  
 									<h3>Shoe-box sized car</h3>
@@ -140,13 +168,26 @@
 							</div>   			
 						</div>
 					</div>
+					<div class="col-lg-3 hidden-xs name mt">
+						<div class="project-wrapper mb">
+		          <div class="project">
+		              <div class="photo-wrapper">
+		                  <div class="photo">
+		                  	<a class="fancybox" title="<h3>3D Printed Materials</h3><p>With our 2013 vehicle 'The Deyhdrated Water Mobile,' one of our members has started a tradition of naming our cars with oxymorons (we did however both split and recombine water molecules on our car). Following this newly founded tradition, this year’s name is 'Plastic Metals' (arising from the metal that we use in our batteries and the large amounts of 3D printed plastic parts we used). The car placed 1st in the region at the PWNR Comepition at Washington State University. </p>" href="assets/img/plastic.jpg"><img class="img-responsive" src="assets/img/plastic.jpg" alt=""></a>
+		                  </div>
+		                  <div class="overlay"></div>
+		              </div>
+		          </div>
+		          <h3 class="centered"> Plastic Metals </h3>
+		      	</div>
+		      </div>	
 					
 				</div><! --/col-lg-8-->
 		
 			</div><!-- /row -->
 		</div><!-- /container -->
 	</div><!-- /aboutwrap -->
-	
+
 	<! -- ABOUT SEPARATOR -->
 	<div class="sep about hidden-xs hidden-md" data-stellar-background-ratio="0.5"></div>
 	
@@ -156,7 +197,7 @@
 		<div class="container">
 			<div class="row">
 				<h1>Achievements</h1>
-				<h3 class="centered"> The award-winning UBC Chem-E-Car team has earned international accolades since its establishment in 2008. </h3>
+				<h3 class="centered"> The award-winning UBC Chem-E-Car team has earned international accolades since its establishment in 2008. More on our history <a href="history.html">here</a>. </h3>
 				<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
 					<div class="project-wrapper">
 	                    <div class="project">
@@ -203,7 +244,7 @@
 				<div class="col-lg-12 col-xs-12">
 					<div class="row mt">
 						<div class="col-md-4 col-xs-12">
-							<h3> Check out our <a href="http://blog.ubcchemecar.com">blog</a> and <a href="history.html">history</a>.</h3>
+							<h3> Check out our <a href="http://blog.ubcchemecar.com">blog</a> for the latest updates.</h3>
 							<hr>
 							<ul class="list-group">
 							  <li class="list-group-item list-group-item-success">2015 Milestones</li>					  
@@ -247,618 +288,38 @@
 		<section id="funding" name="funding"></section>
 		<div class="container">
 			<div class="row mt mb centered">
-				<div class = "col-lg-12">
-					<h1>Funding and Sponsorship</h1>
-					<h3> UBC Chem-E-Car would not be here today without the help of our sponsors. </h3>
-					<br />
-					<div class="row mb mt">
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
-							<div class="project-wrapper">
-			                    <div class="project">
-			                        <div class="photo-wrapper">
-			                            <div class="photo ">
-			                            	<a class="fancybox" title="<h3>Arduino Development</h3><p>Team captain Thanos working with Michelle and Tampriye on Arduino codes for our new design</p>" href="assets/img/photos/pic1.jpg"><img class="img-responsive" src="assets/img/photos/pic1.jpg" alt=""></a>
-			                            </div>
-			                            <div class="overlay"></div>
-			                        </div>
-			                    </div>
-			                </div>
-						</div><!-- col-lg-4 -->		
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
-							<div class="project-wrapper">
-			                    <div class="project">
-			                        <div class="photo-wrapper">
-			                            <div class="photo ">
-			                            	<a class="fancybox" title="<h3>Circuits</h3><p>Team captain Thanos working with Michelle and Tampriye on Arduino codes for our new design</p>" href="assets/img/photos/pic2.jpg"><img class="img-responsive" src="assets/img/photos/pic2.jpg" alt=""></a>
-			                            </div>
-			                            <div class="overlay"></div>
-			                        </div>
-			                    </div>
-			                </div>
-						</div><!-- col-lg-4 -->						
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 desc">
-							<div class="project-wrapper">
-			                    <div class="project">
-			                        <div class="photo-wrapper">
-			                            <div class="photo ">
-			                            	<a class="fancybox" title="<h3>Circuits</h3><p>Team captain Thanos working with Michelle and Tampriye on Arduino codes for our new design</p>" href="assets/img/photos/pic3.jpg"><img class="img-responsive" src="assets/img/photos/pic3.jpg" alt=""></a>
-			                            </div>
-			                            <div class="overlay"></div>
-			                        </div>
-			                    </div>
-			                </div>
-						</div><!-- col-lg-4 -->							
+				<h3>We are proudly supported by:</h3>
+				<div class="row mt mb centered">
+					<div class="col-lg-4 proc">
+						<img src="assets/img/ubc-logo.png" height="100">
+					</div>								
+					<div class="col-lg-4 proc">
+						<img src="assets/img/chbe-logo.jpg" height="100">
+					</div>				
+					<div class="col-lg-4 proc">
+						<img src="assets/img/ams-logo.png" height="100">
 					</div>
-					<div class="row mt">				
-						<h3> We are proudly supported by: </h3>
+				</div>					
+				<div class="row mt mb centered">			
+					<div class="col-lg-4 proc">
+					</div>				
+					<div class="col-lg-4 proc">
+						<img src="assets/img/solidworks-logo.jpg" height="100">
 					</div>
-					<br />
-				</div>
-			</div>
-			<div class="row mt mb centered">
-				<div class="col-lg-3 proc">
-				</div>								
-				<div class="col-lg-6 proc">
-					<img src="assets/img/chbe-logo.jpg" height="80">
-					<h3></h3>
-					<p>The UBC Department of Chemical and Biological Engineering provides workshop services and lab space for the team to conduct experiments safely and has been very supportive of all Chem-E-Car activities.</p>
-				</div>				
-				<div class="col-lg-3 proc">
-				</div>
-			</div>					
-			<div class="row mt mb centered">			
-				<div class="col-lg-4 proc">
-					<img src="assets/img/solidworks-logo.jpg" height="80">
-					<h3>Solidworks</h3>
-					<p>Solidworks has kindly provided UBC Chem-E-Car with Solidworks software for all our designing needs.</p>
-				</div>
-				<div class="col-lg-4 proc">
-					<img src="assets/img/ubc-logo.png" height="80">
-					<h3>The University of British Columbia</h3>
-					<p>Chem-E-Car is funded by The Faculty of Applied Science Professional Activities Fund (PAF) and the Shell Engineering Fund</p>
-				</div>
-				<div class="col-lg-4 proc">
-					<img src="assets/img/ams-logo.png" height="80">
-					<h3>AMS Sustainability</h3>
-					<p>The AMS Sustainability Projects Fund encourages an environmentally conscious culture, by funding student-led projects that reduce the ecological footprint of UBC students and their campus.</p>
-				</div>
-			</div>	
-			<hr>
-			<div class="row mt mb">
-				<div class="jumbotron">
-					<div class="container">
-					<div class="col-lg-4">
-						<img src="assets/img/arduino.gif" width="100%">
+					<div class="col-lg-4 proc">
 					</div>
-					<div class="col-lg-8">
-						<h2> Support Us </h2>	
-						<h3> UBC Chem-E-Car placeholder text </h3>	
-						<br>	
-						<p>
-							<a href="sponsors.html"><button type="button" class="btn btn-default btn-group.btn-group-justified">Corporate Sponsors</button></a>
-							<a><button type="button" href="sponsors.html" class="btn btn-default">Donations</button></a>
-						</p>
-					</div>
-					</div>					
-					
 				</div>
-			</div><!-- /row -->					
+
+				<div class="row text-center">
+					<img src="assets/img/team1.jpg" width="70%">
+				</div>	
+				<h1> Thank you! </h1>	
+			</div><!-- /row -->				
 			<hr>	
 		</div><! --/container -->
 	</div><! --/Portfoliowrap -->
 
-	<! -- PORTFOLIO SEPARATOR -->
-	<div class="sep portfolio hidden-xs hidden-md" data-stellar-background-ratio="0.5"></div>
-	
-	
-	<! -- SERVICE SECTION -->
-	<section id="services" name="services"></section>
-	<div id="servicewrap">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8-offset-2 col-xs-12 mt centered">
-					<h1>What We Do</h1>
-					<h4>Want to <a href="#prospective" class="smoothScroll">join us</a>? We will not turn away any dedicated, hard working students that contribute to the project. </h4>
-				</div><!-- /col-lg-8 -->
-			</div><! --/row -->
-			
-			<div class="row mt mb">
-				<div class="col-lg-4 col-sm-4 col-xs-6 proc faa-parent animated-hover">
-					<i class="fa fa-flask faa-shake"></i>
-					<h3>Chemical</h3>
-					<p>Design of car stopping mechanism using the iodine clock reaction. Involves wet lab experiments</p>
-				</div>		
-				<div class="col-lg-4 col-sm-4 col-xs-6 proc faa-parent animated-hover">
-					<i class="fa fa-power-off faa-pulse faa-fast"></i>
-					<h3>Battery</h3>
-					<p>Research battery material and composition, design battery casing, perform circuitry integration</p>
-				</div>						
-				<div class="col-lg-4 col-sm-4 col-xs-6 proc faa-parent animated-hover">
-					<i class="fa fa-lightbulb-o faa-flash"></i>
-					<h3>Electrical</h3>
-					<p>Circuit board fabrication, circuitry layout design, soldering and assemblying PCB and Arduino programming</p>
-				</div>	
-				<div class="col-lg-4 col-sm-4 col-xs-6 proc faa-parent animated-hover">
-					<i class="fa fa-cog faa-spin"></i>
-					<h3>Mechanical</h3>
-					<p>Solidworks design and 3D printing. Car assembly and optimization, making sure it runs reliably with no stuttering and drives in straight line</p>
-				</div>
-				<div class="col-lg-4 col-sm-4 col-xs-6 proc faa-parent animated-hover">
-					<i class="fa fa-camera faa-vertical"></i>
-					<h3>Media</h3>
-					<p>Video, photographs, social media. Publicity. Sponsorship opportunities.</p>
-				</div>
-				<div class="col-lg-4 col-sm-4 col-xs-6 proc faa-parent animated-hover">
-					<i class="fa fa-briefcase faa-float"></i>
-					<h3>Administration</h3>
-					<p>Logistics (including budgets), project management, recruitment</p>
-				</div>																				
-			</div> <!-- 
-			<div class="row mt">
-				<div class="col-lg-3 service">
-					<i class="fa fa-trophy"></i><p>PREMIUM QUALITY<br/><small>LOREM IPSUM DOLOR</small></p>
-					<p class="text">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
-				</div>
-				<div class="col-lg-3 service">
-					<i class="fa fa-globe"></i><p>CLOUD SERVICES<br/><small>LOREM IPSUM DOLOR</small></p>
-					<p class="text">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
-				</div>
-				<div class="col-lg-3 service">
-					<i class="fa fa-lock"></i><p>SECURED ACCOUNTS<br/><small>LOREM IPSUM DOLOR</small></p>
-					<p class="text">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
-				</div>
-				<div class="col-lg-3 service">
-					<i class="fa fa-thumbs-up"></i><p>100% SATISFACTION<br/><small>LOREM IPSUM DOLOR</small></p>
-					<p class="text">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
-				</div>
-			</div> -->
-			
-		</div><! --/container -->
-	</div><! --/servicewrap -->
 
-	<div class="sep testimonials hidden-xs hidden-md" data-stellar-background-ratio="0.5"></div>
-
-	<div id="testimonials">
-		<div class="container">
-			<div class="row mt mb">
-				<div class="col-lg-8-offset-2 col-xs-12 centered">
-					<h1>2015/2016 Team</h1>
-				</div><!-- /col-lg-8 -->
-			</div><! --/row -->		
-			<!-- Accordian -->
-			<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-			  <div class="panel panel-default">
-			    <div class="panel-heading" role="tab" id="headingAdmin">
-			      <h4 class="panel-title">
-			        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseAdmin" aria-expanded="true" aria-controls="collapseAdmin">
-			          Administration
-			        </a>
-			      </h4>
-			    </div>
-			    <div id="collapseAdmin" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingAdmin">
-			      <div class="panel-body">
-							<div class="container-fluid hidden-team">
-								<div class="col-lg-6 col-md-6 col-xs-12 mt mb hidden-team-inner">
-									<div class="media">
-									  <div class="pull-left">
-									    
-									      <img class="img-circle" src="assets/img/thanos.jpg" width="60">
-									    
-									  </div>
-									  <div class="media-body">
-									    <h3 class="media-heading">ATHANASIOS KRITHARIS</h3>
-								      <h4>Captain</h4>	      
-											<p> Athanasios (Thanos) is currently in his 2nd year of involvement with Chem-E-Car. He originally joined the team reluctantly but, became engrossed in the project. This is his first year as captain and he plans to expand the team and increases its profile so that more students may gain hands on engineering experience. </p>
-											<a href="https://www.linkedin.com/profile/view?id=" target="_blank"><i class="fa fa-lg fa-linkedin"></i></a>	
-									  </div>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6 col-xs-12 mt mb hidden-team-inner">
-									<div class="media">
-									  <div class="pull-left">
-									    <a href="#">
-									      <img class="img-circle" src="assets/img/pic-t3.jpg" width="60">
-									    </a>
-									  </div>
-									  <div class="media-body">
-									    <h3 class="media-heading">MICHELLE ZHOU</h3>
-								      <h4>Safety Officer</h4>	      
-											<p> </p>
-											<a href="https://www.linkedin.com/profile/view?id=168066677" target="_blank"><i class="fa fa-lg fa-linkedin"></i></a>	
-									  </div>
-									</div>
-								</div>
-
-								<div class="col-lg-6 col-md-6 col-xs-12 mt mb hidden-team-inner">
-									<div class="media">
-									  <div class="pull-left">
-									    <a href="#">
-									      <img class="img-circle" src="assets/img/pic-t1.jpg" width="60">
-									    </a>
-									  </div>
-									  <div class="media-body">
-									    <h3 class="media-heading">MARC CARUTH</h3>
-								      <h4>Treasurer</h4>	      
-											<p>  </p>
-											<a href="https://www.linkedin.com/profile/view?id=168066677" target="_blank"><i class="fa fa-lg fa-linkedin"></i></a>	
-									  </div>
-									</div>
-								</div>																	
-							</div>      	
-			      </div>
-			    </div>
-			  </div>			
-
-			  <div class="panel panel-default">
-			    <div class="panel-heading" role="tab" id="headingOne">
-			      <h4 class="panel-title">
-			        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-			          Chemical
-			        </a>
-			      </h4>
-			    </div>
-			    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-			      <div class="panel-body">
-							<div class="container-fluid hidden-team">
-								<div class="col-lg-6 col-md-6 col-xs-12 mt mb hidden-team-inner">
-									<div class="media">
-									  <div class="pull-left">
-									    <a href="#">
-									      <img class="img-circle" src="assets/img/gyenge.jpg" width="80">
-									    </a>
-									  </div>
-									  <div class="media-body">
-									    <h3 class="media-heading">JHONATAN DIAZ</h3>
-								      <h4>Chemical Team</h4>	      
-											<p> </p>
-											<a href="http://www.chbe.ubc.ca/profile/elod-gyenge/" target="_blank"><i class="fa fa-lg fa-external-link"></i></a>			
-									  </div>
-									</div>						      
-								</div>
-								<div class="col-lg-6 col-md-6 col-xs-12 mt mb hidden-team-inner">
-									<div class="media">
-									  <div class="pull-left">
-									    <a href="#">
-									      <img class="img-circle" src="assets/img/gyenge.jpg" width="80">
-									    </a>
-									  </div>
-									  <div class="media-body">
-									    <h3 class="media-heading">ALIYA MITCHELL</h3>
-								      <h4>Chemical Team</h4>	      
-											<p> </p>
-											<a href="http://www.chbe.ubc.ca/profile/elod-gyenge/" target="_blank"><i class="fa fa-lg fa-external-link"></i></a>			
-									  </div>
-									</div>						      
-								</div>	
-							</div>				
-			      </div>
-			    </div>
-			  </div>
-			  <div class="panel panel-default">
-			    <div class="panel-heading" role="tab" id="headingTwo">
-			      <h4 class="panel-title">
-			        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-			          Battery
-			        </a>
-			      </h4>
-			    </div>
-			    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-			      <div class="panel-body">
-							<div class="container-fluid hidden-team">
-								<div class="col-lg-6 col-md-6 col-xs-12 mt mb hidden-team-inner">
-									<div class="media">
-									  <div class="pull-left">
-									    <a href="#">
-									      <img class="img-circle" src="assets/img/tampriye.jpg" width="60">
-									    </a>
-									  </div>
-									  <div class="media-body">
-									    <h3 class="media-heading">TAMPRIYE ASAWO</h3>
-								      <h4>Battery Team, Social Media</h4>	      
-											<p> Tampriye is a third year Chemical Engineering student. She joined Chem-E-Car in 2015 and will be using SolidWorks to design the battery compartment and prepare an appropriate electrolyte solution. She is also involved in administrative duties such as promoting the team. In her spare time, Tampriye enjoys reading and hiking various BC trails. </p>
-											<a href="https://www.linkedin.com/profile/view?id=153442096" target="_blank"><i class="fa fa-lg fa-linkedin"></i></a>	
-									  </div>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6 col-xs-12 mt mb hidden-team-inner">
-									<div class="media">
-									  <div class="pull-left">
-									    <a href="#">
-									      <img class="img-circle" src="assets/img/siang.jpg" width="60">
-									    </a>
-									  </div>
-									  <div class="media-body">
-									    <h3 class="media-heading">SIANG LIM</h3>
-								      <h4>Battery Team, Web Development</h4>	      
-											<p> Siang in currently in 3rd year Chemical Engineering. He joined the Chem-E-Car battery team in 2015 and is also responsible for developing a new website and revamping the current blog. Siang's professional interests include topics on energy production and storage and learning new web development technologies such as <a href="http://rubyonrails.org/" target="_blank">Ruby on Rails</a> and <a href="https://nodesjs.org/" target="_blank">Node.js</a>.</p>
-											<a href="https://www.linkedin.com/profile/view?id=168066677" target="_blank"><i class="fa fa-lg fa-linkedin"></i></a>	
-									  </div>
-									</div>
-								</div>
-
-								<div class="col-lg-6 col-md-6 col-xs-12 mt mb hidden-team-inner">
-									<div class="media">
-									  <div class="pull-left">
-									    <a href="#">
-									      <img class="img-circle" src="assets/img/AndrewMay.jpg" width="60">
-									    </a>
-									  </div>
-									  <div class="media-body">
-									    <h3 class="media-heading">ANDREW MAY</h3>
-								      <h4>Battery Team, Social Media</h4>	      
-											<p> Andrew is a third year Chemical Engineering student. He joined Chem-E-Car in 2015 and will be helping with the development of the new battery. He is also involved with promoting activity on the Facebook page. In his free time Andrew enjoys participating in gymnastics, hip-hop dance, and Super-Smash-Bros. </p>
-											<a href="https://www.linkedin.com/profile/view?id=168066677" target="_blank"><i class="fa fa-lg fa-linkedin"></i></a>	
-									  </div>
-									</div>
-								</div>	
-
-								<div class="col-lg-6 col-md-6 col-xs-12 mt mb hidden-team-inner">
-									<div class="media">
-									  <div class="pull-left">
-									    <a href="#">
-									      <img class="img-circle" src="assets/img/pic-t1.jpg" width="60">
-									    </a>
-									  </div>
-									  <div class="media-body">
-									    <h3 class="media-heading">WILLIAM XI</h3>
-								      <h4>Battery Team</h4> 
-											<p>  </p>
-											<a href="https://www.linkedin.com/profile/view?id=168066677" target="_blank"><i class="fa fa-lg fa-linkedin"></i></a>	
-									  </div>
-									</div>
-								</div>																
-																
-							</div>      	
-			      </div>
-			    </div>
-			  </div>
-
-			  <div class="panel panel-default">
-			    <div class="panel-heading" role="tab" id="headingThree">
-			      <h4 class="panel-title">
-			        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-			          Electrical
-			        </a>
-			      </h4>
-			    </div>
-			    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-			      <div class="panel-body">
-							<div class="container-fluid hidden-team">
-								<div class="col-lg-6 col-md-6 col-xs-12 mt mb hidden-team-inner">
-									<div class="media">
-									  <div class="pull-left">
-									    <a href="#">
-									      <img class="img-circle" src="assets/img/johnson.jpg" width="60">
-									    </a>
-									  </div>
-									  <div class="media-body">
-									    <h3 class="media-heading">GEYI (JOHNSON) LIU</h3>
-								      <h4>Electrical Lead</h4> 
-											<p> Johnson is currently in second year Engineering Physics and is in charge of all electrial design in this team.</p>
-											<a href="https://www.linkedin.com/profile/view?id=363448543" target="_blank"><i class="fa fa-lg fa-linkedin"></i></a>	
-									  </div>
-									</div>
-								</div>						
-							</div>	
-			      </div>
-			    </div>    
-			  </div>
-			  <div class="panel panel-default">
-			    <div class="panel-heading" role="tab" id="headingFour">
-			      <h4 class="panel-title">
-			        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-			          Mechanical
-			        </a>
-			      </h4>
-			    </div>
-			    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-			      <div class="panel-body">
-							<div class="container-fluid hidden-team">
-								<div class="col-lg-6 col-md-6 col-xs-12 mt mb hidden-team-inner">
-									<div class="media">
-									  <div class="pull-left">
-									    <a href="#">
-									      <img class="img-circle" src="assets/img/pic-t1.jpg" width="60">
-									    </a>
-									  </div>
-									  <div class="media-body">
-									    <h3 class="media-heading">KIRSTEN MENG</h3>
-								      <h4>Mechanical Team</h4> 
-											<p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer. </p>
-											<a href="https://www.linkedin.com/profile/view?id=168066677" target="_blank"><i class="fa fa-lg fa-linkedin"></i></a>	
-									  </div>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6 col-xs-12 mt mb hidden-team-inner">
-									<div class="media">
-									  <div class="pull-left">
-									    <a href="#">
-									      <img class="img-circle" src="assets/img/pic-t1.jpg" width="60">
-									    </a>
-									  </div>
-									  <div class="media-body">
-									    <h3 class="media-heading">KYLE COMO</h3>
-								      <h4>Mechanical Team</h4> 
-											<p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer. </p>
-											<a href="https://www.linkedin.com/profile/view?id=168066677" target="_blank"><i class="fa fa-lg fa-linkedin"></i></a>	
-									  </div>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6 col-xs-12 mt mb hidden-team-inner">
-									<div class="media">
-									  <div class="pull-left">
-									    <a href="#">
-									      <img class="img-circle" src="assets/img/pic-t1.jpg" width="60">
-									    </a>
-									  </div>
-									  <div class="media-body">
-									    <h3 class="media-heading">WILL GUMBOC</h3>
-								      <h4>Mechanical Team</h4> 
-											<p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer. </p>
-											<a href="https://www.linkedin.com/profile/view?id=168066677" target="_blank"><i class="fa fa-lg fa-linkedin"></i></a>	
-									  </div>
-									</div>
-								</div>					
-							</div>	
-			      </div>
-			    </div>  
-			  </div>
-			 <div class="panel panel-default">
-			    <div class="panel-heading" role="tab" id="headingSix">
-			      <h4 class="panel-title">
-			        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-			          Media
-			        </a>
-			      </h4>
-			    </div>
-			    <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
-			      <div class="panel-body">
-							<div class="container-fluid hidden-team">
-								<div class="col-lg-6 col-md-6 col-xs-12 mt mb hidden-team-inner">
-									<div class="media">
-									  <div class="pull-left">
-									    <a href="#">
-									      <img class="img-circle" src="assets/img/gyenge.jpg" width="80">
-									    </a>
-									  </div>
-									  <div class="media-body">
-									    <h3 class="media-heading">ALVARO VALCAREL JERVIS</h3>
-								      <h4>Faculty Advisor</h4>	      
-											<p> Professor Gyenge’s research mission is to discover and investigate selective, durable and cost-effective electrocatalysts and to integrate the catalyst structures with the electrode and cell design in order to develop high-performance electrochemical devices and processes. His research on novel mixed reactant fuel cells has been featured in the <a href="http://www.research-europe.com/magazine/ICT/EF28/files/24.html">International Innovation Magazine.</a> </p>
-											<a href="http://www.chbe.ubc.ca/profile/elod-gyenge/" target="_blank"><i class="fa fa-lg fa-external-link"></i></a>			
-									  </div>
-									</div>						      
-								</div>
-								<div class="col-lg-6 col-md-6 col-xs-12 mt mb hidden-team-inner">
-									<div class="media">
-									  <div class="pull-left">
-									    <a href="#">
-									      <img class="img-circle" src="assets/img/pic-t1.jpg" width="60">
-									    </a>
-									  </div>
-									  <div class="media-body">
-									    <h3 class="media-heading">CLAIRE ARMOUR</h3>
-								      <h4>Battery Team</h4> 
-											<p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer. </p>
-											<a href="https://www.linkedin.com/profile/view?id=168066677" target="_blank"><i class="fa fa-lg fa-linkedin"></i></a>	
-									  </div>
-									</div>
-								</div>					
-							</div>	
-			      </div>
-			    </div>  
-			  </div> 			      
-			 <div class="panel panel-default">
-			    <div class="panel-heading" role="tab" id="headingFive">
-			      <h4 class="panel-title">
-			        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-			          Advisors
-			        </a>
-			      </h4>
-			    </div>
-			    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
-			      <div class="panel-body">
-							<div class="container-fluid hidden-team">
-								<div class="col-lg-6 col-md-6 col-xs-12 mt mb hidden-team-inner">
-									<div class="media">
-									  <div class="pull-left">
-									    <a href="#">
-									      <img class="img-circle" src="assets/img/gyenge.jpg" width="80">
-									    </a>
-									  </div>
-									  <div class="media-body">
-									    <h3 class="media-heading">DR. ELOD GYENGE</h3>
-								      <h4>Faculty Advisor</h4>	      
-											<p> Professor Gyenge’s research mission is to discover and investigate selective, durable and cost-effective electrocatalysts and to integrate the catalyst structures with the electrode and cell design in order to develop high-performance electrochemical devices and processes. His research on novel mixed reactant fuel cells has been featured in the <a href="http://www.research-europe.com/magazine/ICT/EF28/files/24.html">International Innovation Magazine.</a> </p>
-											<a href="http://www.chbe.ubc.ca/profile/elod-gyenge/" target="_blank"><i class="fa fa-lg fa-external-link"></i></a>			
-									  </div>
-									</div>						      
-								</div>
-								<div class="col-lg-6 col-md-6 col-xs-12 mt mb hidden-team-inner">
-									<div class="media">
-									  <div class="pull-left">
-									    <a href="#">
-									      <img class="img-circle" src="assets/img/taghipour.jpg" width="80">
-									    </a>
-									  </div>
-									  <div class="media-body">
-									    <h3 class="media-heading">DR. FARIBORZ TAGHIPOUR</h3>
-								      <h4>Faculty Advisor</h4>	      
-											<p> Professor Taghipour's main research interests are in the computational modeling and experimental study of chemical and photochemical systems with application to energy and environmental engineering. His specific research areas include artificial photosynthetic systems, photoreactors for water purification and computational modeling of chemical and biological systems.</p>
-											<a href="http://www.chbe.ubc.ca/profile/fariborz-taghipour/" target="_blank"><i class="fa fa-lg fa-external-link"></i></a>			
-									  </div>
-									</div>						      
-								</div>								
-								<div class="col-lg-6 col-md-6 col-xs-12 mt mb hidden-team-inner">
-									<div class="media">
-									  <div class="pull-left">
-									    <a href="#">
-									      <img class="img-circle" src="assets/img/pic-t1.jpg" width="60">
-									    </a>
-									  </div>
-									  <div class="media-body">
-									    <h3 class="media-heading">ANDREW WANG</h3>
-								      <h4>Graduate Student Advisor</h4> 
-											<p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer. </p>
-											<a href="https://www.linkedin.com/profile/view?id=168066677" target="_blank"><i class="fa fa-lg fa-linkedin"></i></a>	
-									  </div>
-									</div>
-								</div>					
-							</div>	
-			      </div>
-			    </div>  
-			  </div> 
-
-			</div>
-
-		</div><! --/container -->
-	</div><! --/testimonials -->
-
-	<div id="prospective">
-		<div class="container">
-			<div class="row mb">
-				<div class="col-lg-6 col-lg-offset-3 col-xs-12 centered mb mt">
-					<h1>Prospective Members</h1>
-					<div id="team-6" class="carousel slide proc-team-6" data-ride="carousel">
-					  <!-- Wrapper for slides -->
-					  <div class="carousel-inner">					  
-					    <div class="item active mb mt centered">
-					      <h1>You!</h1>
-					      <h4>Chemical Team</h4>
-					      <h1><i class="fa fa-flask faa-shake animated"></i></h1>
-					    </div>
-					    <div class="item mb mt centered">
-					      <h1>You!</h1>
-					      <h4>Battery Team</h4>
-					      <h1><i class="fa fa-power-off faa-pulse faa-fast animated"></i></h1>
-					    </div>
-					    <div class="item mb mt centered">
-					      <h1>You!</h1>
-					      <h4>Electrical Team</h4>
-					      <h1><i class="fa fa-lightbulb-o faa-flash animated"></i></h1>
-					    </div>
-					    <div class="item mb mt centered">
-					      <h1>You!</h1>
-					      <h4>Mechanical Team</h4>
-					      <h1><i class="fa fa-cog faa-spin animated"></i></h1>
-					    </div>					
-					    <div class="item mb mt centered">
-					      <h1>You!</h1>
-					      <h4>Administration Team</h4>
-					      <h1><i class="fa fa-briefcase faa-tada animated"></i></h1>
-					    </div>						        					    					    
-					  </div>
-					</div>
-					<h3>UBC Chem-E-Car welcomes new members from all engineering disciplines as well as students from other faculties. </h3>		
-					<hr>				
-					<h4>Interested in joining UBC Chem-E-Car? Please e-mail us:</h4>
-					<h4><i class="fa fa-envelope"></i> info@ubcchemecar.com</h4>
-				</div><!-- /col-lg-8 -->
-			</div><! --/row -->
-		</div>
-	</div>
-
-	<! -- SERVICE SECTION -->
 	<section id="contact" name="contact"></section>
 	<! -- CONTACT SEPARATOR -->
 	<div class="sep contact hidden-xs hidden-md" data-stellar-background-ratio="0.5"></div>
@@ -872,7 +333,7 @@
 						<h2> All rights reserved </h2>
 						<br />
 						<h3> Image Credits: </h3> 
-						<p> UBC Chem-E-Car Team <br />  <a href="http://www.ubc.ca">University of British Columbia</a> <small></p>
+						<p> UBC Chem-E-Car Media Team <br />  <a href="http://www.ubc.ca">University of British Columbia</a> <small></p>
 						<h3> Theme Credits: </h3> 
 						<p> <a href="http://www.blacktie.co">Studio by blacktie.co</a> <small> </p>
 					</div>
@@ -915,21 +376,28 @@
 	<script src="assets/js/jquery.stellar.min.js"></script>
 	<script src="assets/js/fancybox/jquery.fancybox.js"></script>    
 	<script src="assets/js/main.js"></script>
+	<script src="assets/js/autohidingnavbar.js"></script>
 		<script>
-		$(function(){
-			$.stellar({
-				horizontalScrolling: false,
-				verticalOffset: 40
+			$(function(){
+				$.stellar({
+					horizontalScrolling: false,
+					verticalOffset: 40
+				});
 			});
-		});
 		</script>
 		
 		<script type="text/javascript">
+
       $(function() {
         //    fancybox
           jQuery(".fancybox").fancybox();
       });
+      $(".navbar-fixed-top").autoHidingNavbar({
+			  // see next for specifications
+			});
+			
 	   </script>
+
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
