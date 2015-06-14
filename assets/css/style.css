@@ -25,6 +25,11 @@ textarea {
     overflow-x: hidden !important;
 }
 
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
@@ -192,6 +197,113 @@ h1, h2, h3, h4, h5, h6 {
   filter:         drop-shadow(2px 2px 2px #000);
   opacity: 0.6;
   filter: alpha(opacity=60); /* For IE8 and earlier */    
+}
+
+#joinwrap {
+  background: url(../img/join.jpg) no-repeat center top;
+  background-attachment: relative;
+  background-position: center center;
+  background-size: cover;
+  min-height: 700px;
+  width: 100%;  
+}
+
+.join-logo {
+  margin-top: 100px;
+  width: 40%;
+}
+
+.btn-join {
+  background-color: #9DB446;
+  color: white;
+}
+
+.btn-join:hover {
+  background-color: #7F952E;
+  color: white;
+  font-weight: bold;
+}
+
+#joinwrap h1 {
+  color:#ffffff;
+  margin-top: 10px;
+  padding-bottom: 20px;
+  letter-spacing: 1px;
+  font-size: 70px;
+  font-weight: bolder;
+  text-shadow: 2px 2px 2px #000;
+}
+
+#joinwrap h3 {
+  color:#ffffff;
+  padding-bottom: 10px;
+  letter-spacing: 1px;
+  font-size: 20px;
+  text-shadow: 2px 2px 2px #000;
+}
+
+
+.introwrap-bg {
+  background-color: #000;
+}
+
+.aichewrap-bg {
+  background-color: #eee;
+}
+
+.intro-text-container {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.aiche-text-container h1 {
+  padding-left: 50px;
+  padding-right: 50px;
+  color: #293377 !important;
+  text-shadow: none !important;
+}
+
+
+.aiche-text-container h3 {
+  padding-left: 50px;
+  padding-right: 50px;
+  color: #293377 !important;
+  text-shadow: none !important;
+}
+
+
+#introwrap h1 {
+  color:#ffffff;
+  margin-top: 120px;
+  padding-bottom: 20px;
+  letter-spacing: 2px;
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px #000;
+  vertical-align: middle;
+  display: inline-block;  
+}
+
+#introwrap h2 {
+  color:#ffffff;
+  margin-top: 10px;
+  padding-bottom: 5px;
+  letter-spacing: 1px;
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px #000;
+  vertical-align: middle;
+  display: inline-block;  
+}
+
+#introwrap h3 {
+  color:#ffffff;
+  padding-bottom: 10px;
+  letter-spacing: 1px;
+  font-size: 20px;
+  text-shadow: 2px 2px 2px #000;
+  vertical-align: middle;
+  display: inline-block;  
 }
 
 .navbar-brand {
