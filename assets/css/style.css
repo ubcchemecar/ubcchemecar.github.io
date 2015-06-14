@@ -254,20 +254,22 @@ h1, h2, h3, h4, h5, h6 {
 .intro-text-container {
   padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 80px;
+}
+
+.aiche-text-container {
+  padding-left: 10px;
+  padding-right: 10px;  
+  margin-bottom: 80px;
 }
 
 .aiche-text-container h1 {
-  padding-left: 50px;
-  padding-right: 50px;
   color: #293377 !important;
   text-shadow: none !important;
 }
 
 
 .aiche-text-container h3 {
-  padding-left: 50px;
-  padding-right: 50px;
   color: #293377 !important;
   text-shadow: none !important;
 }
