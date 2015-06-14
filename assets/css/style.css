@@ -194,6 +194,14 @@ h1, h2, h3, h4, h5, h6 {
   filter: alpha(opacity=60); /* For IE8 and earlier */    
 }
 
+.navbar-brand {
+  padding: 5px 5px !important;
+}
+
+#brandlogo {
+  height: 100%;
+}
+
 #headerwrap h2 {
   color:#ffffff;
   margin-top: 10px;
