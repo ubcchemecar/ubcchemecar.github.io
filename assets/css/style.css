@@ -174,7 +174,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #headerwrap h1 {
 	color:#ffffff;
-	margin-top: 80px;
+	margin-top: 20px;
 	padding-bottom: 20px;
 	letter-spacing: 2px;
 	font-size: 50px;
@@ -254,13 +254,13 @@ h1, h2, h3, h4, h5, h6 {
 .intro-text-container {
   padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: 80px;
+  margin-bottom: 20px;
 }
 
 .aiche-text-container {
   padding-left: 10px;
   padding-right: 10px;  
-  margin-bottom: 80px;
+  margin-bottom: 20px;
 }
 
 .aiche-text-container h1 {
