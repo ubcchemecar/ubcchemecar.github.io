@@ -247,10 +247,10 @@ h1, h2, h3, h4, h5, h6 {
 
 #chemecarlogo {
   position:absolute;
-  width: 950px;
+  width: 80%;
   overflow: hidden !important;
-  left: 180px;
-  bottom: 20px;
+  left: 20%;
+  bottom: 5%;
   -webkit-filter: drop-shadow(2px 2px 2px #000);
   filter:         drop-shadow(2px 2px 2px #000);
   opacity: 0.6;
