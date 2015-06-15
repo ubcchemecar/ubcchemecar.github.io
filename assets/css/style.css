@@ -274,10 +274,15 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: none !important;
 }
 
+.vcenter {
+  position: relative;
+  top: 50%;
+  transform: translateY(50%);
+}
 
 #introwrap h1 {
   color:#ffffff;
-  margin-top: 30px;
+  margin-top: 40px;
   padding-bottom: 20px;
   letter-spacing: 2px;
   font-size: 50px;
