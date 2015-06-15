@@ -30,6 +30,64 @@ textarea {
    margin: 0 !important;
 }
 
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+/* columns of same height styles */
+
+.row-full-height {
+  height: 100%;
+}
+.col-full-height {
+  height: 100%;
+  vertical-align: middle;
+}
+.row-same-height {
+  display: table;
+  width: 100%;
+  /* fix overflow */
+  table-layout: fixed;
+}
+.col-xs-height {
+  display: table-cell;
+  float: none !important;
+}
+
+@media (min-width: 768px) {
+  .col-sm-height {
+    display: table-cell;
+    float: none !important;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-height {
+    display: table-cell;
+    float: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-height {
+    display: table-cell;
+    float: none !important;
+  }
+}
+
+/* vertical alignment styles */
+
+.col-top {
+  vertical-align: top !important;
+}
+.col-middle {
+  vertical-align: middle !important;
+}
+.col-bottom {
+  vertical-align: bottom !important;
+}
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
@@ -62,7 +120,7 @@ textarea {
 }
 
 .centered {
-	text-align: center
+  text-align: center
 }
 
 
@@ -86,8 +144,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Oswald", sans-serif;
-	font-weight: 300;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
 }
 
 /* ==========================================================================
@@ -152,15 +210,15 @@ h1, h2, h3, h4, h5, h6 {
 
 
 #headerwrap {
-	background: url(../img/back.jpg) no-repeat center top;
-	margin-top: 0px;
-	padding-top:80px;
-	background-attachment: relative;
-	background-position: center center;
-	min-height: 700px;
-	width: 100%;
+  background: url(../img/back.jpg) no-repeat center top;
+  margin-top: 0px;
+  padding-top:80px;
+  background-attachment: relative;
+  background-position: center center;
+  min-height: 700px;
+  width: 100%;
   overflow: hidden !important;
-	
+  
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
@@ -173,13 +231,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #headerwrap h1 {
-	color:#ffffff;
-	margin-top: 80px;
-	padding-bottom: 20px;
-	letter-spacing: 2px;
-	font-size: 50px;
-	font-weight: bold;
-	text-shadow: 2px 2px 2px #000;
+  color:#ffffff;
+  margin-top: 80px;
+  padding-bottom: 20px;
+  letter-spacing: 2px;
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px #000;
 }
 
 #headerwrap img {
@@ -254,13 +312,11 @@ h1, h2, h3, h4, h5, h6 {
 .intro-text-container {
   padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: 20px;
 }
 
 .aiche-text-container {
   padding-left: 10px;
-  padding-right: 10px;  
-  margin-bottom: 20px;
+  padding-right: 10px; 
 }
 
 .aiche-text-container h1 {
@@ -341,54 +397,54 @@ h1, h2, h3, h4, h5, h6 {
 
 /* About Wrap & Conf */
 #aboutwrap {
-	margin-top: 80px;
-	margin-bottom: 80px;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 .name {
-	text-align: center;
+  text-align: center;
 }
 .name p {
-	font-size: 22px;
-	font-weight: lighter;
-	margin-top: 15px;
-	letter-spacing: 2px;
+  font-size: 22px;
+  font-weight: lighter;
+  margin-top: 15px;
+  letter-spacing: 2px;
 }
 
 .name-label {
-	width: 60px;
-	height: 60px;
-	margin: 0 auto 45px;
-	border-top: 1px solid #000;
-	background: url(../img/name-label.png) center bottom no-repeat;
-	background-size: 35px 35px;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 45px;
+  border-top: 1px solid #000;
+  background: url(../img/name-label.png) center bottom no-repeat;
+  background-size: 35px 35px;
 }
 
 .name-zig {
-	width: 73px;
-	height: 17px;
-	margin: 38px 0 38px;
-	background: url(../img/name-zig.png) 0 0 no-repeat;
-	background-size: 73px 17px;
+  width: 73px;
+  height: 17px;
+  margin: 38px 0 38px;
+  background: url(../img/name-zig.png) 0 0 no-repeat;
+  background-size: 73px 17px;
 }
 
 .name-desc h2 {
-	font-family: 'Oswald', sans-serif;
-	font-size: 40px;
-	line-height: 1.45;
-	font-weight: 300;
+  font-family: 'Oswald', sans-serif;
+  font-size: 40px;
+  line-height: 1.45;
+  font-weight: 300;
 }
 
 /* Separator About - Parallax Section */
 .sep {
-	background-attachment: fixed;
-	background-position: 50% 0;
-	background-repeat: no-repeat;
-	height: 450px;
-	position: relative;
+  background-attachment: fixed;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  height: 450px;
+  position: relative;
 }
 .about {
-	background-image: url(../img/sep-1.jpg);
+  background-image: url(../img/sep-1.jpg);
 }
 .testimonials {
   background-image: url(../img/sep-4.jpg);
@@ -397,18 +453,18 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Portfolio Wrap Section */
 #portfoliowrap {
-	display: block;
-	margin-top: 80px;
-	margin-bottom: 80px;
+  display: block;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 #portfoliowrap h1 {
-	font-weight: 300;
-	text-align: center;
-	margin-bottom: 50px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 50px;
 }
 .mt {
-	margin-top: 50px;
+  margin-top: 50px;
 }
 
 .award-numbers {
@@ -416,11 +472,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 .mb {
-	margin-bottom: 60px;
+  margin-bottom: 60px;
 }
 
 #portfoliowrap i {
-	font-size: 50px;
+  font-size: 50px;
 }
 
 #fundingwrap i {
@@ -441,15 +497,15 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .proc {
-	padding-top: 15px;
-	padding-bottom: 15px;
-	border-bottom: solid 1px transparent;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: solid 1px transparent;
   text-align: center;
 }
 
 #servicewrap .proc:hover {
-	background-color: #eee;
-	border-bottom: solid 1px #2f2f2f
+  background-color: #eee;
+  border-bottom: solid 1px #2f2f2f
 }
 
 #testimonials .proc:hover {
@@ -457,40 +513,40 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .portfolio {
-	background-image: url(../img/sep-2.jpg);
+  background-image: url(../img/sep-2.jpg);
 }
 
 /* Service Wrap */
 #servicewrap {
-	display: block;
-	margin-top: 80px;
-	margin-bottom: 80px;
+  display: block;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 #servicewrap h1 {
-	font-weight: 300;
-	text-align: center;
-	margin-bottom: 20px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .service {
-	text-align: left;
+  text-align: left;
 }
 
 .service small {
-	font-size: 12px;
-	font-weight: bold
+  font-size: 12px;
+  font-weight: bold
 }
 
 .service i {
-	float: left;
-	margin-right: 15px;
-	font-size: 30px;
-	vertical-align: middle;
+  float: left;
+  margin-right: 15px;
+  font-size: 30px;
+  vertical-align: middle;
 }
 
 .service .text {
-	color: #767676
+  color: #767676
 }
 
 .hidden-team-header i{
@@ -500,10 +556,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Testimonials Wrap */
 #testimonials {
-	display: block;
-	margin-top: 80px;
-	margin-bottom: 80px;
-	background-color: #ffffff;
+  display: block;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  background-color: #ffffff;
 }
 
 .carousel-indicators .active {
@@ -542,27 +598,27 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Contact Wrap */
 #contactwrap {
-	background-color: #2f2f2f;
-	margin-top: 0px;
-	padding-top: 25px;
-	padding-bottom: 25px;
+  background-color: #2f2f2f;
+  margin-top: 0px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 #contactwrap p {
-	color: #f2f2f2;
+  color: #f2f2f2;
 }
 
 #contactwrap small {
-	font-size: 13px;
+  font-size: 13px;
 }
 
 .contact {
-	background-image: url(../img/sep-3.jpg);
+  background-image: url(../img/sep-3.jpg);
 }
 
 #contactwrap label {
-	color: #f2f2f2;
-	margin-top: 10px;
+  color: #f2f2f2;
+  margin-top: 10px;
 }
 
 .img-circle {
@@ -599,14 +655,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .project:hover .photo-wrapper {
   background-color: #2f2f2f;
-	background-image:url(../img/zoom.png);
-	background-repeat:no-repeat;
-	background-position:center;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	position: relative;
+  background-image:url(../img/zoom.png);
+  background-repeat:no-repeat;
+  background-position:center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: relative;
 }
 .project:hover .photo {
   opacity: 10;
@@ -622,7 +678,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .desc {
-	margin-top: 25px;
+  margin-top: 25px;
 }
 
 .footer-line h1 {
