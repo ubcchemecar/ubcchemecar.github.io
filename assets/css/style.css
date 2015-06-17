@@ -848,3 +848,44 @@ width: 10%;
   -webkit-filter: sepia(0.4) contrast(0.9) hue-rotate(30deg);
   filter: sepia(0.4) contrast(0.9) hue-rotate(30deg);
 }
+
+#contact ul{
+  padding-left: 0px;
+  margin-bottom: 50px;
+}
+
+#contact p{
+  font-size: 14px;
+  color: #aaa;
+}
+
+#contact h3{
+  color: white;
+}
+
+#contact h3 small{
+  color: #aaa;
+}
+
+#contact p a {
+  padding-right: 10px;
+}
+
+#contact p a i:hover {
+  color: #ccc !important;
+}
+
+
+#contact li
+{
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
+}
+
+#contact li a
+{
+  color: white;
+  font-size: 12px;
+  font-weight: normal;
+}
