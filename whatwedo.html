@@ -33,7 +33,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html"><b>UBC Chem-E-Car</b></a>
+          <!-- <a class="navbar-brand" href="index.html"><img id="brandlogo" src="assets/img/logo-w.svg"></a> -->
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -43,7 +43,7 @@
               <ul class="dropdown-menu" role="menu">
                 <li><a href="history.html">History</a></li>
                 <li><a href="whatwedo.html">What We Do</a></li>
-                <li><a href="index.html#portfolio" class="smoothScroll">Achievements</a></li>
+                <li><a href="achievements.html" class="smoothScroll">Achievements</a></li>
               </ul>
             </li>
             <li class="dropdown">
@@ -60,7 +60,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Team<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="team.html">Current</a></li>
-                <li><a href="team.html">Alumni</a></li>
+                <li><a href="alumni.html">Alumni</a></li>
               </ul>
             </li>
             <li><a href="index.html#contact" class="smoothScroll">Contact</a></li>
@@ -73,16 +73,26 @@
       </div>
     </nav>
 
-  <! -- PORTFOLIO SEPARATOR -->
-  <div class="sep portfolio hidden-xs hidden-md" data-stellar-background-ratio="0.5"></div>
-  
+  <section id="home" name="home"></section>
+  <div id="headerwrap" class="headerwrap5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 col-xs-offset-3">
+          <h1>Chem-E-Car</h1>
+          <h2>What we do</h2>
+          <p><img src="assets/img/ubc-logo.png" height="120"></p>
+        </div>
+      </div><! --/row -->
+    </div><! --/container -->
+  </div><! --/headerwrap -->
+
   <section id="services" name="services"></section>
   <div id="servicewrap">
     <div class="container">
       <div class="row">
         <div class="col-lg-8-offset-2 col-xs-12 mt centered">
           <h1>What We Do</h1>
-          <h4>Meet <a href="team.html">the team</a>. Want to <a href="#prospective" class="smoothScroll">join us</a>? UBC Chem-E-Car welcomes new members from all engineering disciplines as well as students from other faculties.</h4>
+          <h4>Meet <a href="team.html">the team</a>. Want to <a href="team.html#prospective" class="smoothScroll">join us</a>? UBC Chem-E-Car welcomes new members from all engineering disciplines as well as students from other faculties.</h4>
         </div><!-- /col-lg-8 -->
       </div><! --/row -->
       
@@ -139,6 +149,84 @@
       </div>    
     </div><! --/container -->
   </div><! --/servicewrap -->
+
+  <div id="contactwrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="footer-line">
+            <h1> UBC Chem-E-Car Team </h1>
+            <h2> All rights reserved </h2>
+            <br />
+            <h3> Image Credits: </h3> 
+            <p> UBC Chem-E-Car Media Team <br />  <a href="http://www.ubc.ca">University of British Columbia</a> </p>
+            <h3> Theme Credits: </h3> 
+            <p> <a href="http://www.blacktie.co">Studio by blacktie.co</a> </p>
+          </div>
+        </div>      
+        <div class="col-lg-6">
+          <div class="footer-line">
+            <h1>Contact Us</h1>
+          </div>
+          <p>
+            <small>UBC Chem-E-Car<br/>
+            Chemical and Biological Engineering Building<br/>
+            University of British Columbia<br/>
+            2360 East Mall<br />
+            Vancouver, BC Canada V6T 1Z3</small>
+          </p>
+          <p>
+            <small>info@ubcchemecar.com</small><br/>
+          </p>
+          <p><a href="https://www.facebook.com/UbcChemECar"><i class="fa fa-2x fa-inverse fa-facebook-square"></i></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="assets/js/classie.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/smoothscroll.js"></script>
+  <script src="assets/js/jquery.stellar.min.js"></script>
+  <script src="assets/js/fancybox/jquery.fancybox.js"></script>    
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/autohidingnavbar.js"></script>
+    <script>
+      $(function(){
+        $.stellar({
+          horizontalScrolling: false,
+          verticalOffset: 40
+        });
+      });
+    </script>
+    
+    <script type="text/javascript">
+
+      $(function() {
+        //    fancybox
+          jQuery(".fancybox").fancybox();
+      });
+      $(".navbar-fixed-top").autoHidingNavbar({
+        // see next for specifications
+      });
+      
+     </script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-63367875-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
   </body>
 </html>
   
