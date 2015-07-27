@@ -13,6 +13,12 @@ html {
 body {
   margin: 0;
 }
+body.modal-open {
+    overflow: visible;
+}
+.project-wrapper{
+  overflow: visible;
+}
 article,
 aside,
 details,
