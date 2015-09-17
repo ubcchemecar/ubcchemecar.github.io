@@ -991,3 +991,7 @@ textarea
     width:100%;
     height: 200px;
 }
+
+.redtext{
+  color: red !important;
+}
