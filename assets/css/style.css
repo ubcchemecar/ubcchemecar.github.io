@@ -402,8 +402,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .intro-text-container {
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 10%;
+  padding-right: 10%;
   margin-top: 30px;
   margin-bottom: 30px;  
 }
@@ -436,7 +436,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 40px;
   padding-bottom: 20px;
   letter-spacing: 2px;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: bold;
   text-shadow: 2px 2px 2px #000;
   vertical-align: middle;
