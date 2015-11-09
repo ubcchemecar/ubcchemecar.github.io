@@ -995,3 +995,7 @@ textarea
 .redtext{
   color: red !important;
 }
+
+.team-row{
+  margin-bottom: 120px;
+}
