@@ -332,47 +332,31 @@
   <script src="assets/js/simplyscroll.min.js"></script>
 
   <script src="assets/js/instafeed.min.js"></script>
-  <script type="text/javascript">
-    var userFeed = new Instafeed({
-        get: 'user',
-        userId: '1916181001',
-        clientId: 'bd3d8de50ef54fd79d0ba89857382adf'
-    });
-    userFeed.run();   
-  </script>
-  <script>
-    $(function(){
-      $.stellar({
-        horizontalScrolling: false,
-        verticalOffset: 40
-      });
-    });
-  </script>
 
-<script type="text/javascript">
-  (function ($) {
-            $(function () { 
-      i = new Instafeed({
-          get: "user",
-          target: "instafeed",
-          userId: 1916181001,
-          clientId: "bd3d8de50ef54fd79d0ba89857382adf",
-          limit: 10,
-          resolution: "low_resolution",
-          after: function() {
-              $("#instafeed").simplyScroll({
-                  speed: 1,
-                  frameRate: 20,
-                  orientation: "horizontal",
-                  direction: "forwards",
-                  customClass: "instagram_scroller"
-              });
-          }
-      });
-      i.run()
-  });
-          })(jQuery);
-</script>
+  <script type="text/javascript">
+    (function ($) {
+              $(function () { 
+        i = new Instafeed({
+            get: "user",
+            target: "instafeed",
+            userId: 1916181001,
+            clientId: "bd3d8de50ef54fd79d0ba89857382adf",
+            limit: 10,
+            resolution: "low_resolution",
+            after: function() {
+                $("#instafeed").simplyScroll({
+                    speed: 1,
+                    frameRate: 20,
+                    orientation: "horizontal",
+                    direction: "forwards",
+                    customClass: "instagram_scroller"
+                });
+            }
+        });
+        i.run()
+    });
+            })(jQuery);
+  </script>
 
   
   <script type="text/javascript">
@@ -397,5 +381,24 @@
     ga('send', 'pageview');
 
   </script>
+  
+  <script>
+   window.HFCHAT_CONFIG = {
+       EMBED_TOKEN: "3ba0c7c0-8bf1-11e5-b908-a528ef4e25be",
+       ACCESS_TOKEN: "d12b438b0c77403bb3040adbf35ec2f9",
+       HOST_URL: "https://happyfoxchat.com",
+       ASSETS_URL: "https://d1l7z5ofrj6ab8.cloudfront.net/visitor"
+   };
+
+  (function() {
+    var scriptTag = document.createElement('script');
+    scriptTag.type = 'text/javascript';
+    scriptTag.async = true;
+    scriptTag.src = window.HFCHAT_CONFIG.ASSETS_URL + '/js/widget-loader.js';
+
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(scriptTag, s);
+  })();
+  </script>  
   </body>
 </html>
