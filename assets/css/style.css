@@ -218,6 +218,33 @@ h1, h2, h3, h4, h5, h6 {
     -o-background-size: cover !important;
     background-size: cover !important;  
 }
+
+.headerwrapjoin {
+  background: url(../img/ubc/classroom.jpg) !important;
+    -webkit-background-size: 100% auto !important;
+    -moz-background-size: 100% auto !important;
+    -o-background-size: 100% auto !important;
+    background-size: 100% auto !important;
+
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+    background-size: cover !important;  
+}
+
+.headerwrapjoin:after{
+    background: url(../img/ubc/overlay.png);
+    position: absolute;
+    content: "";
+    z-index: 1;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+.overlay-text{
+  z-index: 2;
+}
 .headerwrap3 {
   background: url(../img/ubc/back3.jpg)!important;
 
