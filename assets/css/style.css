@@ -232,19 +232,6 @@ h1, h2, h3, h4, h5, h6 {
     background-size: cover !important;  
 }
 
-.headerwrapjoin:after{
-    background: url(../img/ubc/overlay.png);
-    position: absolute;
-    content: "";
-    z-index: 1;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-}
-.overlay-text{
-  z-index: 2;
-}
 .headerwrap3 {
   background: url(../img/ubc/back3.jpg)!important;
 
