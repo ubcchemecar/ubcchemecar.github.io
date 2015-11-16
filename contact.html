@@ -188,7 +188,24 @@
     ga('send', 'pageview');
 
   </script>
+  <script>
+   window.HFCHAT_CONFIG = {
+       EMBED_TOKEN: "3ba0c7c0-8bf1-11e5-b908-a528ef4e25be",
+       ACCESS_TOKEN: "d12b438b0c77403bb3040adbf35ec2f9",
+       HOST_URL: "https://happyfoxchat.com",
+       ASSETS_URL: "https://d1l7z5ofrj6ab8.cloudfront.net/visitor"
+   };
 
+  (function() {
+    var scriptTag = document.createElement('script');
+    scriptTag.type = 'text/javascript';
+    scriptTag.async = true;
+    scriptTag.src = window.HFCHAT_CONFIG.ASSETS_URL + '/js/widget-loader.js';
+
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(scriptTag, s);
+  })();
+  </script>
   </body>
 </html>
   
