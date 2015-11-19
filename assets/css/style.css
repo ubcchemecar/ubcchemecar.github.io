@@ -1084,3 +1084,9 @@ textarea
         height: 130px
     }
 }
+
+.thin-border {
+  margin: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
