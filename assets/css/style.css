@@ -156,31 +156,148 @@ h1, h2, h3, h4, h5, h6 {
 /* ==========================================================================
    MENU CONFIGURATION
    ========================================================================== */
-.navbar.navbar-fixed-top{
-    background: rgba(0, 0, 0, 0.7);
-    border: none;
-    font-size: 18px;
+
+.main-nav {
+    width: auto;
 }
 
-.navbar-default .navbar-nav > li > a {
-  color: white;
-  }
-
-.navbar-default .navbar-nav > li > a:hover {
-  color: #ccc;
-  }
-
-.navbar-default .navbar-brand {
-  color: white;
-}  
-
-.dropdown-menu {
-  background: rgba(0, 0, 0, 0.9);
-  font-size: 16px;
+#section_header .haeder-fixed {
+    background: #fff;
+    padding: 10px 0px;
 }
 
-.dropdown-menu > li > a {
-  color: white;  
+#section_header {
+    background: #fff;
+    padding: 10px 0px;
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
+}
+
+.navbar {
+    position: relative;
+    border-bottom: solid 1px;
+    border-color: #eeeeee;
+}
+
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    margin-left: 0px!important;
+}
+
+.navbar-brand {
+    font-size: 40px;
+    color: #222;
+}
+
+.navbar-brand img {
+    height: 180%;
+    width: auto;
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+.navbar {
+    /*margin-bottom: 0px;*/
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    position: relative;
+}
+
+ul.navbar-nav a {
+    color: #0053A3;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 15px 0 15px 30px;
+    line-height: 34px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.nav > li > a:focus {
+    background: transparent!important;
+}
+
+ul.navbar-nav > .active > a {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.nav > li > a:hover {
+    background: transparent;
+}
+
+.navbar-nav .dropdown-menu {
+    left: 0;
+    right: auto;
+}
+
+.dropdown-menu * {
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+}
+
+.navbar-nav .dropdown-menu {
+    background: #fff;
+    border: 0;
+    box-shadow: none;
+    min-width: 240px;
+    display: block;
+    opacity: 0;
+    z-index: 1;
+    visibility: hidden;
+    -webkit-transform: scale(.8);
+    -moz-transform: scale(.8);
+    -ms-transform: scale(.8);
+    -o-transform: scale(.8);
+    transform: scale(.8);
+    -webkit-transition: visibility 500ms, opacity 500ms, -webkit-transform 500ms cubic-bezier(.43, .26, .11, .99);
+    -moz-transition: visibility 500ms, opacity 500ms, -moz-transform 500ms cubic-bezier(.43, .26, .11, .99);
+    -o-transition: visibility 500ms, opacity 500ms, -o-transform 500ms cubic-bezier(.43, .26, .11, .99);
+    -ms-transition: visibility 500ms, opacity 500ms, -ms-transform 500ms cubic-bezier(.43, .26, .11, .99);
+    transition: visibility 500ms, opacity 500ms, transform 500ms cubic-bezier(.43, .26, .11, .99);
+}
+
+.navbar-nav .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+
+.navbar-nav .dropdown-backdrop {
+    visibility: hidden;
+}
+
+.navbar-nav .dropdown-menu li {
+    padding: 5px 20px 0;
+}
+
+.navbar-nav .dropdown-menu li:first-child {
+    border-radius: 2px 2px 0 0;
+}
+
+.dropdown-menu li:last-child {
+    border-radius: 0 0 2px 2px;
+}
+
+.navbar-nav > li > .dropdown-menu {
+    margin-top: 15px!important;
+}
+
+.dropdown-menu>li>a {
+    font-size: 14px;
+    padding: 5px 0;
+    color: #0053A3;
+}
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, 
+.dropdown-menu>li.active>a {
+    background: none !important;
 }
 /* ==========================================================================
    Wrap Sections
@@ -478,7 +595,7 @@ h1, h2, h3, h4, h5, h6 {
   vertical-align: middle;
   display: inline-block;  
 }
-
+/*
 .navbar-brand {
   padding: 5px 5px !important;
 }
@@ -491,7 +608,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #brandlogo {
   height: 100%;
-}
+}*/
 
 #headerwrap h2 {
   color:#ffffff;
