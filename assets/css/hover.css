@@ -2172,6 +2172,7 @@
 /* Border Fade */
 .hvr-border-fade {
   display: inline-block;
+  padding: 8px 16px;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
