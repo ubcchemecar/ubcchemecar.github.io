@@ -402,7 +402,7 @@ ul.navbar-nav > .active > a {
     -o-background-size: cover !important;
     background-size: cover !important;  
 }
-
+/*
 .headerwrap7 {
   background:     
   linear-gradient(
@@ -420,14 +420,14 @@ ul.navbar-nav > .active > a {
     -moz-background-size: cover !important;
     -o-background-size: cover !important;
     background-size: cover !important;  
-}
+}*/
 
 .contacthead a{
-  color: white !important;
+  /*color: white !important;*/
 }
 
 .contacthead h1{
-  margin-top: 15% !important;
+  margin-top: 6% !important;
 }
 
 .contact-desc {
@@ -461,6 +461,35 @@ ul.navbar-nav > .active > a {
   font-size: 50px;
   font-weight: bold;
   text-shadow: 2px 2px 2px #000;
+}
+
+.header {
+  /*background: url(../img/ubc/back.jpg);*/
+  margin-top: 0px;
+  padding-top:80px;
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden !important;
+  
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.header h1 {
+  color:#555;
+  margin-top: 5%;
+  padding-bottom: 20px;
+  letter-spacing: 2px;
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #777;
 }
 
 #headerwrap img {
