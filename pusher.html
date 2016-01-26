@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<head>
+  <title>Pusher Test</title>
+  <script src="https://js.pusher.com/3.0/pusher.min.js"></script>
+  <script>
+    var pusher = new Pusher('458df284cbac14a4488c', {
+      encrypted: true
+    });
+    var channel = pusher.subscribe('chbot_comm');
+    channel.bind('lab_door', function(data) {
+      alert(data.message);
+    });
+  </script>
+</head>
