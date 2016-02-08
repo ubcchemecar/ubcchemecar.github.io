@@ -1,94 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Official website of The University of British Columbia's Chem-E-Car Student Engineering Team">
     <meta name="author" content="">
-    <title>Team | UBC Chem-E-Car</title>
-	
-	<!-- core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet">
-	  <link href="css/main.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
-	  <link href="css/chemecar.css" rel="stylesheet">
 
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->       
-    <link rel="shortcut icon" href="images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
-</head><!--/head-->
+    <title>UBC Chem-E-Car | Team Members</title>
 
-<body>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
 
-    <header id="header">
-        <nav class="navbar navbar-inverse" role="banner">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html"><img src="images/common/logo.png" alt="logo"></a>
-                </div>
-        
-                <div class="collapse navbar-collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li class="active"><a href="team.html">Team</a></li>
-                        <li><a href="sponsors.html">Sponsors</a></li>
-                        <li><a href="http://blog.ubcchemecar.com">Blog</a></li> 
-                        <li><a href="contact.html">Contact</a></li>                        
-                    </ul>
-                </div>
-            </div><!--/.container-->
-        </nav><!--/nav-->
-    
-    </header><!--/header-->
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/team_hover.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="assets/css/font-awesome-animation.min.css" rel="stylesheet">
+    <link href="assets/js/fancybox/jquery.fancybox.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="assets/favicon.ico">
 
-    <section id="about-us">
-        <div class="container">
-    			<div class="center wow fadeInDown">
-    				<h2>The 2015/2016 Team</h2>
-    				<p class="lead">UBC Chem-E-Car welcomes students of all skill levels and experience. Please send me an email if you're interested in our projects or the team!</p>
-    			</div>
-          <div class="row mt mb">
-            <div class="col-lg-8-offset-2 col-xs-12">
-              <br>
-              <p>Sub-teams:</p>
-              <div class="btn-toolbar" role="toolbar" aria-label="...">
-                <div class="btn-group" role="group" aria-label="...">
-                  <a href="#administration" button type="button" class="btn btn-default"><i class="fa fa-briefcase">&nbsp;</i>Administration</a>
-                  <a href="#battery" button type="button" class="btn btn-default"><i class="fa fa-power-off">&nbsp;</i>Battery</a>
-                  <a href="#chemical" button type="button" class="btn btn-default"><i class="fa fa-flask">&nbsp;</i>Chemical</a>
-                  <a href="#electrical" button type="button" class="btn btn-default"><i class="fa fa-lightbulb-o">&nbsp;</i>Electrical</a>
-                  <a href="#mechanical" button type="button" class="btn btn-default"><i class="fa fa-cogs">&nbsp;</i>Mechanical</a>
-                </div>
-                <div class="btn-group" role="group" aria-label="...">
-                  <a href="#advisors" button type="button" class="btn btn-default">Advisors</a>
-                </div>    
-              </div>   
-              <hr>             
-            </div><!-- /col-lg-8 -->
-          </div>
+
+  </head>
+
+  <body data-spy="scroll" data-offset="0" data-target="#theMenu">    
+  <!-- Menu -->
+    <nav class="navbar navbar-fixed-top main-nav">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><img id="brandlogo" src="assets/img/ubc-logo-blue.png"></a>
         </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html#home" class="smoothScroll">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About Us<span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="history.html">History</a></li>
+                <li><a href="whatwedo.html">What We Do</a></li>
+                <li><a href="achievements.html" class="smoothScroll">Achievements</a></li>
+                 <li><a href="team.html">Team Members</a></li>
+                 <li><a href="alumni.html">Alumni Members</a></li>
+              </ul>
+            </li>
+            <li><a href="sponsors.html" class="smoothScroll">Sponsors</a></li>
+            <li><a href="resources.html" class="smoothScroll">Resources</a></li>
+            <li><a href="contact.html" class="smoothScroll">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="joinus.html" class="smoothScroll"> Join Us </a></li>
+            <li><a href="http://blog.ubcchemecar.com" class="smoothScroll">Blog</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
 
+
+  <section id="home" name="home"></section>
+  <div id="captainmessage">
+    <div class="col-md-5 col-md-offset-1 col-xs-offset-3">
+      <h1> The 2015/2016 Chem-E-Car Team </h1>
+      <br>
+      <p> UBC Chem-E-Car welcomes students of all skill levels and experience. Please send me an email if you're interested in our projects or the team! </p>
+      <br>
+      <b> Thanos </b>
+      <p> Team Captain </p>
+    </div>
+    <div class="col-md-6">
+      <div style="display:flex;justify-content:center;align-items:center;">
+       <img src="assets/img/ubc-logo-blue.png" class="img-responsive img-logo">
+      </div>    
+    </div>
+  </div>
+
+  <div id="testimonials">
     <div class="container">
+      <div class="row mt mb">
+        <div class="col-lg-8-offset-2 col-xs-12">
+          <br>
+          <p>Sub-teams:</p>
+          <div class="btn-toolbar" role="toolbar" aria-label="...">
+            <div class="btn-group" role="group" aria-label="...">
+              <a href="#administration" button type="button" class="btn btn-default"><i class="fa fa-briefcase">&nbsp;</i>Administration</a>
+              <a href="#battery" button type="button" class="btn btn-default"><i class="fa fa-power-off">&nbsp;</i>Battery</a>
+              <a href="#chemical" button type="button" class="btn btn-default"><i class="fa fa-flask">&nbsp;</i>Chemical</a>
+              <a href="#electrical" button type="button" class="btn btn-default"><i class="fa fa-lightbulb-o">&nbsp;</i>Electrical</a>
+              <a href="#mechanical" button type="button" class="btn btn-default"><i class="fa fa-cogs">&nbsp;</i>Mechanical</a>
+            </div>
+            <div class="btn-group" role="group" aria-label="...">
+              <a href="#advisors" button type="button" class="btn btn-default">Advisors</a>
+            </div>    
+          </div>   
+          <hr>             
+        </div><!-- /col-lg-8 -->
+
+      </div><! --/row -->  
+
       <!-- First Row -->
-      <div id="administration" class="row team-head">
+      <div id="administration" class="row team-row">
         <div class="col-md-6 col-sm-12 col-xs-12">
           <h1 class="admin"> Administration </h1>
-          <p>The administration team takes care of the team logistics and financess so that the technical teams can focus on the science and engineering!</p>
+          <p> The administration team does blah blah blah </p>
         </div>      
 
         <div class="col-md-6 col-sm-12 col-xs-12">
@@ -96,7 +114,7 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id=374933040"><img class="img-circle" src="images/team/2015/thanos.jpg" width="100%"></a>
+                          <a href="https://www.linkedin.com/profile/view?id=374933040"><img class="img-circle" src="assets/img/thanos.jpg" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -111,7 +129,7 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="images/team/2015/michellezhou.jpg" width="100%"></a>
+                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="assets/img/michellezhou.jpg" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -132,7 +150,7 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id="><img class="img-circle" src="images/team/2015/marcCaruth.jpg" width="100%"></a>
+                          <a href="https://www.linkedin.com/profile/view?id="><img class="img-circle" src="assets/img/marcCaruth.jpg" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -149,7 +167,7 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id="><img class="img-circle" src="images/team/2015/claire.jpg" width="100%"></a>
+                          <a href="https://www.linkedin.com/profile/view?id="><img class="img-circle" src="assets/img/claire.jpg" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -164,17 +182,17 @@
       </div>   <!-- End team row -->      
 
       <!-- First Row -->
-      <div id="battery" class="row team-head">     
+      <div id="battery" class="row team-row">     
         <div class="col-md-6 col-sm-12 col-xs-12">
           <h1 class="admin"> Battery </h1>
-          <p> The battery team builds the power sources for the car and tries not to blow up the lab while doing their experiments.</p>
+          <p> The battery team does blah blah blah </p>
         </div>     
         <div class="col-md-6 col-sm-12 col-xs-12">
             <div class="col-md-3 col-sm-3 col-xs-3">
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="images/team/2015/tampriye.jpg" width="100%"></a>
+                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="assets/img/tampriye.jpg" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -189,14 +207,14 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id=168066677"><img class="img-circle" src="images/team/2015/siang.jpg" width="100%"></a>
+                          <a href="https://www.linkedin.com/profile/view?id=168066677"><img class="img-circle" src="assets/img/siang.jpg" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
             </div>
             <div class="col-md-9 col-sm-9 col-xs-9">
                 <h3>Siang Lim</h3>
-                <h4>[Insert Role]</h4>
+                <h4>Trollololol</h4>
                 <hr>
                 <p>Siang is a 3rd year Chemical Engineering student. Aside from battery development projects, he is also responsible for setting up and maintaining the team's technology infrastructure (website development and social media management etc). He enjoys completing assignments, doing iClicker questions and writing CHBE lab reports. In his spare time... What do you mean spare time?!!</p>
             </div>
@@ -210,7 +228,7 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id=340891479"><img class="img-circle" src="images/team/2015/AndrewMay.jpg" width="100%"></a>
+                          <a href="https://www.linkedin.com/profile/view?id=340891479"><img class="img-circle" src="assets/img/AndrewMay.jpg" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -227,7 +245,7 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://ca.linkedin.com/in/filippo-botta-60b77198"><img class="img-circle" src="images/team/2015/filippo.jpg" width="100%"></a>
+                          <a href="https://ca.linkedin.com/in/filippo-botta-60b77198"><img class="img-circle" src="assets/img/filippo.jpg" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -248,7 +266,7 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="images/team/2015/pic-t2.jpg" width="100%"></a>
+                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="assets/img/pic-t2.jpg" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -265,7 +283,7 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="images/team/2015/pic-t1.jpg" width="100%"></a>
+                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="assets/img/pic-t1.jpg" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -286,7 +304,7 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="images/team/2015/solomon.png" width="100%"></a>
+                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="assets/img/solomon.png" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -303,7 +321,7 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="images/team/2015/arjun.jpg" width="100%"></a>
+                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="assets/img/arjun.jpg" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -324,7 +342,7 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="images/team/2015/peter.jpg" width="100%"></a>
+                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="assets/img/peter.jpg" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -341,7 +359,7 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="images/team/2015/jordan.jpg" width="100%"></a>
+                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="assets/img/jordan.jpg" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -362,7 +380,7 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="images/team/2015/pavneet.png" width="100%"></a>
+                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="assets/img/pavneet.png" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -379,17 +397,17 @@
       </div>   <!-- End team row --> 
 
       <!-- First Row -->
-      <div id="chemical" class="row team-head">
+      <div id="chemical" class="row team-row">
         <div class="col-md-6 col-sm-12 col-xs-12">
           <h1 class="admin"> Chemical </h1>
-          <p> The chemical team gets to play with mystery chemicals and mix random stuff in beakers (safely of course). </p>
+          <p> The battery team does blah blah blah </p>
         </div>        
         <div class="col-md-6 col-sm-12 col-xs-12">
             <div class="col-md-3 col-sm-3 col-xs-3">
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://ca.linkedin.com/in/aliya-mitchell-30898177"><img class="img-circle" src="images/team/2015/aliya.jpg" width="100%"></a>
+                          <a href="https://ca.linkedin.com/in/aliya-mitchell-30898177"><img class="img-circle" src="assets/img/aliya.jpg" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -404,7 +422,7 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://ca.linkedin.com/in/"><img class="img-circle" src="images/team/2015/rayBi1.jpg" width="100%"></a>
+                          <a href="https://ca.linkedin.com/in/"><img class="img-circle" src="assets/img/rayBi1.jpg" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -425,7 +443,7 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://ca.linkedin.com/in/"><img class="img-circle" src="images/team/2015/andrewliu.JPG" width="100%"></a>
+                          <a href="https://ca.linkedin.com/in/"><img class="img-circle" src="assets/img/andrewliu.JPG" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -442,7 +460,7 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://ca.linkedin.com/in/"><img class="img-circle" src="images/team/2015/Xrystosreformat.jpg" width="100%"></a>
+                          <a href="https://ca.linkedin.com/in/"><img class="img-circle" src="assets/img/Xrystosreformat.jpg" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -463,7 +481,7 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="images/team/2015/chrisGu1.jpg" width = "100%" ></a>
+                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="assets/img/chrisGu1.jpg" width = "100%" ></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -474,21 +492,38 @@
                 <hr>
                 <p>Christina is a second year Chemical engineering student. It is her first year being involved in the team and she hopes to gain more skills and apply her knowledge to a fun extracurricular activity. She is part of the chemical team, helping with the research for alternative stopping mechanisms for the car. In her spare time, she enjoys travelling, shopping and enjoying all the delicacies that Vancouver has to offer.</p>
             </div>
-        </div>                      
+        </div>        
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <div class="col-md-3 col-sm-3 col-xs-3">
+                <div class="team-items">
+                    <div class="item text-left">
+                        <div class="single-member">
+                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="assets/img/pic-t1.jpg" width="100%"></a>
+                        </div>
+                    </div>  <!-- item wrapper end -->
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-9 col-xs-9">
+                <h3></h3>
+                <h4></h4>
+                <hr>
+                <p> </p>
+            </div>            
+        </div>                
       </div>   <!-- End team row -->  
 
       <!-- First Row -->
-      <div id="electrical" class="row team-head">
+      <div id="electrical" class="row team-row">
         <div class="col-md-6 col-sm-12 col-xs-12">
           <h1 class="admin"> Electrical </h1>
-          <p> The electrical team builds home-made PCBs and program Arduinos!</p>
+          <p> The electrical team does blah blah blah </p>
         </div>              
         <div class="col-md-6 col-sm-12 col-xs-12">
             <div class="col-md-3 col-sm-3 col-xs-3">
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id=363448543"><img class="img-circle" src="images/team/2015/johnson.jpg" width="100%"></a>
+                          <a href="https://www.linkedin.com/profile/view?id=363448543"><img class="img-circle" src="assets/img/johnson.jpg" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -503,7 +538,7 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id="><img class="img-circle" src="images/team/2015/Coltonreformat.jpg" width="100%"></a>
+                          <a href="https://www.linkedin.com/profile/view?id="><img class="img-circle" src="assets/img/Coltonreformat.jpg" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -525,7 +560,7 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id="><img class="img-circle" src="images/team/2015/kelvinHau.jpg" width="100%"></a>
+                          <a href="https://www.linkedin.com/profile/view?id="><img class="img-circle" src="assets/img/kelvinHau.jpg" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -542,33 +577,33 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id="><img class="img-circle" src="images/team/2015/hanibal1.jpg" width="100%"></a>
+                          <a href="https://www.linkedin.com/profile/view?id="><img class="img-circle" src="assets/img/pic-t1.jpg" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
             </div>
             <div class="col-md-9 col-sm-9 col-xs-9">
-                <h3>Hani Bitar</h3>
-                <h4>Electrical Team</h4>
+                <h3>Team Member</h3>
+                <h4>position</h4>
                 <hr>
-                <p> "Hani is a second year Chemical Engineering student. Originally intending to join the chemical sub-team, he was enticed to join the electrical team to try something new and to diversify his skill-set. In his spare time, he enjoys playing table tennis and chess."</p> 
+                <p> Description</p> 
             </div>
         </div>        
       </div>   <!-- End team row -->   
       
 
       <!-- First Row -->
-      <div id="mechanical" class="row team-head">
+      <div id="mechanical" class="row team-row">
         <div class="col-md-6 col-sm-12 col-xs-12">
           <h1 class="admin"> Mechanical </h1>
-          <p> The mechanical team gets to use power tools and heavy machinery. WHERE ARE MY DRILL BITS?! </p>
+          <p> The mechanical team does blah blah blah </p>
         </div>      
         <div class="col-md-6 col-sm-12 col-xs-12">
             <div class="col-md-3 col-sm-3 col-xs-3">
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id="><img class="img-circle" src="images/team/2015/willgumboc.jpg" width="100%"></a>
+                          <a href="https://www.linkedin.com/profile/view?id="><img class="img-circle" src="assets/img/willgumboc.jpg" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -584,7 +619,7 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="images/team/2015/kirsten.jpg" width="100%"></a>
+                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="assets/img/pic-t1.jpg" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -593,7 +628,7 @@
                 <h3>Kirsten Meng</h3>
                 <h4>Mechanical Team</h4>
                 <hr>
-                <p>Kirsten is a Mechanical Engineering student! Woohoo!!</p>
+                <p>Something</p>
             </div>
         </div>                      
       </div>   <!-- End team row -->  
@@ -605,7 +640,7 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id="><img class="img-circle" src="images/team/2015/KyleComo.jpg" width="100%"></a>
+                          <a href="https://www.linkedin.com/profile/view?id="><img class="img-circle" src="assets/img/KyleComo.jpg" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -614,7 +649,7 @@
                 <h3>Kyle Como</h3>
                 <h4>Mechanical Team</h4>
                 <hr>
-                <p>Insert Kyle's Description</p>
+                <p>Kyle Description</p>
             </div>
         </div>      
         <div class="col-md-6 col-sm-12 col-xs-12">
@@ -622,7 +657,7 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id="><img class="img-circle" src="images/team/2015/tyraPhillipsRef.jpg" width="100%"></a>
+                          <a href="https://www.linkedin.com/profile/view?id="><img class="img-circle" src="assets/img/tyraPhillipsRef.jpg" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -643,7 +678,7 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="images/team/2015/alison.jpg" width = "100%" ></a>
+                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="assets/img/alison.jpg" width = "100%" ></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -660,7 +695,7 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="images/team/2015/ngai.jpg" width="100%"></a>
+                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="assets/img/ngai.jpg" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -681,7 +716,7 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="images/team/2015/sammyLee2.jpg" width = "100%" ></a>
+                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="assets/img/sammyLee2.jpg" width = "100%" ></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -698,7 +733,7 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="images/team/2015/caitlinLee1.jpg" width="100%"></a>
+                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="assets/img/caitlinLee1.jpg" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -713,10 +748,10 @@
       </div>   <!-- End team row -->  
 
       <!-- Start team row -->
-       <div id="advisors" class="row team-head">
+       <div id="advisors" class="row team-row">
         <div class="col-md-6 col-sm-12 col-xs-12">
           <h1 class="admin"> Advisors </h1>
-          <p> The advisors advise. </p>
+          <p> The administration team does blah blah blah </p>
         </div>      
 
         <div class="col-md-6 col-sm-12 col-xs-12">
@@ -724,7 +759,7 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id=374933040"><img class="img-circle" src="images/team/2015/gyenge.jpg" width="100%"></a>
+                          <a href="https://www.linkedin.com/profile/view?id=374933040"><img class="img-circle" src="assets/img/gyenge.jpg" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -739,7 +774,7 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="images/team/2015/taghipour.jpg" width="100%"></a>
+                          <a href="https://www.linkedin.com/profile/view?id=301477131"><img class="img-circle" src="assets/img/taghipour.jpg" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -754,13 +789,13 @@
       </div>   <!-- End team row -->
 
       <!-- First Row -->
-      <!-- <div id="administration" class="row team-row"> -->
+      <div id="administration" class="row team-row">
         <div class="col-md-6 col-sm-12 col-xs-12">
             <div class="col-md-3 col-sm-3 col-xs-3">
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id="><img class="img-circle" src="images/team/2015/pic-t1.jpg" width="100%"></a>
+                          <a href="https://www.linkedin.com/profile/view?id="><img class="img-circle" src="assets/img/pic-t1.jpg" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -777,7 +812,7 @@
                 <div class="team-items">
                     <div class="item text-left">
                         <div class="single-member">
-                          <a href="https://www.linkedin.com/profile/view?id="><img class="img-circle" src="images/team/2015/pic-t1.jpg" width="100%"></a>
+                          <a href="https://www.linkedin.com/profile/view?id="><img class="img-circle" src="assets/img/pic-t1.jpg" width="100%"></a>
                         </div>
                     </div>  <!-- item wrapper end -->
                 </div>
@@ -794,38 +829,140 @@
 <!-- contact header -->
     </div>
   </div> 
-			
-
-		</div><!--/.container-->
-    </section><!--/about-us-->
 
 
-    <footer id="footer" class="midnight-blue">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    &copy; 2016 <a target="_blank" href="http://www.ubcchemecar.com/" title="UBC Chem-E-Car">UBC Chem-E-Car Engineering Design Team</a>. All Rights Reserved.
-                    <p><b>Email Us:</b> <a href="mailto:info@ubcchemecar.com">info@ubcchemecar.com</a></p>
-                </div>
-                <div class="col-sm-6">
-                    <ul class="pull-right">
-                        <li><a href="https://www.facebook.com/UbcChemECar"><i class="fa fa-2x fa-inverse fa-facebook-square"></i></a></li>
-                        <li><a href="https://instagram.com/ubcchemecar"><i class="fa fa-2x fa-inverse fa-instagram"></i></a> </li>
-                        <li><a href="https://twitter.com/ubcchemecar"><i class="fa fa-2x fa-inverse fa-twitter-square"></i></a></li>
-                    </ul>
-                </div>
-            </div>
+  <! -- SERVICE SECTION -->
+  <section id="contact" name="contact"></section>
+  
+  <div id="contactwrap">
+    <div class="container" id="contact">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="footer-line">
+            <h1> UBC Chem-E-Car Team </h1>
+            <h2> All rights reserved </h2>
+            <br />
+            <h3> photo credits: </h3> 
+            <p> UBC Chem-E-Car Media Team <br />  <a href="http://www.ubc.ca">University of British Columbia</a> </p>
+          </div>
+        </div>      
+        <div class="col-lg-4">
+          <div class="footer-line">
+            <h1>Follow Us</h1>
+          </div>        
+          <p>
+            <a href="https://www.facebook.com/UbcChemECar"><i class="fa fa-2x fa-inverse fa-facebook-square"></i></a>
+            <a href="https://twitter.com/ubcchemecar"><i class="fa fa-2x fa-inverse fa-twitter-square"></i></a>
+            <a href="https://instagram.com/ubcchemecar"><i class="fa fa-2x fa-inverse fa-instagram"></i></a>            
+            <a href="https://www.facebook.com/UbcChemECar"><i class="fa fa-2x fa-inverse fa-youtube-square"></i></a>    
+            <a href="https://medium.com/@ubcchemecar"><i class="fa fa-2x fa-inverse fa-medium"></i></a>         
+          </p>        
         </div>
-    </footer><!--/#footer-->
+        <div class="col-lg-4">
+          <div class="footer-line">
+            <h1>Contact Us</h1>
+          </div>
+          <p>
+            <small>UBC Chem-E-Car<br/>
+            Chemical and Biological Engineering Building<br/>
+            University of British Columbia<br/>
+            2360 East Mall<br />
+            Vancouver, BC Canada V6T 1Z3</small>
+          </p>
+          <h3>
+            <small>E-mail</small><br/>
+            info@ubcchemecar.com<br/>
+          </h3>
+        </div>
+        <div class="col-lg-12">
+          <hr>
+          <div class="col-lg-4 nopadding">
+            <p>About UBC Chem-E-Car</p>
+            <ul>
+              <li><a href="history.html">History</a></li>
+              <li><a href="whatwedo.html">What We Do</a></li>
+              <li><a href="achievements.html">Achievements</a></li>
+              <li><a href="http://blog.ubcchemecar.com">Blog</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 nopadding">
+            <p>Funding and Sponsorship</p>
+            <ul>
+              <li><a href="sponsors.html">Our Sponsors</a></li>
+            </ul>
+          </div>               
+          <div class="col-lg-4 nopadding">
+            <p>Meet the Team</p>
+            <ul>  
+              <li><a href="team.html">Team Members</a></li>
+              <li><a href="alumni.html">Alumni Members</a></li> 
+              <li><a href="joinus.html"> Join Us </a></li>              
+            </ul>
+          </div>                       
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <script src="js/jquery.js"></script>
-    <script type="text/javascript">
-        $('.carousel').carousel()
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="assets/js/classie.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/smoothscroll.js"></script>
+  <script src="assets/js/jquery.stellar.min.js"></script>
+  <script src="assets/js/fancybox/jquery.fancybox.js"></script>    
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/autohidingnavbar.js"></script>
+    <script>
+      $(function(){
+        $.stellar({
+          horizontalScrolling: false,
+          verticalOffset: 40
+        });
+      });
     </script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/wow.min.js"></script>
-</body>
+    
+    <script type="text/javascript">
+
+      $(function() {
+        //    fancybox
+          jQuery(".fancybox").fancybox();
+      });
+      // $(".navbar-fixed-top").autoHidingNavbar({
+      //   // see next for specifications
+      // });
+      
+     </script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-63367875-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+  <script>
+   window.HFCHAT_CONFIG = {
+       EMBED_TOKEN: "3ba0c7c0-8bf1-11e5-b908-a528ef4e25be",
+       ACCESS_TOKEN: "d12b438b0c77403bb3040adbf35ec2f9",
+       HOST_URL: "https://happyfoxchat.com",
+       ASSETS_URL: "https://d1l7z5ofrj6ab8.cloudfront.net/visitor"
+   };
+
+  (function() {
+    var scriptTag = document.createElement('script');
+    scriptTag.type = 'text/javascript';
+    scriptTag.async = true;
+    scriptTag.src = window.HFCHAT_CONFIG.ASSETS_URL + '/js/widget-loader.js';
+
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(scriptTag, s);
+  })();
+  </script>
+  </body>
 </html>

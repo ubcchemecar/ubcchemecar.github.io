@@ -1,0 +1,22 @@
+.carousel-content{
+  text-shadow: 1px 1px 1px #000;
+}
+
+.carousel-content h3{
+  color: #fff;
+}
+
+/* For the team page*/
+.admin{
+  color: #000;
+}
+
+.team-head{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.team-row{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
