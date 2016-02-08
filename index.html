@@ -305,6 +305,9 @@
     <section id="content">
         <div class="container">
             <div class="row">
+                <div class="center wow fadeInDown">
+                    <h2>About UBC Chem-E-Car</h2>  
+                </div>      
                 <div class="col-xs-12 col-sm-12 wow fadeInDown">
                    <div class="tab-wrap"> 
                         <div class="media">
@@ -380,6 +383,15 @@
             </div><!--/.row-->
         </div><!--/.container-->
     </section><!--/#content-->
+
+      <div class="container">
+        <div class="row">
+            <div class="center wow fadeInDown">
+                <h2>We're on Instagram!</h2>  
+                <div id="instafeed"></div>
+            </div>
+        </div>  
+      </div>
 
     <section id="partner">
         <div class="container">
@@ -479,9 +491,36 @@
     </footer><!--/#footer-->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/simplyscroll.min.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="js/instafeed.min.js"></script>
+
+    <script type="text/javascript">
+    (function ($) {
+              $(function () { 
+        i = new Instafeed({
+            get: "user",
+            target: "instafeed",
+            userId: 1916181001,
+            clientId: "bd3d8de50ef54fd79d0ba89857382adf",
+            limit: 10,
+            resolution: "low_resolution",
+            after: function() {
+                $("#instafeed").simplyScroll({
+                    speed: 1,
+                    frameRate: 20,
+                    orientation: "horizontal",
+                    direction: "forwards",
+                    customClass: "instagram_scroller"
+                });
+            }
+        });
+        i.run()
+    });
+    })(jQuery);
+    </script>    
 </body>
 </html>
