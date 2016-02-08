@@ -20,3 +20,7 @@
   margin-top: 50px;
   margin-bottom: 50px;
 }
+
+.img-shadow{
+  box-shadow: 5px 5px 4px #888888;
+}
