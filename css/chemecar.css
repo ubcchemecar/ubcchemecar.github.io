@@ -6,6 +6,12 @@
   color: #fff;
 }
 
+/* For the tagline in index */
+#tagline{
+  color: #FFE328;
+  text-shadow: 1px 1px 1px #000;
+}
+
 /* For the team page*/
 .admin{
   color: #000;

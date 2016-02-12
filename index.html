@@ -3,8 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The University of British Columbia Chem-E-Car Engineering Design Team competes in the annual AIChE Chem-E-Car competition. Every year, we recruit a team of dedicated and skilled UBC students to build a shoebox-sized car from scratch and compete in the Pacific Northwest Regionals.">
-    <!-- <meta name="author" content=""> -->
+    <meta name="description" content="The University of British Columbia Chem-E-Car Engineering Design Team competes in the annual AIChE Chem-E-Car competition. Every year, UBC Chem-E-Car recruits a team of dedicated and skilled UBC students to build a new shoebox-sized car from scratch using innovative power sources and compete in the Pacific Northwest Regionals.">
+    <meta name="author" content="C. Siang Lim">
+    <meta name="keywords" content="ubc,vancouver,chemecar,aiche,ubcchemecar,engineering,circuits,battery,fuel cells">
     <title>Home | UBC Chem-E-Car</title>
 	
 	<!-- core CSS -->
@@ -20,10 +21,6 @@
     <script src="js/respond.min.js"></script>
     <![endif]-->       
     <link rel="shortcut icon" href="images/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 
 <body class="homepage">
@@ -69,9 +66,9 @@
                         <div class="row slide-margin">
                             <div class="col-sm-6">
                                 <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">UBC Chem-E-Car</h1>
-                                    <h3 class="animation animated-item-4">A University of British Columbia Engineering Design Team</h4>
-                                    <h2 class="animation animated-item-2">We compete in the annual AIChE Chem-E-Car competition with other North American teams.</h2>
+                                    <h1 class="animation animated-item-1">Interested in <span id="tagline">Energy?</span></h1>
+                                    <h3 class="animation animated-item-4">A University of British Columbia Engineering Design Team.</h4>
+                                    <h2 class="animation animated-item-2">UBC Chem-E-Car competes in the annual AIChE Chem-E-Car competition with other North American teams.</h2>
                                     <a class="btn-slide animation animated-item-3" href="team.html">Meet the Team</a>
                                 </div>
                             </div>
@@ -464,7 +461,7 @@
                         </div>
                         <div class="media-body">
                             <h2>Interested in the team?</h2>
-                            <p>UBC Chem-E-Car welcomes new members from all faculties and engineering departments. As with other engineering design teams on campus, we value commitment and dedication over experience. We strive to provide opportunities for UBC students to get more involved on campus and gain valuable hands-on engineering experience by working on fun and interesting projects as a group. We will not turn away <b>anyone</b> who is interested in contributing to the team! Feel free to email us at <b>captain@ubcchemecar.com</b> and briefly introduce yourself or drop by during our <a href="contact.html">regular meetings.</a></p>
+                            <p>UBC Chem-E-Car welcomes new members from all faculties and engineering departments. As with other engineering design teams on campus, we value commitment and dedication over prior experience. We strive to provide opportunities for UBC students to get more involved on campus and gain valuable hands-on engineering experience by working on fun and interesting projects as a group. We will not turn away <b>anyone</b> who is interested in contributing to the team! Feel free to email us at <b>captain@ubcchemecar.com</b> and briefly introduce yourself or drop by during our <a href="contact.html">regular meetings.</a></p>
                         </div>
                     </div>
                 </div>
@@ -531,6 +528,18 @@
       ga('create', 'UA-63367875-1', 'auto');
       ga('send', 'pageview');
 
+    </script>    
+    <script>
+        var text = ["Batteries?", "Fuel Cells?", "Engineering?", "Research?", "Chemistry?", "Energy?"];
+        var counter = 0;
+        var elem = document.getElementById("tagline");
+        setInterval(change, 3000);
+        function change() {
+            $(elem).fadeOut(400, function() {
+                $(elem).html(text[counter++]).fadeIn(400);
+                if (counter >= text.length) counter = 0;
+            });
+        }
     </script>    
 </body>
 </html>
