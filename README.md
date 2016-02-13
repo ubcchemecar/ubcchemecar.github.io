@@ -8,6 +8,6 @@ Greetings from the UBC Chem-E-Car team at the University of British Columbia. Yo
 * Using the Bootstrap 3 framework
 * Based on the [Corlate Theme](http://shapebootstrap.net/item/1524962-corlate-free-responsive-business-html-template/live-demo) by ShapeBoostrap
 * Instafeed.js - http://instafeedjs.com/
- 
+
 ### Copyright
 Copyright 2016 UBC Chem-E-Car Engineering Design Team

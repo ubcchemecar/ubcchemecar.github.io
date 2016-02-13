@@ -67,8 +67,8 @@
                             <div class="col-sm-6">
                                 <div class="carousel-content">
                                     <h1 class="animation animated-item-1">Interested in <span id="tagline">Energy?</span></h1>
-                                    <h3 class="animation animated-item-4">A University of British Columbia Engineering Design Team.</h4>
-                                    <h2 class="animation animated-item-2">UBC Chem-E-Car competes in the annual AIChE Chem-E-Car competition with other North American teams.</h2>
+                                    <h3 class="animation animated-item-2">UBC Chem-E-Car competes in the annual AIChE Chem-E-Car competition with other North American teams. We also work on smaller side projects throughout the year.</h4>
+                                    <h2 class="animation animated-item-4">Learn new skills and have fun! We're all pretty chill.</h2>
                                     <a class="btn-slide animation animated-item-3" href="team.html">Meet the Team</a>
                                 </div>
                             </div>
@@ -126,7 +126,7 @@
         <div class="container">
            <div class="center wow fadeInDown">
                 <h2>Why Join Chem-E-Car?</h2>
-                <p class="lead">UBC Chem-E-Car consists of vaguely defined sub-teams with many different (and some overlapping) roles. <br> We have many people who work hard to make the car a reality, find out more on our <a href="team.html">team page</a>! </p>
+                <p class="lead">The UBC Chem-E-Car team consists of 6 vaguely defined sub-teams with many different (and some overlapping) roles. <br> We have many members who work hard to make the car a reality, find out more on our <a href="team.html">team page</a>! </p>
             </div>
 
             <div class="row">
@@ -310,16 +310,17 @@
                         <div class="media">
                             <div class="parrent pull-left">
                                 <ul class="nav nav-tabs nav-stacked">
-                                    <li class=""><a href="#tab1" data-toggle="tab" class="analistic-01">What's a Chem-E-Car?</a></li>
-                                    <li class="active"><a href="#tab2" data-toggle="tab" class="analistic-02">The Challenges</a></li>
+                                    <li class="active"><a href="#tab1" data-toggle="tab" class="analistic-01">What's a Chem-E-Car?</a></li>
+                                    <li class=""><a href="#tab2" data-toggle="tab" class="analistic-02">The Competition</a></li>
                                     <li class=""><a href="#tab3" data-toggle="tab" class="tehnical">History</a></li>
                                     <li class=""><a href="#tab4" data-toggle="tab" class="tehnical">Sponsorship</a></li>
+                                    <li class=""><a href="#tab5" data-toggle="tab" class="tehnical">Our Awards</a></li>
                                 </ul>
                             </div>
 
                             <div class="parrent media-body">
                                 <div class="tab-content">
-                                    <div class="tab-pane fade" id="tab1">
+                                    <div class="tab-pane fade active in" id="tab1">
                                         <div class="media">
                                            <div class="pull-left">
                                                 <img class="img-responsive" src="images/tabs/tab1.jpg">
@@ -331,7 +332,7 @@
                                         </div>
                                     </div>
 
-                                     <div class="tab-pane fade active in" id="tab2">
+                                     <div class="tab-pane fade" id="tab2">
                                         <div class="media">
                                            <div class="pull-left">
                                                 <img class="img-responsive" src="images/tabs/tab2.jpg">
@@ -372,10 +373,25 @@
 
                                         <h2> For more information, please visit our <a href="sponsors.html">sponsorship page</a>.</h2>                                        
                                      </div>
+
+                                     <div class="tab-pane fade" id="tab5">
+                                        <h2>Recent Awards</h2>
+                                        <ul>
+                                            <li>
+                                                2016 CHBE Research Day - Best Presentation (Undergraduate Design Team Category)
+                                            </li>
+                                            <li>
+                                                2015 LNG in BC Conference - First Runner-up (Innovation Engineering Poster Presentation)
+                                            </li>                                            
+                                        </ul>                                        
+                                     </div>
+
                                 </div> <!--/.tab-content-->  
                             </div> <!--/.media-body--> 
                         </div> <!--/.media-->     
-                    </div><!--/.tab-wrap-->               
+                    </div><!--/.tab-wrap-->   
+
+
                 </div><!--/.col-sm-6-->
             </div><!--/.row-->
         </div><!--/.container-->
@@ -461,7 +477,7 @@
                         </div>
                         <div class="media-body">
                             <h2>Interested in the team?</h2>
-                            <p>UBC Chem-E-Car welcomes new members from all faculties and engineering departments. As with other engineering design teams on campus, we value commitment and dedication over prior experience. We strive to provide opportunities for UBC students to get more involved on campus and gain valuable hands-on engineering experience by working on fun and interesting projects as a group. We will not turn away <b>anyone</b> who is interested in contributing to the team! Feel free to email us at <b>captain@ubcchemecar.com</b> and briefly introduce yourself or drop by during our <a href="contact.html">regular meetings.</a></p>
+                            <p>UBC Chem-E-Car welcomes new members from all faculties and engineering departments. As with other engineering design teams on campus, we value commitment and dedication over prior technical experience. We strive to provide opportunities for UBC students to get more involved on campus and gain valuable hands-on engineering experience by working on fun and interesting projects as a group. We will not turn away <b>anyone</b> who is interested in contributing to the team! Feel free to email us at <b>captain@ubcchemecar.com</b> and briefly introduce yourself or drop by during our <a href="contact.html">regular meetings.</a></p>
                         </div>
                     </div>
                 </div>
@@ -530,7 +546,7 @@
 
     </script>    
     <script>
-        var text = ["Batteries?", "Fuel Cells?", "Engineering?", "Research?", "Chemistry?", "Energy?"];
+        var text = ["Batteries?", "Fuel Cells?", "Circuits?", "Engineering?", "Research?", "Chemistry?", "Energy?"];
         var counter = 0;
         var elem = document.getElementById("tagline");
         setInterval(change, 3000);
