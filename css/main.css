@@ -391,6 +391,7 @@ input.search-form:hover {
   border-radius: 4px;
   margin-top: 25px;
   display: inline-block;
+  background-color:rgba(50, 81, 127, 0.8);
 }
 
 #main-slider .carousel .slider-img{
