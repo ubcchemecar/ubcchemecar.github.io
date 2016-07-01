@@ -189,7 +189,7 @@ body > section {
 }
 
 .navbar-brand img {
-  height: 75%;
+  height: 70%;
   position: absolute;
 }
 
@@ -621,6 +621,7 @@ input.search-form:hover {
 
 .recent-work-wrap img{
   width: 100%;
+  padding: 5px;
 }
 
 .recent-work-wrap .recent-work-inner{
