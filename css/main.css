@@ -181,11 +181,16 @@ body > section {
 
 .navbar{
   font-family: 'Orbitron', sans-serif;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .navbar>.container .navbar-brand{
   margin-left: 0;
+}
+
+.navbar-brand img {
+  width: 20%;
+  position: absolute;
 }
 
 .navbar-toggle {
