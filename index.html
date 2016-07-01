@@ -577,12 +577,12 @@
   (function ($) {
     $(function () { 
       i = new Instafeed({
-        get: "user",
-        target: "instafeed",
+        get: 'user',
         userId: 1916181001,
-        clientId: "533bedde9cc84450bae1dbf7360541b1",
+        clientId: '533bedde9cc84450bae1dbf7360541b1',
+        accessToken: '1916181001.1677ed0.a8641350606647c781b0228896ae79df',
+        target: "instafeed",
         limit: 10,
-        resolution: "low_resolution",
         after: function() {
           $("#instafeed").simplyScroll({
             speed: 1,
