@@ -6,6 +6,16 @@
   color: #fff;
 }
 
+.footer-social li{
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.logoEnd{
+    margin-top: 50px;
+}
+
 .pp_default{
   background: white;
 }
