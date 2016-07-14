@@ -199,8 +199,7 @@
                 <h3>Athanasios (Thanos) Kritharis</h3>
                 <h4><b>Team Captain</b>, Finance <a class="pull-right" href="https://ca.linkedin.com/in/athanasios-kritharis-180693a5"><i class="fa fa-2x fa-linkedin-square"> &nbsp;</i></a></h4>
                 <hr>
-                <p>Athanasios (Thanos) is currently in his 3rd year of involvement with Chem-E-Car. He has watched the team grow from 5 dedicated students to the 30+ Organization that it is today. Under his leadership Chem-E-Car has expanded to include innovations in the LNG sector, development of novel forms of rechargeable batteries, and increased public outreach and education on fuel cells and other forms of energy storage. He hopes to further empower even more students in pursuing their passion to develop technologies for the benefit of all.</p>
-
+                <p id="user_7"></p>
             </div>
         </div>      
         <div class="col-md-6 col-sm-12 col-xs-12">
@@ -217,7 +216,7 @@
                 <h3>Siang Lim</h3>
                 <h4>Can't Even Title<a class="pull-right" href="https://ca.linkedin.com/in/c-siang-lim-98535048"><i class="fa fa-2x fa-linkedin-square"> &nbsp;</i></a></h4>                
                 <hr>
-                <p>I'm a 4th year CHBE student completing a CPSC minor because why not. I'm entering my second year of involvement with the Chem-E-Car battery team and will be responsible for expanding the team's financial capabilities to take on bigger engineering projects. My role is focused on leading our finance and marketing teams to identify and apply effectively for strategic funding opportunities. I enjoy completing assignments and writing CHBE lab reports. In my spare time... What do you mean spare time?!!</p>
+                <p id="user_1"></p>
             </div>
         </div>         
       </div>   <!-- End team row -->  
@@ -413,7 +412,7 @@
                 <h3>Mani Massah</h3>
                 <h4>Senior Battery Lead <a class="pull-right" href="https://ca.linkedin.com/in/mani-massah-172907b0"><i class="fa fa-2x fa-linkedin-square"> &nbsp;</i></a></h4>
                 <hr>
-                <p>Mani is a 4th year chemical engineering student with an interest in electrochemistry. He is working on creating alkaline batteries as an alternative to the zinc air batteries that are currently being used in the car. He has recently become very involved with Chem-E-Car and loves hanging out with the team.</p>
+                <p id="user_8"></p>
             </div>
         </div>        
         <div class="col-md-6 col-sm-12 col-xs-12">
@@ -430,7 +429,7 @@
                 <h3>Arjun Bhagwat</h3>
                 <h4>Junior Battery Lead <a class="pull-right" href="https://ca.linkedin.com/in/arjun-bhagwat-7b6345b6"><i class="fa fa-2x fa-linkedin-square"> &nbsp;</i></a></h4>
                 <hr>
-                <p>Arjun is a first year engineering student and part of the battery team. He has a strong interest in energy generation through chemical reactions. He is a dedicated learner and hopes to gain a great experience while being part of this amazing team. He is ready to accept challenges and will put in his best efforts to lift up the team.</p>
+                <p id="user_3"></p>
             </div>
         </div>            
       </div> <!-- end row -->
@@ -491,7 +490,7 @@
                 <h3>Andrew May</h3>
                 <h4>Imagineer<a class="pull-right" href="https://ca.linkedin.com/in/andrew-may-1b31b796"><i class="fa fa-2x fa-linkedin-square"> &nbsp;</i></a></h4>
                 <hr>
-                <p>Andrew is a third year Chemical Engineering student. He joined Chem-E-Car in 2015 and will be helping with the development of the new battery. He is also involved with promoting activity on the Facebook page. In his free time Andrew enjoys participating in gymnastics, hip-hop dance, and Super-Smash-Bros.</p>
+                <p id="user_5"></p>
             </div>
         </div>      
         <div class="col-md-6 col-sm-12 col-xs-12">
@@ -546,8 +545,7 @@
                 <h3>Fiona D'Silva</h3>
                 <h4>Battery Team</h4>
                 <hr>
-                <p>Fiona is an aspiring chemical engineer who recently joined the Chem-E-Car battery team. She will be assisting with the research and development of an efficient battery for the car. Her interests lie in clean energy generation and sustainability in engineering. Aside from her busy engineering life, she enjoys playing the violin and writing.
-                </p>
+                <p id="user_4"></p>
             </div>
         </div>        
       </div>   <!-- End team row -->            
@@ -916,7 +914,7 @@
                 <h3>Ngai To Lo</h3>
                 <h4>Electrical Team Lead, Logistics</h4>
                 <hr>
-                <p>Ngai To is in his second year of chemical engineering. His love for all disciplines of science has made him find himself working with the mechanical team learning new concepts and bringing in his positive attitude. Ngai To enjoys people places and things. He is non-discriminatory and accepts proper pronouns as well.</p>
+                <p id="user_6"></p>
             </div> 
         </div>      
         <div class="col-md-6 col-sm-12 col-xs-12">
@@ -1332,6 +1330,19 @@
     <script src="js/jquery.isotope.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/wow.min.js"></script>
+    <script type = "text/javascript" language = "javascript">
+       $(document).ready(function() {
+      
+         $.getJSON('http://finance.ubcchemecar.com/admin/users.json', function(jd) {
+            $.each(jd, function(i,item){
+              if (document.getElementById("user_" + item.id) != null){
+                document.getElementById("user_" + item.id).innerHTML = item.biography
+              }
+            });
+          });
+    
+       });
+    </script>    
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
