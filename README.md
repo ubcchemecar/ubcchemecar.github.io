@@ -5,6 +5,9 @@ Greetings from the UBC Chem-E-Car team at the University of British Columbia. Yo
 
 ![Team Photo](http://www.ubcchemecar.com/images/team/2015/full.jpg)
 
+### Sponsorship
+UBC Chem-E-Car acknowledges the **Daniel Family Foundation** as our Exclusive Diamond Sponsor for their very generous donation to the team. We would like to extend our special thanks to the Foundation for their outstanding support for student development at UBC.
+
 ### Details and Credits
 * Site hosted on GitHub Pages
 * Using the Bootstrap 3 framework
@@ -16,4 +19,4 @@ Greetings from the UBC Chem-E-Car team at the University of British Columbia. Yo
 =======
  
 ### Copyright
-Copyright 2016 UBC Chem-E-Car Engineering Design Team
+Copyright 2016-2017 UBC Chem-E-Car Engineering Design Team

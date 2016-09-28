@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,300,800);
+@import 'https://fonts.googleapis.com/css?family=Orbitron:700';
 
 
 /*************************
@@ -178,8 +179,29 @@ body > section {
   display: inline-block;
 }
 
+.navbar{
+  font-family: 'Orbitron', sans-serif;
+  font-size: 15px;
+}
+
 .navbar>.container .navbar-brand{
   margin-left: 0;
+}
+
+.navbar-brand img {
+  height: 70%;
+  position: absolute;
+}
+
+.navbar-toggle {
+  border: 1px solid #ccc;
+}
+.navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: #cccccc;
+  border-radius: 1px;
 }
 
 .top-bar {
@@ -265,7 +287,7 @@ input.search-form:hover {
 .navbar {
   border-radius: 0;
   margin-bottom: 0;
-  background: #151515;
+  /*background: #151515;*/
   padding: 15px 0;
   padding-bottom: 0;
 }
@@ -391,6 +413,7 @@ input.search-form:hover {
   border-radius: 4px;
   margin-top: 25px;
   display: inline-block;
+  background-color:rgba(50, 81, 127, 0.8);
 }
 
 #main-slider .carousel .slider-img{
@@ -598,6 +621,7 @@ input.search-form:hover {
 
 .recent-work-wrap img{
   width: 100%;
+  padding: 5px;
 }
 
 .recent-work-wrap .recent-work-inner{
@@ -2489,11 +2513,18 @@ shortcodes page css
 
 #footer ul {
   list-style: none;
+}
+
+#footer ul > li{
+  margin-top: 10px;
+}
+.logoEnd ul {
+  list-style: none;
   padding: 0;
   margin: 0;
 }
 
-#footer ul > li {
+.logoEnd ul > li {
   display: inline-block;
   margin-left: 15px;
 }
