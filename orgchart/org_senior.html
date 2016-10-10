@@ -46,9 +46,13 @@
         var role = raw_data.getValue(i, 0);
         var reportsTo = raw_data.getValue(i,1);
         var name = raw_data.getValue(i,2) != null ? raw_data.getValue(i,2) : '';
-        data.addRows([[{ v: role,
-                    f: name + "<div class='role'>" + role + "</div>"
-                }, reportsTo, name]]);
+        var url = raw_data.getValue(i,3);
+        data.addRows([[
+          { v: role,
+            f: name + "<div class='role'>" + role + "</div>"
+          }, 
+          reportsTo, 
+          name, url]]);
       }
 
       var container = document.getElementById('orgchart_admin');
