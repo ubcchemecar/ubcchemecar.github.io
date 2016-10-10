@@ -6,11 +6,13 @@
   <meta name="description" content="UBC Chem-E-Car Organization Chart">
   <!-- <meta name="author" content=""> -->
   <title>Org Chart - Admin | UBC Chem-E-Car</title>
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/main.css" rel="stylesheet">
+  <link href="../css/chemecar.css" rel="stylesheet">
 
   <style>
-    .role{
-      font-size: 12px;
-      color: blue;
+    body{
+      line-height: 18px;
     }
   </style>
 
@@ -48,6 +50,7 @@
         var reportsTo = raw_data.getValue(i,1);
         var name = raw_data.getValue(i,2) != null ? raw_data.getValue(i,2) : '';
         var url = raw_data.getValue(i,3);
+        console.log(url)
         data.addRows([[
           { v: role,
             f: name + "<div class='role'>" + role + "</div>"
@@ -58,9 +61,7 @@
 
       var container = document.getElementById('orgchart_admin');
       var chart = new google.visualization.OrgChart(container);
-      chart.draw(data, {allowHtml:true, 'size': 'medium', allowCollapse:true});
-
-      chart.collapse(2,1);
+      chart.draw(data, {allowHtml:true, 'size': 'large'});
 
       container.addEventListener('click', function (e) {
         e.preventDefault();
@@ -88,32 +89,71 @@
         }
       });
 
+      chart.collapse(2,1);      
     }
   </script>
 </head>
 
 <body>
-  <center>
-    <h1>2016-2017 UBC Chem-E-Car Administration Team</h1>
-    <h3>Click to expand view</h3>
-  </center>
+  <header id="header">
+      <nav class="navbar " role="banner">
+          <div class="container">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="../index.html"><img src="../images/common/logo.png" alt="logo"></a>
+              </div>
+      
+              <div class="collapse navbar-collapse navbar-right">
+                  <ul class="nav navbar-nav">
+                      <li><a href="../index.html">Home</a></li>
+                      <li><a href="../team.html">Team</a></li>
+                      <li class="../active"><a href="../sponsors.html">Sponsors</a></li>
+                      <li><a href="../projects.html">Projects</a></li>
+                      <li><a href="../contact.html">Contact</a></li><li><a href="http://blog.ubcchemecar.com">Blog</a></li>                        
+                  </ul>
+              </div>
+          </div><!--/.container-->
+      </nav><!--/nav-->
+  
+  </header><!--/header-->
 
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1>2016-2017 UBC Chem-E-Car Admin Team</h1>
+        <br />
+      </div>
+      <div class="col-md-12 text-center">
+        <div id="orgchart_admin"></div>
+        <br />
+        <hr>
+      </div>
+  </div>
 
-  <br />
-  <div id="orgchart_admin"></div>
-  <br />
-  <hr>
-  <h2>
-    <center>
-      <a href="org_admin.html">Admin</a> | 
-      <a href="org_senior.html">Senior Car</a> | 
-      <a href="org_junior.html">Junior Car</a> | 
-      <a href="org_app.html">AIChE App</a> | 
-      <a href="org_flow.html">Flow Battery</a>
+  <div class="container">
+    <div class="row text-center">
+      <h2>
+        <p>
+          <a href="org_admin.html">Admin</a> | 
+          <a href="org_senior.html">Senior Car</a> | 
+          <a href="org_junior.html">Junior Car</a> | 
+          <a href="org_app.html">AIChE App</a> | 
+          <a href="org_flow.html">Flow Battery</a>
+          <br>
+        </p>
+      </h2>
+    </div>
+    <div class="row text-center">
       <p>
-        <a href="../index.html"><img src="../images/common/logo.png" width="200px"></a>
-      </p>              
-    </center>
-  </h2>
-  </body>
+       <a href="../index.html"><img src="../images/common/logo.png" width="200px"></a>
+      </p>     
+    </div>         
+  </div>
+
+</body>
 </html>
