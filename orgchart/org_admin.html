@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="UBC Chem-E-Car Organization Chart">
+  <!-- <meta name="author" content=""> -->
+  <title>Org Chart - Admin | UBC Chem-E-Car</title>
+
+  <style>
+    .role{
+      font-size: 12px;
+      color: blue;
+    }
+  </style>
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages' : ['orgchart', 'table']});
+    google.charts.setOnLoadCallback(function() { initialize() });
+
+    function initialize() {
+      var dataSourceUrl = 'https://docs.google.com/spreadsheets/d/1daLouav56XqtTl2FBI319GwcysiATxwPYG3e6u7QUhI/gviz/tq?';
+      var query = new google.visualization.Query(dataSourceUrl + '&headers=1');
+
+      // Send the query with a callback function.
+      query.send(handleQueryResponse);
+    }
+
+    function handleQueryResponse(response) {
+      // Called when the query response is returned.
+      if (response.isError()) {
+        alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+        return;
+      }
+
+      var raw_data = response.getDataTable();
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Entity');
+      data.addColumn('string', 'ParentEntity');
+      data.addColumn('string', 'ToolTip');
+
+      var num_rows = raw_data.getNumberOfRows();
+      for (var i = 0; i < num_rows; i++) {
+        var role = raw_data.getValue(i, 0);
+        var reportsTo = raw_data.getValue(i,1);
+        var name = raw_data.getValue(i,2);
+        data.addRows([[{ v: role,
+                    f: name + "<div class='role'>" + role + "</div>"
+                }, reportsTo, name]]);
+      }
+
+      var container = document.getElementById('orgchart_admin');
+      var chart = new google.visualization.OrgChart(container);
+      chart.draw(data, {allowHtml:true, 'size': 'medium'});
+    }
+  </script>
+</head>
+
+<body>
+  <h1><center>2016-2017 UBC Chem-E-Car Administration Team<center></h1>
+  <br />
+  <div id="orgchart_admin"></div>
+  <br />
+  <hr>
+  <h2>
+    <center>
+      <a href="org_admin.html">Admin</a> | 
+      <a href="org_senior.html">Senior Car</a> | 
+      <a href="org_junior.html">Junior Car</a> | 
+      <a href="org_app.html">AIChE App</a> | 
+      <a href="org_flow.html">Flow Battery</a>
+      <p>
+        <a href="../index.html"><img src="../images/common/logo.png" width="200px"></a>
+      </p>              
+    </center>
+  </h2>
+  </body>
+</html>
