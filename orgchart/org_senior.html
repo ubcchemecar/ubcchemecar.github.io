@@ -63,7 +63,7 @@
       google.visualization.events.addListener(chart, 'select', function() {
         var current_row = chart.getSelection()[0].row;
         if(data.getValue(current_row,3)){
-           window.open(data.getValue(current_row,3),'_self',false);
+           window.open(data.getValue(current_row,3),"_self");
         }
       });      
     }
