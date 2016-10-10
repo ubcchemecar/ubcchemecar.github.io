@@ -16,13 +16,22 @@
     var dataSourceUrl = 'https://docs.google.com/spreadsheets/d/1daLouav56XqtTl2FBI319GwcysiATxwPYG3e6u7QUhI/gviz/tq?';
     var query;
 
+    var dataSourceUrl_junior = 'https://docs.google.com/spreadsheets/d/1HZys1U3JEAJgRUKPLX7Q8i01AvV1l2_STOvVg1lOx10/gviz/tq?';
+
     function sendAndDraw() {
-      var container = document.getElementById('orgchart');
+      var container = document.getElementById('orgchart_admin');
       var orgChart = new google.visualization.OrgChart(container);
       query && query.abort();
       query = new google.visualization.Query(dataSourceUrl + '&headers=1');
       var queryWrapper = new QueryWrapper(query, orgChart, {'size': 'large'}, container);
       queryWrapper.sendAndDraw();
+
+      var container = document.getElementById('orgchart_junior');
+      var orgChart = new google.visualization.OrgChart(container);
+      query && query.abort();
+      query = new google.visualization.Query(dataSourceUrl_junior + '&headers=1');
+      var queryWrapper = new QueryWrapper(query, orgChart, {'size': 'large'}, container);
+      queryWrapper.sendAndDraw();      
     }
 
 
@@ -30,8 +39,14 @@
 </head>
 
 <body>
-<h1>2016-2017 UBC Chem-E-Car Team</h1>
+<h1>2016-2017 UBC Chem-E-Car Administration Team</h1>
 <br />
-<div id="orgchart"></div>
+<div id="orgchart_admin"></div>
+<br />
+<hr>
+<h1>2016-2017 UBC Chem-E-Car Junior Car Team</h1>
+<br />
+<div id="orgchart_junior"></div>
+<br />
 </body>
 </html>
