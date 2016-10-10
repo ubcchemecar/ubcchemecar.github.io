@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="UBC Chem-E-Car Organization Chart">
+  <!-- <meta name="author" content=""> -->
+  <title>Orgchart | UBC Chem-E-Car</title>
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript" src="./js/queryWrapper.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages' : ['orgchart']});
+    google.charts.setOnLoadCallback(function() { sendAndDraw('') });
+
+    var dataSourceUrl = 'https://docs.google.com/spreadsheets/d/1daLouav56XqtTl2FBI319GwcysiATxwPYG3e6u7QUhI/gviz/tq?';
+    var query;
+
+    function sendAndDraw() {
+      var container = document.getElementById('orgchart');
+      var orgChart = new google.visualization.OrgChart(container);
+      query && query.abort();
+      query = new google.visualization.Query(dataSourceUrl + '&headers=1');
+      var queryWrapper = new QueryWrapper(query, orgChart, {'size': 'large'}, container);
+      queryWrapper.sendAndDraw();
+    }
+
+
+  </script>
+</head>
+
+<body>
+<h1>2016-2017 UBC Chem-E-Car Team</h1>
+<br />
+<div id="orgchart"></div>
+</body>
+</html>
