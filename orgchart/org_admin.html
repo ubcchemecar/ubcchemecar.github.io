@@ -45,7 +45,8 @@
       for (var i = 0; i < num_rows; i++) {
         var role = raw_data.getValue(i, 0);
         var reportsTo = raw_data.getValue(i,1);
-        var name = raw_data.getValue(i,2);
+        var name = raw_data.getValue(i,2) != null ? raw_data.getValue(i,2) : '';
+        console.log(name)
         data.addRows([[{ v: role,
                     f: name + "<div class='role'>" + role + "</div>"
                 }, reportsTo, name]]);
