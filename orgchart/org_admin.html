@@ -40,16 +40,21 @@
       data.addColumn('string', 'Entity');
       data.addColumn('string', 'ParentEntity');
       data.addColumn('string', 'ToolTip');
+      data.addColumn('string', 'URL');
 
       var num_rows = raw_data.getNumberOfRows();
       for (var i = 0; i < num_rows; i++) {
         var role = raw_data.getValue(i, 0);
         var reportsTo = raw_data.getValue(i,1);
         var name = raw_data.getValue(i,2) != null ? raw_data.getValue(i,2) : '';
+        var url = raw_data.getValue(i,3);
         console.log(name)
-        data.addRows([[{ v: role,
-                    f: name + "<div class='role'>" + role + "</div>"
-                }, reportsTo, name]]);
+        data.addRows([[
+          { v: role,
+            f: name + "<div class='role'>" + role + "</div>"
+          }, 
+          reportsTo, 
+          name, url]]);
       }
 
       var container = document.getElementById('orgchart_admin');
@@ -76,7 +81,14 @@
         chart.setSelection([]);
         return false;
       }, false); 
-           
+
+      google.visualization.events.addListener(chart, 'select', function() {
+        var current_row = chart.getSelection()[0].row;
+        if(data.getValue(current_row,3)){
+           window.open(data.getValue(current_row,3));
+        }
+      });
+
     }
   </script>
 </head>
