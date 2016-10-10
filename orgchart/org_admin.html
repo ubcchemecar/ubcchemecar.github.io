@@ -53,7 +53,31 @@
 
       var container = document.getElementById('orgchart_admin');
       var chart = new google.visualization.OrgChart(container);
-      chart.draw(data, {allowHtml:true, 'size': 'medium'});
+      chart.draw(data, {allowHtml:true, 'size': 'medium', allowCollapse:true});
+
+      chart.collapse(3,1);
+      chart.collapse(4,1);
+      chart.collapse(5,1);
+
+      container.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (e.target.tagName.toUpperCase() === 'A') {
+          console.log(e.target.href);
+          // window.open(e.target.href, '_blank');
+          // or
+          // location.href = e.target.href;
+        } else {
+          var selection = chart.getSelection();
+          if (selection.length > 0) {
+            var row = selection[0].row;
+            var collapse = (chart.getCollapsedNodes().indexOf(row) == -1);
+            chart.collapse(row, collapse);
+          }
+        }
+        chart.setSelection([]);
+        return false;
+      }, false); 
+           
     }
   </script>
 </head>
