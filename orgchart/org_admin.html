@@ -55,9 +55,7 @@
       var chart = new google.visualization.OrgChart(container);
       chart.draw(data, {allowHtml:true, 'size': 'medium', allowCollapse:true});
 
-      chart.collapse(3,1);
-      chart.collapse(4,1);
-      chart.collapse(5,1);
+      chart.collapse(2,1);
 
       container.addEventListener('click', function (e) {
         e.preventDefault();
@@ -83,7 +81,12 @@
 </head>
 
 <body>
-  <h1><center>2016-2017 UBC Chem-E-Car Administration Team<center></h1>
+  <center>
+    <h1>2016-2017 UBC Chem-E-Car Administration Team</h1>
+    <h3>Click to expand view</h3>
+  </center>
+
+
   <br />
   <div id="orgchart_admin"></div>
   <br />
