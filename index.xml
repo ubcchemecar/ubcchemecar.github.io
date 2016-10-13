@@ -1813,7 +1813,7 @@ $ vi themes/zafta/layouts/_default/single.html
 &lt;/blockquote&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Our regular meeting hours for the current academic term are listed in the &lt;a href=&#34;contact.html&#34;&gt;&lt;b&gt;Contact&lt;/b&gt; page&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Our regular meeting hours for the current academic term are listed in the &lt;a href=&#34;http://www.ubcchemecar.com/contact/&#34;&gt;&lt;b&gt;Contact&lt;/b&gt; page&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;We value passion, commitment and dedication over prior technical experience. We will &lt;b&gt;never&lt;/b&gt; turn away anyone who&amp;rsquo;s genuinely interested in learning and contributing to the team.&lt;/li&gt;
 &lt;li&gt;As a student-driven team, we understand that academics and schoolwork will be your first priority, and we do not expect you to work on our design team projects &lt;sup&gt;24&lt;/sup&gt;&amp;frasl;&lt;sub&gt;7&lt;/sub&gt; and neglect your assignments.&lt;/li&gt;
 &lt;li&gt;To be a valuable contributor to the team, you should have a strong sense of responsibility and the ability to work independently with minimal supervision. Your team lead can provide guidance and point you in the right direction, but you are expected to take charge of your own projects.&lt;/li&gt;
