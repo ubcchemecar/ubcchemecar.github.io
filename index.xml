@@ -1772,6 +1772,32 @@ $ vi themes/zafta/layouts/_default/single.html
     </item>
     
     <item>
+      <title>Internal Team Links</title>
+      <link>http://www.ubcchemecar.com/internal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ubcchemecar.com/internal/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://drive.google.com/drive/u/1/folders/0BxA5RJPqh-P_WlZvTlRvMi1GV00&#34;&gt;Google Drive&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;http://finance.ubcchemecar.com/&#34;&gt;Finance App&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://l.facebook.com/l.php?u=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1zPqP23Z02I8iavZ902oKUTuOukcSbLERkJTW3zqJMJU%2Fedit%23gid%3D0&amp;amp;h=oAQFsbOdl&#34;&gt;Lab Chemicals&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+</description>
+    </item>
+    
+    <item>
       <title>New Members Infopack</title>
       <link>http://www.ubcchemecar.com/infopack/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
