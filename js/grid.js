@@ -345,7 +345,7 @@ var Grid = (function() {
 			this.$title = $( '<h3></h3>' );
 			this.$role = $( '<h4></h4>' );
 			this.$description = $( '<p></p>' );
-			this.$href = $( '<a href="#" target="_blank"><i class="fa fa-linkedin fa-square-o"></i> Connect on LinkedIn</a>' );
+			this.$href = $( '<a href="#" target="_blank"></a>' );
 			this.$details = $( '<div class="og-details"></div>' ).append( this.$title, this.$role, this.$description, this.$href );
 			this.$loading = $( '<div class="og-loading"></div>' );
 			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
@@ -381,6 +381,7 @@ var Grid = (function() {
 			var $itemEl = this.$item.children( 'a' ),
 				eldata = {
 					href : $itemEl.attr( 'href' ),
+					href_desc : $itemEl.data ( 'href_desc' ),
 					largesrc : $itemEl.data( 'largesrc' ),
 					title : $itemEl.data( 'title' ),
 					role : $itemEl.data( 'role' ),
@@ -390,6 +391,7 @@ var Grid = (function() {
 			this.$title.html( eldata.title );
 			this.$role.html( eldata.role );
 			this.$description.html( eldata.description );
+			this.$href.html ( eldata.href_desc );
 			this.$href.attr( 'href', eldata.href );
 
 			var self = this;
