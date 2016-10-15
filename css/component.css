@@ -86,17 +86,22 @@
 	background: #333;
 }
 
-.og-fullimg,
-.og-details {
-	width: 50%;
+.og-fullimg{
+	width: 30%;
 	float: left;
 	height: 100%;
 	overflow: hidden;
 	position: relative;
 }
 
+
 .og-details {
-	padding: 0 40px 0 20px;
+	width: 70%;
+	float: left;
+	height: 100%;
+	overflow: hidden;
+	position: relative;	
+	padding: 0 20px 0 50px;
 }
 
 .og-fullimg {
