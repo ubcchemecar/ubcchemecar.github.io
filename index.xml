@@ -1908,12 +1908,11 @@ $ vi themes/zafta/layouts/_default/single.html
 &lt;p&gt;&lt;strong&gt;Mandatory Certificates, COMPLETE ASAP&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;ul&gt;
+&lt;ol&gt;
 &lt;li&gt;Engineering Design Team Safety Orientation&lt;/li&gt;
 &lt;li&gt;Preventing and Addressing Workplace Bullying and Harassment&lt;/li&gt;
-&lt;li&gt;WHMIS Training Course&lt;/li&gt;
-&lt;li&gt;Introduction to Lab Safety Course&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;Chemical Safety Course&lt;/li&gt;
+&lt;/ol&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;AIChE Registration and Safety Test, COMPLETE ASAP&lt;/strong&gt;&lt;/p&gt;
