@@ -2064,125 +2064,6 @@ $ vi themes/zafta/layouts/_default/single.html
     </item>
     
     <item>
-      <title>Orgchart</title>
-      <link>http://www.ubcchemecar.com/orgchart/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.ubcchemecar.com/orgchart/</guid>
-      <description>&lt;p&gt;&lt;div class=&#34;row text-center&#34;&gt;
-  &lt;h2&gt;
-    &lt;p&gt;
-      &lt;a href=&#34;javascript:initialize(&#39;https://docs.google.com/spreadsheets/d/1daLouav56XqtTl2FBI319GwcysiATxwPYG3e6u7QUhI/gviz/tq?&#39;)&#34;&gt;Admin&lt;/a&gt; |
-      &lt;a href=&#34;javascript:initialize(&#39;https://docs.google.com/spreadsheets/d/1-xv0UpGCs3OpxpSi7unufpw1BwCxz5k83x9GYJ34RLc/gviz/tq?&#39;)&#34;&gt;Senior Car&lt;/a&gt; |
-      &lt;a href=&#34;javascript:initialize(&#39;https://docs.google.com/spreadsheets/d/1HZys1U3JEAJgRUKPLX7Q8i01AvV1l2_STOvVg1lOx10/gviz/tq?&#39;)&#34;&gt;Junior Car&lt;/a&gt; |
-      &lt;a href=&#34;javascript:initialize(&#39;https://docs.google.com/spreadsheets/d/1qImsDykMfz-obbMsOQo6f_IW_xmNdtScByEhcnfU3S8/gviz/tq?&#39;)&#34;&gt;AIChE App&lt;/a&gt; |
-      &lt;a href=&#34;javascript:initialize(&#39;https://docs.google.com/spreadsheets/d/1I9MOhwVxOCA4Jo_bUX7g2grN7oyxtcRaNMrr2AlNtNc/gviz/tq?&#39;)&#34;&gt;Flow Battery&lt;/a&gt;
-      &lt;br&gt;
-    &lt;/p&gt;
-  &lt;/h2&gt;
-&lt;/div&gt;
-&lt;hr&gt;
-&lt;div id=&#34;orgchart_admin&#34;&gt;&lt;/div&gt;
-&lt;hr&gt;&lt;/p&gt;
-
-&lt;style&gt;
-body{
-  line-height: 18px !important;
-}
-table.google-visualization-orgchart-table {
-  border-collapse: inherit;
-}    
-
-.role{
-    font-size: small;
-    color: #1aa;
-}
-&lt;/style&gt;
-
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://www.gstatic.com/charts/loader.js&#34;&gt;&lt;/script&gt;
-&lt;script type=&#34;text/javascript&#34;&gt;
-google.charts.load(&#39;current&#39;, {&#39;packages&#39; : [&#39;orgchart&#39;, &#39;table&#39;]});
-google.charts.setOnLoadCallback(function() { initialize(&#39;&#39;) });
-
-function initialize(dataLink) {
-  if(dataLink){
-    var dataSourceUrl = dataLink;
-  }
-  else{
-    var dataSourceUrl = &#39;https://docs.google.com/spreadsheets/d/1daLouav56XqtTl2FBI319GwcysiATxwPYG3e6u7QUhI/gviz/tq?&#39;;
-  }
-  
-  var query = new google.visualization.Query(dataSourceUrl + &#39;&amp;headers=1&#39;);
-
-  // Send the query with a callback function.
-  query.send(handleQueryResponse);
-}
-
-function handleQueryResponse(response) {
-  // Called when the query response is returned.
-  if (response.isError()) {
-alert(&#39;Error in query: &#39; + response.getMessage() + &#39; &#39; + response.getDetailedMessage());
-return;
-  }
-
-  var raw_data = response.getDataTable();
-
-  var data = new google.visualization.DataTable();
-  data.addColumn(&#39;string&#39;, &#39;Entity&#39;);
-  data.addColumn(&#39;string&#39;, &#39;ParentEntity&#39;);
-  data.addColumn(&#39;string&#39;, &#39;ToolTip&#39;);
-  data.addColumn(&#39;string&#39;, &#39;URL&#39;);
-
-  var num_rows = raw_data.getNumberOfRows();
-  for (var i = 0; i &lt; num_rows; i++) {
-var role = raw_data.getValue(i, 0);
-var reportsTo = raw_data.getValue(i,1);
-var name = raw_data.getValue(i,2) != null ? raw_data.getValue(i,2) : &#39;&#39;;
-var url = raw_data.getValue(i,3);
-
-data.addRows([[
-  { v: role,
-f: name + &#34;&lt;div class=&#39;role&#39;&gt;&#34; + role + &#34;&lt;/div&gt;&#34;
-  }, 
-  reportsTo, 
-  name, url]]);
-  }
-
-  var container = document.getElementById(&#39;orgchart_admin&#39;);
-  var chart = new google.visualization.OrgChart(container);
-  chart.draw(data, {allowHtml:true, &#39;size&#39;: &#39;large&#39;});
-
-  container.addEventListener(&#39;click&#39;, function (e) {
-e.preventDefault();
-if (e.target.tagName.toUpperCase() === &#39;A&#39;) {
-  console.log(e.target.href);
-  // window.open(e.target.href, &#39;_blank&#39;);
-  // or
-  // location.href = e.target.href;
-} else {
-  var selection = chart.getSelection();
-  if (selection.length &gt; 0) {
-var row = selection[0].row;
-var collapse = (chart.getCollapsedNodes().indexOf(row) == -1);
-chart.collapse(row, collapse);
-  }
-}
-chart.setSelection([]);
-return false;
-  }, false); 
-
-  google.visualization.events.addListener(chart, &#39;select&#39;, function() {
-var current_row = chart.getSelection()[0].row;
-if(data.getValue(current_row,3)){
-   window.open(data.getValue(current_row,3),&#34;_self&#34;);
-}
-  });
-}
-&lt;/script&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Sponsorship</title>
       <link>http://www.ubcchemecar.com/sponsors/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -2204,6 +2085,15 @@ if(data.getValue(current_row,3)){
 
 &lt;h2 id=&#34;view-orgchart-orgchart&#34;&gt;&lt;a href=&#34;http://www.ubcchemecar.com/orgchart/&#34;&gt;View Orgchart&lt;/a&gt;&lt;/h2&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>orgchart</title>
+      <link>http://www.ubcchemecar.com/orgchart/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ubcchemecar.com/orgchart/</guid>
+      <description></description>
     </item>
     
   </channel>

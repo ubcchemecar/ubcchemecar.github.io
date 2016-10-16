@@ -7,7 +7,7 @@
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Orgchart</title>
+  <title>orgchart</title>
 
   <meta name="author" content="" />
   <meta name="keywords" content="">
@@ -45,7 +45,7 @@
   <link rel="alternate" href="http://www.ubcchemecar.com/index.xml" type="application/rss+xml" title="UBC Chem-E-Car: The University of British Columbia">
 
   
-  <meta property="og:title" content="Orgchart" />
+  <meta property="og:title" content="orgchart" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="/orgchart//" />
   <meta property="og:image" content="img/logo2.png" />
@@ -53,6 +53,24 @@
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </head>
 
+
+  <style>
+   h3 {
+    font-size: 28px !important;
+   }
+   .
+  body{
+    line-height: 18px !important;
+  }
+  table.google-visualization-orgchart-table {
+    border-collapse: inherit;
+  }    
+
+  .role{
+      font-size: small;
+      color: #1aa;
+  }   
+  </style>
 
   <body>
 
@@ -67,9 +85,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="http://www.ubcchemecar.com/">
-                    <img src="http://www.ubcchemecar.com/img/logo.png" alt="Orgchart logo" class="hidden-xs hidden-sm">
-                    <img src="http://www.ubcchemecar.com/img/logo-small.png" alt="Orgchart logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Orgchart - go to homepage</span>
+                    <img src="http://www.ubcchemecar.com/img/logo.png" alt="orgchart logo" class="hidden-xs hidden-sm">
+                    <img src="http://www.ubcchemecar.com/img/logo-small.png" alt="orgchart logo" class="visible-xs visible-sm">
+                    <span class="sr-only">orgchart - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -135,6 +153,7 @@
 
 
 
+          <link rel="stylesheet" type="text/css" href="http://www.ubcchemecar.com/css/component.css" />
 
         </header>
 
@@ -142,7 +161,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Orgchart</h1>
+                <h1>orgchart</h1>
             </div>
         </div>
     </div>
@@ -150,127 +169,28 @@
 
 
         <div id="content">
-            
 
-            <div class="container">
+            <div class="container-fluid">
 
                 <div class="row">
 
-                    <div class="col-md-12">
-
-                        <div>
-                          <p><div class="row text-center">
-  <h2>
-    <p>
-      <a href="javascript:initialize('https://docs.google.com/spreadsheets/d/1daLouav56XqtTl2FBI319GwcysiATxwPYG3e6u7QUhI/gviz/tq?')">Admin</a> |
-      <a href="javascript:initialize('https://docs.google.com/spreadsheets/d/1-xv0UpGCs3OpxpSi7unufpw1BwCxz5k83x9GYJ34RLc/gviz/tq?')">Senior Car</a> |
-      <a href="javascript:initialize('https://docs.google.com/spreadsheets/d/1HZys1U3JEAJgRUKPLX7Q8i01AvV1l2_STOvVg1lOx10/gviz/tq?')">Junior Car</a> |
-      <a href="javascript:initialize('https://docs.google.com/spreadsheets/d/1qImsDykMfz-obbMsOQo6f_IW_xmNdtScByEhcnfU3S8/gviz/tq?')">AIChE App</a> |
-      <a href="javascript:initialize('https://docs.google.com/spreadsheets/d/1I9MOhwVxOCA4Jo_bUX7g2grN7oyxtcRaNMrr2AlNtNc/gviz/tq?')">Flow Battery</a>
-      <br>
-    </p>
-  </h2>
-</div>
-<hr>
-<div id="orgchart_admin"></div>
-<hr></p>
-
-<style>
-body{
-  line-height: 18px !important;
-}
-table.google-visualization-orgchart-table {
-  border-collapse: inherit;
-}    
-
-.role{
-    font-size: small;
-    color: #1aa;
-}
-</style>
-
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
-google.charts.load('current', {'packages' : ['orgchart', 'table']});
-google.charts.setOnLoadCallback(function() { initialize('') });
-
-function initialize(dataLink) {
-  if(dataLink){
-    var dataSourceUrl = dataLink;
-  }
-  else{
-    var dataSourceUrl = 'https://docs.google.com/spreadsheets/d/1daLouav56XqtTl2FBI319GwcysiATxwPYG3e6u7QUhI/gviz/tq?';
-  }
-  
-  var query = new google.visualization.Query(dataSourceUrl + '&headers=1');
-
-  // Send the query with a callback function.
-  query.send(handleQueryResponse);
-}
-
-function handleQueryResponse(response) {
-  // Called when the query response is returned.
-  if (response.isError()) {
-alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
-return;
-  }
-
-  var raw_data = response.getDataTable();
-
-  var data = new google.visualization.DataTable();
-  data.addColumn('string', 'Entity');
-  data.addColumn('string', 'ParentEntity');
-  data.addColumn('string', 'ToolTip');
-  data.addColumn('string', 'URL');
-
-  var num_rows = raw_data.getNumberOfRows();
-  for (var i = 0; i < num_rows; i++) {
-var role = raw_data.getValue(i, 0);
-var reportsTo = raw_data.getValue(i,1);
-var name = raw_data.getValue(i,2) != null ? raw_data.getValue(i,2) : '';
-var url = raw_data.getValue(i,3);
-
-data.addRows([[
-  { v: role,
-f: name + "<div class='role'>" + role + "</div>"
-  }, 
-  reportsTo, 
-  name, url]]);
-  }
-
-  var container = document.getElementById('orgchart_admin');
-  var chart = new google.visualization.OrgChart(container);
-  chart.draw(data, {allowHtml:true, 'size': 'large'});
-
-  container.addEventListener('click', function (e) {
-e.preventDefault();
-if (e.target.tagName.toUpperCase() === 'A') {
-  console.log(e.target.href);
-  // window.open(e.target.href, '_blank');
-  // or
-  // location.href = e.target.href;
-} else {
-  var selection = chart.getSelection();
-  if (selection.length > 0) {
-var row = selection[0].row;
-var collapse = (chart.getCollapsedNodes().indexOf(row) == -1);
-chart.collapse(row, collapse);
-  }
-}
-chart.setSelection([]);
-return false;
-  }, false); 
-
-  google.visualization.events.addListener(chart, 'select', function() {
-var current_row = chart.getSelection()[0].row;
-if(data.getValue(current_row,3)){
-   window.open(data.getValue(current_row,3),"_self");
-}
-  });
-}
-</script>
-
+                    <div class="col-md-12 text-center">
+                        <div class="heading"><h4> Navigation </h4></div>
+                        <div class="row text-center">
+                          <h3>
+                            <p>
+                              <a href="javascript:initialize('https://docs.google.com/spreadsheets/d/1daLouav56XqtTl2FBI319GwcysiATxwPYG3e6u7QUhI/gviz/tq?')">Admin</a> | 
+                              <a href="javascript:initialize('https://docs.google.com/spreadsheets/d/1-xv0UpGCs3OpxpSi7unufpw1BwCxz5k83x9GYJ34RLc/gviz/tq?')">Senior Car</a> | 
+                              <a href="javascript:initialize('https://docs.google.com/spreadsheets/d/1HZys1U3JEAJgRUKPLX7Q8i01AvV1l2_STOvVg1lOx10/gviz/tq?')">Junior Car</a> | 
+                              <a href="javascript:initialize('https://docs.google.com/spreadsheets/d/1qImsDykMfz-obbMsOQo6f_IW_xmNdtScByEhcnfU3S8/gviz/tq?')">AIChE App</a> | 
+                              <a href="javascript:initialize('https://docs.google.com/spreadsheets/d/1I9MOhwVxOCA4Jo_bUX7g2grN7oyxtcRaNMrr2AlNtNc/gviz/tq?')">Flow Battery</a>
+                              <br>
+                            </p>
+                          </h3>
                         </div>
+                        <hr>
+                        <div class="text-center" id="orgchart_admin"></div>
+                        <hr>
 
                     </div>
 
@@ -279,10 +199,6 @@ if(data.getValue(current_row,3)){
 
             </div>
             
-
-            
-        </div>
-        
 
         <footer id="footer">
     <div class="container">
@@ -403,9 +319,12 @@ if(data.getValue(current_row,3)){
 
 
 
+        </div>
+        
+
+        
 
     </div>
-    
 
     
 <script>
@@ -426,6 +345,92 @@ ga('send', 'pageview');
 
 
 <script src="http://www.ubcchemecar.com/js/owl.carousel.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://www.ubcchemecar.com/js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+    google.charts.load('current', {'packages' : ['orgchart', 'table']});
+    google.charts.setOnLoadCallback(function() { initialize('') });
 
+    function initialize(dataLink) {
+      document.getElementById('orgchart_admin').innerHTML = "<i class='fa fa-spinner fa-spin fa-3x fa-fw'></i>";
+
+      if(dataLink){
+        var dataSourceUrl = dataLink;
+      }
+      else{
+        var dataSourceUrl = 'https://docs.google.com/spreadsheets/d/1daLouav56XqtTl2FBI319GwcysiATxwPYG3e6u7QUhI/gviz/tq?';
+      }
+      
+      var query = new google.visualization.Query(dataSourceUrl + '&headers=1');
+
+      
+      query.send(handleQueryResponse);
+    }
+
+    function handleQueryResponse(response) {
+      
+      if (response.isError()) {
+        alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+        return;
+      }
+
+      var raw_data = response.getDataTable();
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Entity');
+      data.addColumn('string', 'ParentEntity');
+      data.addColumn('string', 'ToolTip');
+      data.addColumn('string', 'URL');
+
+      var num_rows = raw_data.getNumberOfRows();
+      for (var i = 0; i < num_rows; i++) {
+        var role = raw_data.getValue(i, 0);
+        var reportsTo = raw_data.getValue(i,1);
+        var name = raw_data.getValue(i,2) != null ? raw_data.getValue(i,2) : '';
+        var url = raw_data.getValue(i,3);
+
+        data.addRows([[
+          { v: role,
+        f: name + "<div class='role'>" + role + "</div>"
+          }, 
+          reportsTo, 
+          name, url]]);
+      }
+
+      var container = document.getElementById('orgchart_admin');
+      var chart = new google.visualization.OrgChart(container);
+      chart.draw(data, {allowHtml:true, 'size': 'large'});
+
+      container.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (e.target.tagName.toUpperCase() === 'A') {
+          console.log(e.target.href);
+          
+          
+          
+        } else {
+          var selection = chart.getSelection();
+          if (selection.length > 0) {
+        var row = selection[0].row;
+        var collapse = (chart.getCollapsedNodes().indexOf(row) == -1);
+        chart.collapse(row, collapse);
+          }
+        }
+        chart.setSelection([]);
+        return false;
+          }, false); 
+
+        google.visualization.events.addListener(chart, 'select', function() {
+        var current_row = chart.getSelection()[0].row;
+        if(data.getValue(current_row,3)){
+           window.open(data.getValue(current_row,3),"_self");
+           }
+      });
+    }
+    </script>
   </body>
 </html>
+
+
+
