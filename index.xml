@@ -1751,22 +1751,24 @@ $ vi themes/zafta/layouts/_default/single.html
 
 &lt;h1 id=&#34;looking-for-someone&#34;&gt;Looking for someone?&lt;/h1&gt;
 
-&lt;h3 id=&#34;all-general-inquiries-info-ubcchemecar-com-info-ubcchemecar-com&#34;&gt;All General Inquiries: &lt;a href=&#34;info@ubcchemecar.com&#34;&gt;info@ubcchemecar.com&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;all-general-inquiries-info-ubcchemecar-com-mailto-info-ubcchemecar-com&#34;&gt;All General Inquiries: &lt;a href=&#34;mailto:info@ubcchemecar.com&#34;&gt;info@ubcchemecar.com&lt;/a&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Captain&amp;rsquo;s email - &lt;a href=&#34;captain@ubcchemecar.com&#34;&gt;captain@ubcchemecar.com&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Captain&amp;rsquo;s email - &lt;a href=&#34;mailto:captain@ubcchemecar.com&#34;&gt;captain@ubcchemecar.com&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Admin-related issues - &lt;a href=&#34;admin@ubcchemecar.com&#34;&gt;admin@ubcchemecar.com&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Sponsorship inquiries - &lt;a href=&#34;mailto:sponsorship@ubcchemecar.com&#34;&gt;sponsorship@ubcchemecar.com&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Sponsorship inquiries - &lt;a href=&#34;sponsorship@ubcchemecar.com&#34;&gt;sponsorship@ubcchemecar.com&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Admin and website-related issues - &lt;a href=&#34;mailto:admin@ubcchemecar.com&#34;&gt;admin@ubcchemecar.com&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Battery/Chemical Team - &lt;a href=&#34;battery@ubcchemecar.com&#34;&gt;battery@ubcchemecar.com&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Lab Managers - &lt;a href=&#34;mailto:labmanager@ubcchemecar.com&#34;&gt;labmanager@ubcchemecar.com&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Mechanical Team - &lt;a href=&#34;mechanical@ubcchemecar.com&#34;&gt;mechanical@ubcchemecar.com&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Battery/Chemical Team - &lt;a href=&#34;mailto:battery@ubcchemecar.com&#34;&gt;battery@ubcchemecar.com&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Electrical Team - &lt;a href=&#34;mechanical@ubcchemecar.com&#34;&gt;electrical@ubcchemecar.com&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Mechanical Team - &lt;a href=&#34;mailto:mechanical@ubcchemecar.com&#34;&gt;mechanical@ubcchemecar.com&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Junior Team Captains - &lt;a href=&#34;juniorlead@ubcchemecar.com&#34;&gt;juniorlead@ubcchemecar.com&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Electrical Team - &lt;a href=&#34;mailto:mechanical@ubcchemecar.com&#34;&gt;electrical@ubcchemecar.com&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Junior Team Captains - &lt;a href=&#34;mailto:juniorlead@ubcchemecar.com&#34;&gt;juniorlead@ubcchemecar.com&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
