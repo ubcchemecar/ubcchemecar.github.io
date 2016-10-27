@@ -1781,6 +1781,26 @@ $ vi themes/zafta/layouts/_default/single.html
       <guid>http://www.ubcchemecar.com/internal/</guid>
       <description>
 
+&lt;h1 id=&#34;lab&#34;&gt;Lab&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;h2 id=&#34;lab-sign-in-https-form-jotform-com-63001712223236&#34;&gt;&lt;a href=&#34;https://form.jotform.com/63001712223236&#34;&gt;Lab Sign In&lt;/a&gt;&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+&lt;h2 id=&#34;lab-sign-out-https-form-jotform-com-63001791811246&#34;&gt;&lt;a href=&#34;https://form.jotform.com/63001791811246&#34;&gt;Lab Sign Out&lt;/a&gt;&lt;/h2&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;links&#34;&gt;Links&lt;/h1&gt;
+
+&lt;hr /&gt;
+
 &lt;blockquote&gt;
 &lt;h2 id=&#34;google-drive-https-drive-google-com-drive-u-1-folders-0bxa5rjpqh-p-wlzvtlrvmi1gv00&#34;&gt;&lt;a href=&#34;https://drive.google.com/drive/u/1/folders/0BxA5RJPqh-P_WlZvTlRvMi1GV00&#34;&gt;Google Drive&lt;/a&gt;&lt;/h2&gt;
 &lt;/blockquote&gt;
