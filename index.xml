@@ -1789,11 +1789,21 @@ $ vi themes/zafta/layouts/_default/single.html
 
 &lt;hr /&gt;
 
-&lt;h1 id=&#34;links&#34;&gt;Links&lt;/h1&gt;
+&lt;h1 id=&#34;team-assets&#34;&gt;Team Assets&lt;/h1&gt;
 
 &lt;hr /&gt;
 
-&lt;h2 id=&#34;google-drive-https-drive-google-com-drive-u-1-folders-0bxa5rjpqh-p-wlzvtlrvmi1gv00-finance-app-http-finance-ubcchemecar-com-junior-car-battery-proposal-https-drive-google-com-open-id-0bzhmhyppv3ewvmrynzvozklrqy1ewe45u0s1nxh3bmh1ognz-ubc-engineering-design-team-handbook-docs-edt-handbook-pdf&#34;&gt;&lt;a href=&#34;https://drive.google.com/drive/u/1/folders/0BxA5RJPqh-P_WlZvTlRvMi1GV00&#34;&gt;Google Drive&lt;/a&gt; | ## &lt;a href=&#34;http://finance.ubcchemecar.com/&#34;&gt;Finance App&lt;/a&gt; | ## &lt;a href=&#34;https://drive.google.com/open?id=0BzHMHyppV3eWVmRyNzVoZklRQy1EWE45U0s1NXh3bmh1OGNz&#34;&gt;Junior Car Battery Proposal&lt;/a&gt; | &lt;a href=&#34;http://www.ubcchemecar.com/docs/EDT_handbook.pdf&#34;&gt;UBC Engineering Design Team Handbook&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;google-drive-https-drive-google-com-drive-u-1-folders-0bxa5rjpqh-p-wlzvtlrvmi1gv00-finance-app-http-finance-ubcchemecar-com-junior-car-battery-proposal-https-drive-google-com-open-id-0bzhmhyppv3ewvmrynzvozklrqy1ewe45u0s1nxh3bmh1ognz&#34;&gt;&lt;a href=&#34;https://drive.google.com/drive/u/1/folders/0BxA5RJPqh-P_WlZvTlRvMi1GV00&#34;&gt;Google Drive&lt;/a&gt; | &lt;a href=&#34;http://finance.ubcchemecar.com/&#34;&gt;Finance App&lt;/a&gt; | &lt;a href=&#34;https://drive.google.com/open?id=0BzHMHyppV3eWVmRyNzVoZklRQy1EWE45U0s1NXh3bmh1OGNz&#34;&gt;Junior Car Battery Proposal&lt;/a&gt;&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;misc&#34;&gt;Misc&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;ubc-engineering-design-team-handbook-docs-edt-handbook-pdf&#34;&gt;&lt;a href=&#34;http://www.ubcchemecar.com/docs/EDT_handbook.pdf&#34;&gt;UBC Engineering Design Team Handbook&lt;/a&gt;&lt;/h2&gt;
+
+&lt;hr /&gt;
 </description>
     </item>
     
