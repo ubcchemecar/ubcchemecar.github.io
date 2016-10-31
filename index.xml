@@ -1781,11 +1781,19 @@ $ vi themes/zafta/layouts/_default/single.html
       <guid>http://www.ubcchemecar.com/internal/</guid>
       <description>
 
-&lt;h1 id=&#34;lab-forms&#34;&gt;Lab Forms&lt;/h1&gt;
+&lt;h1 id=&#34;lab-access&#34;&gt;Lab Access&lt;/h1&gt;
 
 &lt;hr /&gt;
 
 &lt;h2 id=&#34;lab-sign-in-https-form-jotform-com-63001712223236-lab-sign-out-https-form-jotform-com-63001791811246-lab-inventory-https-docs-google-com-spreadsheets-d-1zpqp23z02i8iavz902okutuoukcsblerkjtw3zqjmju-edit-gid-0-h-oaqfsbodl-lab-sop-https-drive-google-com-open-id-0bxa5rjpqh-p-mmhsq1deluhlnjq-upload-safety-certificates-https-form-jotform-com-62887715352263&#34;&gt;&lt;a href=&#34;https://form.jotform.com/63001712223236&#34;&gt;Lab Sign In&lt;/a&gt; | &lt;a href=&#34;https://form.jotform.com/63001791811246&#34;&gt;Lab Sign Out&lt;/a&gt; | &lt;a href=&#34;https://docs.google.com/spreadsheets/d/1zPqP23Z02I8iavZ902oKUTuOukcSbLERkJTW3zqJMJU/edit#gid=0&amp;amp;h=oAQFsbOdl&#34;&gt;Lab Inventory&lt;/a&gt; | &lt;a href=&#34;https://drive.google.com/open?id=0BxA5RJPqh-P_MmhSQ1dELUhLNjQ&#34;&gt;Lab SOP&lt;/a&gt; | &lt;a href=&#34;https://form.jotform.com/62887715352263&#34;&gt;Upload Safety Certificates&lt;/a&gt;&lt;/h2&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&#34;row text-center&#34;&gt;  
+  &lt;div class=&#34;responsiveCal&#34;&gt;
+    &lt;iframe src=&#34;https://calendar.google.com/calendar/embed?src=chemecarlogistics%40gmail.com&amp;ctz=America/Vancouver&#34; style=&#34;border-width:0&#34; width=&#34;800&#34; height=&#34;600&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34;&gt;&lt;/iframe&gt;     
+  &lt;/div&gt;                     
+&lt;/div&gt;
 
 &lt;hr /&gt;
 
