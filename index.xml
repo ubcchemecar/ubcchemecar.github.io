@@ -1767,8 +1767,22 @@ $ vi themes/zafta/layouts/_default/single.html
 &lt;li&gt;&lt;p&gt;Mechanical Team - &lt;a href=&#34;mailto:mechanical@ubcchemecar.com&#34;&gt;mechanical@ubcchemecar.com&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Electrical Team - &lt;a href=&#34;mailto:mechanical@ubcchemecar.com&#34;&gt;electrical@ubcchemecar.com&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
+&lt;hr /&gt;
+
+&lt;h4 id=&#34;junior-team-contacts&#34;&gt;Junior Team Contacts&lt;/h4&gt;
+
+&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Junior Team Captains - &lt;a href=&#34;mailto:juniorlead@ubcchemecar.com&#34;&gt;juniorlead@ubcchemecar.com&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Junior Mechanical Lead - &lt;a href=&#34;mailto:juniormech@ubcchemecar.com&#34;&gt;juniormech@ubcchemecar.com&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Junior Battery Lead - &lt;a href=&#34;mailto:juniorbatt@ubcchemecar.com&#34;&gt;juniorbatt@ubcchemecar.com&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Junior Chemical Lead - &lt;a href=&#34;mailto:juniorchem@ubcchemecar.com&#34;&gt;juniorchem@ubcchemecar.com&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Junior Electrical Lead - &lt;a href=&#34;mailto:juniorelec@ubcchemecar.com&#34;&gt;juniorelec@ubcchemecar.com&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
