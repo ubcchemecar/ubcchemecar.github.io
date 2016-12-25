@@ -7,7 +7,7 @@
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Hugo is for lovers</title>
+  <title>Articles</title>
 
   <meta name="author" content="" />
   <meta name="keywords" content="">
@@ -45,15 +45,12 @@
   <link rel="alternate" href="http://www.ubcchemecar.com/index.xml" type="application/rss+xml" title="UBC Chem-E-Car: The University of British Columbia">
 
   
-  <meta property="og:title" content="Hugo is for lovers" />
+  <meta property="og:title" content="Articles" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/blog/2015/08/03/hugo-is-for-lovers//" />
+  <meta property="og:url" content="/article//" />
   <meta property="og:image" content="img/logo2.png" />
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/agate.min.css">
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>  
 </head>
 
 
@@ -70,9 +67,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="http://www.ubcchemecar.com/">
-                    <img src="http://www.ubcchemecar.com/img/logo.png" alt="Hugo is for lovers logo" class="hidden-xs hidden-sm">
-                    <img src="http://www.ubcchemecar.com/img/logo-small.png" alt="Hugo is for lovers logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Hugo is for lovers - go to homepage</span>
+                    <img src="http://www.ubcchemecar.com/img/logo.png" alt="Articles logo" class="hidden-xs hidden-sm">
+                    <img src="http://www.ubcchemecar.com/img/logo-small.png" alt="Articles logo" class="visible-xs visible-sm">
+                    <span class="sr-only">Articles - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -145,7 +142,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Hugo is for lovers</h1>
+                <h1>Articles</h1>
             </div>
         </div>
     </div>
@@ -154,117 +151,23 @@
 
         <div id="content">
             <div class="container">
-
                 <div class="row">
-
                     
 
-                    <div class="col-md-9" id="blog-post">
+                    <div class="col-md-9" id="blog-listing-medium">
 
-                        <p class="text-muted text-uppercase mb-small text-right">August 3, 2015</p>
-
-                        <div id="post-content">
-                          
-
-<h2 id="step-1-install-hugo">Step 1. Install Hugo</h2>
-
-<p>Goto <a href="https://github.com/spf13/hugo/releases">hugo releases</a> and download the
-appropriate version for your os and architecture.</p>
-
-<p>Save it somewhere specific as we will be using it in the next step.</p>
-
-<p>More complete instructions are available at <a href="http://www.ubcchemecar.com/overview/installing/">installing hugo</a></p>
-
-<h2 id="step-2-build-the-docs">Step 2. Build the Docs</h2>
-
-<p>Hugo has its own example site which happens to also be the documentation site
-you are reading right now.</p>
-
-<p>Follow the following steps:</p>
-
-<ol>
-<li>Clone the <a href="http://github.com/spf13/hugo">hugo repository</a></li>
-<li>Go into the repo</li>
-<li>Run hugo in server mode and build the docs</li>
-<li>Open your browser to <a href="http://localhost:1313">http://localhost:1313</a></li>
-</ol>
-
-<p>Corresponding pseudo commands:</p>
-
-<pre><code>git clone https://github.com/spf13/hugo
-cd hugo
-/path/to/where/you/installed/hugo server --source=./docs
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 27 ms
-&gt; Web Server is available at http://localhost:1313
-&gt; Press ctrl+c to stop
-</code></pre>
-
-<p>Once you&rsquo;ve gotten here, follow along the rest of this page on your local build.</p>
-
-<h2 id="step-3-change-the-docs-site">Step 3. Change the docs site</h2>
-
-<p>Stop the Hugo process by hitting ctrl+c.</p>
-
-<p>Now we are going to run hugo again, but this time with hugo in watch mode.</p>
-
-<pre><code>/path/to/hugo/from/step/1/hugo server --source=./docs --watch
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 27 ms
-&gt; Web Server is available at http://localhost:1313
-&gt; Watching for changes in /Users/spf13/Code/hugo/docs/content
-&gt; Press ctrl+c to stop
-</code></pre>
-
-<p>Open your <a href="http://vim.spf13.com">favorite editor</a> and change one of the source
-content pages. How about changing this very file to <em>fix the typo</em>. How about changing this very file to <em>fix the typo</em>.</p>
-
-<p>Content files are found in <code>docs/content/</code>. Unless otherwise specified, files
-are located at the same relative location as the url, in our case
-<code>docs/content/overview/quickstart.md</code>.</p>
-
-<p>Change and save this file.. Notice what happened in your terminal.</p>
-
-<pre><code>&gt; Change detected, rebuilding site
-
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 26 ms
-</code></pre>
-
-<p>Refresh the browser and observe that the typo is now fixed.</p>
-
-<p>Notice how quick that was. Try to refresh the site before it&rsquo;s finished building.. I double dare you.
-Having nearly instant feedback enables you to have your creativity flow without waiting for long builds.</p>
-
-<h2 id="step-4-have-fun">Step 4. Have fun</h2>
-
-<p>The best way to learn something is to play with it.</p>
-
-                        </div>
                         
                         
-                        <div id="comments">
-                            <div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_shortname = 'ubcchemecar';
-    var disqus_identifier = 'http:\/\/www.ubcchemecar.com\/blog\/2015\/08\/03\/hugo-is-for-lovers\/';
-    var disqus_title = 'Hugo is for lovers';
-    var disqus_url = 'http:\/\/www.ubcchemecar.com\/blog\/2015\/08\/03\/hugo-is-for-lovers\/';
 
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-                        </div>
-                        
+                        <ul class="pager">
+                            
+                            <li class="previous disabled"><a href="#">&larr; Newer</a></li>
+                            
 
+                            
+                            <li class="next disabled"><a href="#">Older &rarr;</a></li>
+                            
+                        </ul>
                     </div>
                     
 
@@ -312,16 +215,16 @@ Having nearly instant feedback enables you to have your creativity flow without 
     <div class="panel-body">
         <ul class="nav nav-pills nav-stacked">
             
-            <li><a href="http://www.ubcchemecar.com/categories/design">design (1)</a>
+            <li><a href="http://www.ubcchemecar.com/categories/design">design (2)</a>
             </li>
             
-            <li><a href="http://www.ubcchemecar.com/categories/programming">programming (2)</a>
+            <li><a href="http://www.ubcchemecar.com/categories/lorem">lorem (2)</a>
             </li>
             
-            <li><a href="http://www.ubcchemecar.com/categories/pseudo">pseudo (1)</a>
+            <li><a href="http://www.ubcchemecar.com/categories/programming">programming (4)</a>
             </li>
             
-            <li><a href="http://www.ubcchemecar.com/categories/software">software (1)</a>
+            <li><a href="http://www.ubcchemecar.com/categories/pseudo">pseudo (2)</a>
             </li>
             
         </ul>
@@ -349,9 +252,6 @@ Having nearly instant feedback enables you to have your creativity flow without 
             <li><a href="http://www.ubcchemecar.com/tags/hugo"><i class="fa fa-tags"></i> hugo</a>
             </li>
             
-            <li><a href="http://www.ubcchemecar.com/tags/javascript"><i class="fa fa-tags"></i> javascript</a>
-            </li>
-            
         </ul>
     </div>
 </div>
@@ -370,7 +270,6 @@ Having nearly instant feedback enables you to have your creativity flow without 
 
                 </div>
                 
-
             </div>
             
         </div>
@@ -401,19 +300,6 @@ Having nearly instant feedback enables you to have your creativity flow without 
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
-                        <a href="http://www.ubcchemecar.com/blog/2016/12/24/orgcharts/">
-                          
-                            <img src="http://www.ubcchemecar.com/img/banners/banner-5.jpg" class="img-responsive" alt="">
-                          
-                        </a>
-                    </div>
-                    <div class="name same-height-always">
-                        <h5><a href="http://www.ubcchemecar.com/blog/2016/12/24/orgcharts/">How To Create Dynamic Org Charts With Google Sheets and Javascript</a></h5>
-                    </div>
-                </div>
-                
-                <div class="item same-height-row clearfix">
-                    <div class="image same-height-always">
                         <a href="http://www.ubcchemecar.com/blog/2016/11/24/trial-and-error/">
                           
                             <img src="http://www.ubcchemecar.com/img/banners/banner-trial.jpg" class="img-responsive" alt="">
@@ -422,6 +308,19 @@ Having nearly instant feedback enables you to have your creativity flow without 
                     </div>
                     <div class="name same-height-always">
                         <h5><a href="http://www.ubcchemecar.com/blog/2016/11/24/trial-and-error/">The Importance of Trial and Error</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
+                        <a href="http://www.ubcchemecar.com/blog/2015/10/10/migrate-from-jekyll/">
+                          
+                            <img src="http://www.ubcchemecar.com/img/banners/banner-5.jpg" class="img-responsive" alt="">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="http://www.ubcchemecar.com/blog/2015/10/10/migrate-from-jekyll/">Migrate from Jekyll</a></h5>
                     </div>
                 </div>
                 

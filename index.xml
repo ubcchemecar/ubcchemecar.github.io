@@ -7,8 +7,210 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (C) 2016 UBC Chem-E-Car. All rights reserved.</copyright>
-    <lastBuildDate>Thu, 24 Nov 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 24 Dec 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://www.ubcchemecar.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How To Create Dynamic Org Charts With Google Sheets and Javascript</title>
+      <link>http://www.ubcchemecar.com/blog/2016/12/24/orgcharts/</link>
+      <pubDate>Sat, 24 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ubcchemecar.com/blog/2016/12/24/orgcharts/</guid>
+      <description>
+
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;The &lt;a href=&#34;https://developers.google.com/chart/interactive/docs/&#34;&gt;Google Chart&lt;/a&gt; library provides a convenient way of visualizing datasets using Javascript and embedding them in websites.&lt;/p&gt;
+
+&lt;p&gt;For our &lt;a href=&#34;http://www.ubcchemecar.com/team/&#34;&gt;team page&lt;/a&gt;, we wanted to embed a dynamic orgchart that would be updated automatically using values stored in a Google Docs &amp;lsquo;database&amp;rsquo;. Finding online tutorials for this was a bit challenging, so here&amp;rsquo;s our implementation.&lt;/p&gt;
+
+&lt;p&gt;If all goes well, you should get something like this, with the names, roles and relationships defined in a Google Sheet:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.ubcchemecar.com/img/blog/orgcharts/1.png&#34; width=&#34;100%&#34;&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;how-it-works&#34;&gt;How it works&lt;/h2&gt;
+
+&lt;p&gt;We will be using the &lt;code&gt;orgchart&lt;/code&gt; package in Google Charts. Our implementation will be somewhat similar to the &lt;a href=&#34;https://developers.google.com/chart/interactive/docs/gallery/orgchart&#34;&gt;example&lt;/a&gt; in the Google Charts documentation, but instead of hardcoding the values in JavaScript, we will grab them dynamically from a Google Sheet data source.&lt;/p&gt;
+
+&lt;h2 id=&#34;set-up-your-google-sheet&#34;&gt;Set up your Google Sheet&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;First, create a new Google Sheet with a title of your choice.&lt;/li&gt;
+&lt;li&gt;In the first row, fill in the first 3 columns, A to C, with &amp;lsquo;Role&amp;rsquo;, &amp;lsquo;Reports To&amp;rsquo; and &amp;lsquo;Name&amp;rsquo;.&lt;/li&gt;
+&lt;li&gt;Add in your team&amp;rsquo;s roles, names and organizational relationships in the subsequent rows.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Role&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The first column contains the role of the team member (i.e. Captain, Treasurer, Secretary). This is the green colored text in the screenshot above. The &lt;strong&gt;roles must be unique&lt;/strong&gt; or the orgchart won&amp;rsquo;t work properly. If you have multiple people with the same roles, add numbers or Roman numerals at the end (i.e. Webmaster I, Webmaster II).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Reports To&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This column defines the relationships in the orgchart. Fill it up with the &lt;strong&gt;role&lt;/strong&gt; that this position reports to. A blank entry will place the box at the very top of the org chart. (i.e. the &lt;strong&gt;Reports To&lt;/strong&gt; entry for Captain will be blank).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Name&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Self-explanatory, this column contains the names of the team members. This is the black colored text in the screenshot above.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Once you&amp;rsquo;re done, your Google Sheet should look something like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.ubcchemecar.com/img/blog/orgcharts/2.png&#34; width=&#34;50%&#34;&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;grab-your-google-sheet-data-in-json-format&#34;&gt;Grab your Google Sheet data in JSON format&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Once that&amp;rsquo;s done, click the big blue share button on the top right corner of the screen and change the sharing settings to &amp;lsquo;Anyone with the link &lt;strong&gt;Can View&lt;/strong&gt;&amp;rsquo;. Copy the URL for your Google Sheet from your browser, it should look something like this:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code&gt;https://docs.google.com/spreadsheets/d/1qImsDykMfz-obbMsOQo6f_IW_xmNdtScByEhcnfU3S8/edit#gid=0&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;To get the data as a JSON file, modify the &lt;code&gt;edit#gid=0&lt;/code&gt; part to &lt;code&gt;gviz/tq&lt;/code&gt;, as below:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code&gt;https://docs.google.com/spreadsheets/d/1qImsDykMfz-obbMsOQo6f_IW_xmNdtScByEhcnfU3S8/gviz/tq&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;If you navigate to that link in your browser, you should get a &lt;code&gt;json.txt&lt;/code&gt; file. You will need this link for the next step.&lt;/p&gt;
+
+&lt;h2 id=&#34;javascript-implementation&#34;&gt;Javascript Implementation&lt;/h2&gt;
+
+&lt;p&gt;Once the Google Sheet &amp;lsquo;database&amp;rsquo; has been set up, create a new &lt;code&gt;orgchart.html&lt;/code&gt; (or any other name) file and paste in the following code. We will be using the &lt;a href=&#34;https://developers.google.com/chart/interactive/docs/reference#queryobjects&#34;&gt;Google Visualization API Query Language&lt;/a&gt; to help us grab data from our Google Sheet.&lt;/p&gt;
+
+&lt;p&gt;Remember to replace &lt;code&gt;var dataSourceUrl&lt;/code&gt; with your own Google Sheet URL. Open the file in your browser, and you should see your orgchart!&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+  &amp;lt;div id=&amp;quot;orgchart_admin&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;
+  &amp;lt;script src=&amp;quot;https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+  &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;https://www.gstatic.com/charts/loader.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+  &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+    google.charts.load(&#39;current&#39;, {&#39;packages&#39; : [&#39;orgchart&#39;, &#39;table&#39;]});
+    google.charts.setOnLoadCallback(function() { initialize(&#39;&#39;) });
+
+    function initialize() {
+      document.getElementById(&#39;orgchart_admin&#39;).innerHTML = &amp;quot;&amp;lt;i class=&#39;fa fa-spinner fa-spin fa-3x fa-fw&#39;&amp;gt;&amp;lt;/i&amp;gt;&amp;quot;;
+      
+      var dataSourceUrl = &#39;https://docs.google.com/spreadsheets/d/1qImsDykMfz-obbMsOQo6f_IW_xmNdtScByEhcnfU3S8/gviz/tq?&#39;;
+
+      // Tells it that the first row contains headers: &#39;Role&#39;, &#39;Reports To&#39;, &#39;Name&#39;
+      var query = new google.visualization.Query(dataSourceUrl + &#39;&amp;amp;headers=1&#39;);
+
+      // Send the query with a callback function.
+      query.send(handleQueryResponse);
+    }
+
+    function handleQueryResponse(response) {
+      // Called when the query response is returned.
+      if (response.isError()) {
+        alert(&#39;Error in query: &#39; + response.getMessage() + &#39; &#39; + response.getDetailedMessage());
+        return;
+      }
+
+      var raw_data = response.getDataTable();
+      var data = new google.visualization.DataTable();
+
+      data.addColumn(&#39;string&#39;, &#39;Entity&#39;);
+      data.addColumn(&#39;string&#39;, &#39;ParentEntity&#39;);
+      data.addColumn(&#39;string&#39;, &#39;ToolTip&#39;);
+
+      // Loops through all rows and populates a new DataTable with formatted values for the orgchart
+      var num_rows = raw_data.getNumberOfRows();
+      for (var i = 0; i &amp;lt; num_rows; i++) {
+        var role = raw_data.getValue(i, 0);
+        var reportsTo = raw_data.getValue(i,1);
+        var name = raw_data.getValue(i,2) != null ? raw_data.getValue(i,2) : &#39;&#39;;
+
+        data.addRows([[
+          { v: role,
+            f: name + &amp;quot;&amp;lt;div class=&#39;role&#39;&amp;gt;&amp;quot; + role + &amp;quot;&amp;lt;/div&amp;gt;&amp;quot;
+          }, 
+          reportsTo, 
+          name]]);
+      }
+
+      // Loops through all rows and populates a new DataTable with formatted values for the orgchart
+      var container = document.getElementById(&#39;orgchart_admin&#39;);
+      var chart = new google.visualization.OrgChart(container);
+      chart.draw(data, {allowHtml:true, &#39;size&#39;: &#39;large&#39;});
+    }      
+  &amp;lt;/script&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;breaking-down-the-script&#34;&gt;Breaking down the script&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;In the &lt;code&gt;initialize()&lt;/code&gt; function, we used the &lt;code&gt;Query&lt;/code&gt; class to grab data from our Google Sheet. This is very similar to the &lt;a href=&#34;https://developers.google.com/chart/interactive/docs/spreadsheets&#34;&gt;example&lt;/a&gt; in the documentation.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;In the &lt;code&gt;handleQueryResponse()&lt;/code&gt; callback function, if the query is successful, we can get the data as a &lt;a href=&#34;https://developers.google.com/chart/interactive/docs/datatables_dataviews&#34;&gt;DataTable&lt;/a&gt; with &lt;code&gt;raw_data = response.getDataTable()&lt;/code&gt;. A DataTable is essentially an array of columns and rows used by Google Charts to represent chart data.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;We then looped through our &lt;code&gt;raw_data&lt;/code&gt; and populated a new DataTable, &lt;code&gt;var data = new google.visualization.DataTable()&lt;/code&gt;. We did this row by row with the &lt;code&gt;addRows()&lt;/code&gt; function. We did this because the &lt;code&gt;orgchart&lt;/code&gt; package takes in 3 columns, according to the &lt;a href=&#34;https://developers.google.com/chart/interactive/docs/gallery/orgchart&#34;&gt;documentation&lt;/a&gt; and we want to add formatted values to the first column:&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;First Column&lt;/strong&gt;
+The first column is the node ID (each node is a box in the org chart) and as previously mentioned, it should be unique. We can either show the node ID in the box, or use a prettier formatted value, &lt;code&gt;f&lt;/code&gt; to show in the box, but the unformatted value, &lt;code&gt;v&lt;/code&gt; is still used as the ID. Having formatted values allows us to display the name and role (or optionally, even more data like pictures) in different colors in the same box.&lt;/p&gt;
+
+&lt;p&gt;In our orgchart, we want to display both the name and the role, with the role in a different color. So in the code above, we defined the formatted value as follows, with &lt;code&gt;div&lt;/code&gt; tags around &lt;code&gt;role&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;f: name + &amp;quot;&amp;lt;div class=&#39;role&#39;&amp;gt;&amp;quot; + role + &amp;quot;&amp;lt;/div&amp;gt;&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Second Column&lt;/strong&gt;
+The second column defines the parent node of the current box (i.e. the relationship data) using the unformatted value, &lt;code&gt;v&lt;/code&gt; of the parent node. If this is left blank, the node will be defined as a root node.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Third Column&lt;/strong&gt;
+The third and optional column defines the tooltip text, the text that pops up when you hover your mouse over the box.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Finally, in the last part of the script, we made a call to &lt;code&gt;new google.visualization.OrgChart()&lt;/code&gt; to display our chart in the web page.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;var container = document.getElementById(&#39;orgchart_admin&#39;);
+var chart = new google.visualization.OrgChart(container);
+chart.draw(data, {allowHtml:true, &#39;size&#39;: &#39;large&#39;});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;styling-the-org-chart&#34;&gt;Styling the org chart&lt;/h2&gt;
+
+&lt;p&gt;So far, we&amp;rsquo;ve managed to display our org chart, but we haven&amp;rsquo;t added the formatting yet.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.ubcchemecar.com/img/blog/orgcharts/3.png&#34; width=&#34;100%&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;To change the text color for the roles in the box, we need to add some CSS. Let&amp;rsquo;s modify the head section in the code above:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;head&amp;gt;
+  &amp;lt;style&amp;gt;
+  .role{
+      font-size: small;
+      color: #1aa;
+  }   
+  &amp;lt;/style&amp;gt;
+&amp;lt;/head&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You should now see the font size and colors updated for the roles if you refresh your page:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.ubcchemecar.com/img/blog/orgcharts/4.png&#34; width=&#34;100%&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;That&amp;rsquo;s it! Using CSS, you can also style the names by wrapping them with div tags. You can also play around with the box colors, font size and anything else in the org chart. Refer to the Google Charts &lt;a href=&#34;https://developers.google.com/chart/interactive/docs/gallery/orgchart&#34;&gt;documentation&lt;/a&gt; for further information.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;f: &amp;quot;&amp;lt;div class=&#39;name&#39;&amp;gt;&amp;quot; + name + &amp;quot;&amp;lt;/div&amp;gt;&amp;quot; + &amp;quot;&amp;lt;div class=&#39;role&#39;&amp;gt;&amp;quot; + role + &amp;quot;&amp;lt;/div&amp;gt;&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>The Importance of Trial and Error</title>
@@ -59,183 +261,6 @@
 &lt;p&gt;So, to any beginner in terms of design, don’t despair! Rather look at what you can learn from your prototype and how it can be improved.&lt;/p&gt;
 
 &lt;p&gt;In that sense it is important to seek the feedback of experienced individuals. Their experience (in how NOT to do things wrong by doing it wrong) is invaluable for any would-be inventor. Look at how others have done things and learn accordingly from it. Finally remember, every master in a subject started from knowing nothing; the difference between them and the amateurs is that they never stopped trying to learn.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Migrate from Jekyll</title>
-      <link>http://www.ubcchemecar.com/blog/2015/10/10/migrate-from-jekyll/</link>
-      <pubDate>Sat, 10 Oct 2015 13:07:31 +0200</pubDate>
-      
-      <guid>http://www.ubcchemecar.com/blog/2015/10/10/migrate-from-jekyll/</guid>
-      <description>
-
-&lt;h2 id=&#34;move-static-content-to-static&#34;&gt;Move static content to &lt;code&gt;static&lt;/code&gt;&lt;/h2&gt;
-
-&lt;p&gt;Jekyll has a rule that any directory not starting with &lt;code&gt;_&lt;/code&gt; will be copied as-is to the &lt;code&gt;_site&lt;/code&gt; output. Hugo keeps all static content under &lt;code&gt;static&lt;/code&gt;. You should therefore move it all there.
-With Jekyll, something that looked like&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;▾ &amp;lt;root&amp;gt;/
-    ▾ images/
-        logo.png
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;should become&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;▾ &amp;lt;root&amp;gt;/
-    ▾ static/
-        ▾ images/
-            logo.png
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as &lt;code&gt;CNAME&lt;/code&gt;) to be moved to &lt;code&gt;static&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;create-your-hugo-configuration-file&#34;&gt;Create your Hugo configuration file&lt;/h2&gt;
-
-&lt;p&gt;Hugo can read your configuration as JSON, YAML or TOML. Hugo supports parameters custom configuration too. Refer to the &lt;a href=&#34;http://www.ubcchemecar.com/overview/configuration/&#34;&gt;Hugo configuration documentation&lt;/a&gt; for details.&lt;/p&gt;
-
-&lt;h2 id=&#34;set-your-configuration-publish-folder-to-site&#34;&gt;Set your configuration publish folder to &lt;code&gt;_site&lt;/code&gt;&lt;/h2&gt;
-
-&lt;p&gt;The default is for Jekyll to publish to &lt;code&gt;_site&lt;/code&gt; and for Hugo to publish to &lt;code&gt;public&lt;/code&gt;. If, like me, you have &lt;a href=&#34;http://blog.blindgaenger.net/generate_github_pages_in_a_submodule.html&#34;&gt;&lt;code&gt;_site&lt;/code&gt; mapped to a git submodule on the &lt;code&gt;gh-pages&lt;/code&gt; branch&lt;/a&gt;, you&amp;rsquo;ll want to do one of two alternatives:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Change your submodule to point to map &lt;code&gt;gh-pages&lt;/code&gt; to public instead of &lt;code&gt;_site&lt;/code&gt; (recommended).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git submodule deinit _site
-git rm _site
-git submodule add -b gh-pages git@github.com:your-username/your-repo.git public
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Or, change the Hugo configuration to use &lt;code&gt;_site&lt;/code&gt; instead of &lt;code&gt;public&lt;/code&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{
-    ..
-    &amp;quot;publishdir&amp;quot;: &amp;quot;_site&amp;quot;,
-    ..
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;convert-jekyll-templates-to-hugo-templates&#34;&gt;Convert Jekyll templates to Hugo templates&lt;/h2&gt;
-
-&lt;p&gt;That&amp;rsquo;s the bulk of the work right here. The documentation is your friend. You should refer to &lt;a href=&#34;http://jekyllrb.com/docs/templates/&#34;&gt;Jekyll&amp;rsquo;s template documentation&lt;/a&gt; if you need to refresh your memory on how you built your blog and &lt;a href=&#34;http://www.ubcchemecar.com/layout/templates/&#34;&gt;Hugo&amp;rsquo;s template&lt;/a&gt; to learn Hugo&amp;rsquo;s way.&lt;/p&gt;
-
-&lt;p&gt;As a single reference data point, converting my templates for &lt;a href=&#34;http://heyitsalex.net/&#34;&gt;heyitsalex.net&lt;/a&gt; took me no more than a few hours.&lt;/p&gt;
-
-&lt;h2 id=&#34;convert-jekyll-plugins-to-hugo-shortcodes&#34;&gt;Convert Jekyll plugins to Hugo shortcodes&lt;/h2&gt;
-
-&lt;p&gt;Jekyll has &lt;a href=&#34;http://jekyllrb.com/docs/plugins/&#34;&gt;plugins&lt;/a&gt;; Hugo has &lt;a href=&#34;http://www.ubcchemecar.com/doc/shortcodes/&#34;&gt;shortcodes&lt;/a&gt;. It&amp;rsquo;s fairly trivial to do a port.&lt;/p&gt;
-
-&lt;h3 id=&#34;implementation&#34;&gt;Implementation&lt;/h3&gt;
-
-&lt;p&gt;As an example, I was using a custom &lt;a href=&#34;https://github.com/alexandre-normand/alexandre-normand/blob/74bb12036a71334fdb7dba84e073382fc06908ec/_plugins/image_tag.rb&#34;&gt;&lt;code&gt;image_tag&lt;/code&gt;&lt;/a&gt; plugin to generate figures with caption when running Jekyll. As I read about shortcodes, I found Hugo had a nice built-in shortcode that does exactly the same thing.&lt;/p&gt;
-
-&lt;p&gt;Jekyll&amp;rsquo;s plugin:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;module Jekyll
-  class ImageTag &amp;lt; Liquid::Tag
-    @url = nil
-    @caption = nil
-    @class = nil
-    @link = nil
-    // Patterns
-    IMAGE_URL_WITH_CLASS_AND_CAPTION =
-    IMAGE_URL_WITH_CLASS_AND_CAPTION_AND_LINK = /(\w+)(\s+)((https?:\/\/|\/)(\S+))(\s+)&amp;quot;(.*?)&amp;quot;(\s+)-&amp;gt;((https?:\/\/|\/)(\S+))(\s*)/i
-    IMAGE_URL_WITH_CAPTION = /((https?:\/\/|\/)(\S+))(\s+)&amp;quot;(.*?)&amp;quot;/i
-    IMAGE_URL_WITH_CLASS = /(\w+)(\s+)((https?:\/\/|\/)(\S+))/i
-    IMAGE_URL = /((https?:\/\/|\/)(\S+))/i
-    def initialize(tag_name, markup, tokens)
-      super
-      if markup =~ IMAGE_URL_WITH_CLASS_AND_CAPTION_AND_LINK
-        @class   = $1
-        @url     = $3
-        @caption = $7
-        @link = $9
-      elsif markup =~ IMAGE_URL_WITH_CLASS_AND_CAPTION
-        @class   = $1
-        @url     = $3
-        @caption = $7
-      elsif markup =~ IMAGE_URL_WITH_CAPTION
-        @url     = $1
-        @caption = $5
-      elsif markup =~ IMAGE_URL_WITH_CLASS
-        @class = $1
-        @url   = $3
-      elsif markup =~ IMAGE_URL
-        @url = $1
-      end
-    end
-    def render(context)
-      if @class
-        source = &amp;quot;&amp;lt;figure class=&#39;#{@class}&#39;&amp;gt;&amp;quot;
-      else
-        source = &amp;quot;&amp;lt;figure&amp;gt;&amp;quot;
-      end
-      if @link
-        source += &amp;quot;&amp;lt;a href=\&amp;quot;#{@link}\&amp;quot;&amp;gt;&amp;quot;
-      end
-      source += &amp;quot;&amp;lt;img src=\&amp;quot;#{@url}\&amp;quot;&amp;gt;&amp;quot;
-      if @link
-        source += &amp;quot;&amp;lt;/a&amp;gt;&amp;quot;
-      end
-      source += &amp;quot;&amp;lt;figcaption&amp;gt;#{@caption}&amp;lt;/figcaption&amp;gt;&amp;quot; if @caption
-      source += &amp;quot;&amp;lt;/figure&amp;gt;&amp;quot;
-      source
-    end
-  end
-end
-Liquid::Template.register_tag(&#39;image&#39;, Jekyll::ImageTag)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;is written as this Hugo shortcode:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;!-- image --&amp;gt;
-&amp;lt;figure {{ with .Get &amp;quot;class&amp;quot; }}class=&amp;quot;{{.}}&amp;quot;{{ end }}&amp;gt;
-    {{ with .Get &amp;quot;link&amp;quot;}}&amp;lt;a href=&amp;quot;{{.}}&amp;quot;&amp;gt;{{ end }}
-        &amp;lt;img src=&amp;quot;{{ .Get &amp;quot;src&amp;quot; }}&amp;quot; {{ if or (.Get &amp;quot;alt&amp;quot;) (.Get &amp;quot;caption&amp;quot;) }}alt=&amp;quot;{{ with .Get &amp;quot;alt&amp;quot;}}{{.}}{{else}}{{ .Get &amp;quot;caption&amp;quot; }}{{ end }}&amp;quot;{{ end }} /&amp;gt;
-    {{ if .Get &amp;quot;link&amp;quot;}}&amp;lt;/a&amp;gt;{{ end }}
-    {{ if or (or (.Get &amp;quot;title&amp;quot;) (.Get &amp;quot;caption&amp;quot;)) (.Get &amp;quot;attr&amp;quot;)}}
-    &amp;lt;figcaption&amp;gt;{{ if isset .Params &amp;quot;title&amp;quot; }}
-        {{ .Get &amp;quot;title&amp;quot; }}{{ end }}
-        {{ if or (.Get &amp;quot;caption&amp;quot;) (.Get &amp;quot;attr&amp;quot;)}}&amp;lt;p&amp;gt;
-        {{ .Get &amp;quot;caption&amp;quot; }}
-        {{ with .Get &amp;quot;attrlink&amp;quot;}}&amp;lt;a href=&amp;quot;{{.}}&amp;quot;&amp;gt; {{ end }}
-            {{ .Get &amp;quot;attr&amp;quot; }}
-        {{ if .Get &amp;quot;attrlink&amp;quot;}}&amp;lt;/a&amp;gt; {{ end }}
-        &amp;lt;/p&amp;gt; {{ end }}
-    &amp;lt;/figcaption&amp;gt;
-    {{ end }}
-&amp;lt;/figure&amp;gt;
-&amp;lt;!-- image --&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;usage&#34;&gt;Usage&lt;/h3&gt;
-
-&lt;p&gt;I simply changed:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{% image full http://farm5.staticflickr.com/4136/4829260124_57712e570a_o_d.jpg &amp;quot;One of my favorite touristy-type photos. I secretly waited for the good light while we were &amp;quot;having fun&amp;quot; and took this. Only regret: a stupid pole in the top-left corner of the frame I had to clumsily get rid of at post-processing.&amp;quot; -&amp;gt;http://www.flickr.com/photos/alexnormand/4829260124/in/set-72157624547713078/ %}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;to this (this example uses a slightly extended version named &lt;code&gt;fig&lt;/code&gt;, different than the built-in &lt;code&gt;figure&lt;/code&gt;):&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;{{% fig class=&amp;quot;full&amp;quot; src=&amp;quot;http://farm5.staticflickr.com/4136/4829260124_57712e570a_o_d.jpg&amp;quot; title=&amp;quot;One of my favorite touristy-type photos. I secretly waited for the good light while we were having fun and took this. Only regret: a stupid pole in the top-left corner of the frame I had to clumsily get rid of at post-processing.&amp;quot; link=&amp;quot;http://www.flickr.com/photos/alexnormand/4829260124/in/set-72157624547713078/&amp;quot; %}}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;As a bonus, the shortcode named parameters are, arguably, more readable.&lt;/p&gt;
-
-&lt;h2 id=&#34;finishing-touches&#34;&gt;Finishing touches&lt;/h2&gt;
-
-&lt;h3 id=&#34;fix-content&#34;&gt;Fix content&lt;/h3&gt;
-
-&lt;p&gt;Depending on the amount of customization that was done with each post with Jekyll, this step will require more or less effort. There are no hard and fast rules here except that &lt;code&gt;hugo server --watch&lt;/code&gt; is your friend. Test your changes and fix errors as needed.&lt;/p&gt;
-
-&lt;h3 id=&#34;clean-up&#34;&gt;Clean up&lt;/h3&gt;
-
-&lt;p&gt;You&amp;rsquo;ll want to remove the Jekyll configuration at this point. If you have anything else that isn&amp;rsquo;t used, delete it.&lt;/p&gt;
-
-&lt;h2 id=&#34;a-practical-example-in-a-diff&#34;&gt;A practical example in a diff&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://heyitsalex.net/&#34;&gt;Hey, it&amp;rsquo;s Alex&lt;/a&gt; was migrated in less than a &lt;em&gt;father-with-kids day&lt;/em&gt; from Jekyll to Hugo. You can see all the changes (and screw-ups) by looking at this &lt;a href=&#34;https://github.com/alexandre-normand/alexandre-normand/compare/869d69435bd2665c3fbf5b5c78d4c22759d7613a...b7f6605b1265e83b4b81495423294208cc74d610&#34;&gt;diff&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
@@ -777,7 +802,7 @@ Having nearly instant feedback enables you to have your creativity flow without 
 
 &lt;hr /&gt;
 
-&lt;h2 id=&#34;google-drive-https-drive-google-com-drive-u-1-folders-0bxa5rjpqh-p-wlzvtlrvmi1gv00-finance-app-http-finance-ubcchemecar-com-junior-car-battery-proposal-https-drive-google-com-open-id-0bzhmhyppv3ewvmrynzvozklrqy1ewe45u0s1nxh3bmh1ognz&#34;&gt;&lt;a href=&#34;https://drive.google.com/drive/u/1/folders/0BxA5RJPqh-P_WlZvTlRvMi1GV00&#34;&gt;Google Drive&lt;/a&gt; | &lt;a href=&#34;http://finance.ubcchemecar.com/&#34;&gt;Finance App&lt;/a&gt; | &lt;a href=&#34;https://drive.google.com/open?id=0BzHMHyppV3eWVmRyNzVoZklRQy1EWE45U0s1NXh3bmh1OGNz&#34;&gt;Junior Car Battery Proposal&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;google-drive-https-drive-google-com-drive-u-1-folders-0bxa5rjpqh-p-wlzvtlrvmi1gv00-safety-certificates-https-drive-google-com-open-id-0bxa5rjpqh-p-skxwv1dquw5grnm-finance-app-http-finance-ubcchemecar-com-junior-car-battery-proposal-https-drive-google-com-open-id-0bzhmhyppv3ewvmrynzvozklrqy1ewe45u0s1nxh3bmh1ognz&#34;&gt;&lt;a href=&#34;https://drive.google.com/drive/u/1/folders/0BxA5RJPqh-P_WlZvTlRvMi1GV00&#34;&gt;Google Drive&lt;/a&gt; | &lt;a href=&#34;https://drive.google.com/open?id=0BxA5RJPqh-P_SkxWV1dQUW5GRnM&#34;&gt;Safety Certificates&lt;/a&gt; | &lt;a href=&#34;http://finance.ubcchemecar.com/&#34;&gt;Finance App&lt;/a&gt; | &lt;a href=&#34;https://drive.google.com/open?id=0BzHMHyppV3eWVmRyNzVoZklRQy1EWE45U0s1NXh3bmh1OGNz&#34;&gt;Junior Car Battery Proposal&lt;/a&gt;&lt;/h2&gt;
 
 &lt;hr /&gt;
 
@@ -785,7 +810,7 @@ Having nearly instant feedback enables you to have your creativity flow without 
 
 &lt;hr /&gt;
 
-&lt;h2 id=&#34;ubc-engineering-design-team-handbook-docs-edt-handbook-pdf&#34;&gt;&lt;a href=&#34;http://www.ubcchemecar.com/docs/EDT_handbook.pdf&#34;&gt;UBC Engineering Design Team Handbook&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;ubc-engineering-design-team-handbook-docs-edt-handbook-pdf-iodine-clock-reaction-docs-iodine-clock-reaction-calibration-sop-doc&#34;&gt;&lt;a href=&#34;http://www.ubcchemecar.com/docs/EDT_handbook.pdf&#34;&gt;UBC Engineering Design Team Handbook&lt;/a&gt; | &lt;a href=&#34;http://www.ubcchemecar.com/docs/Iodine-Clock-Reaction-Calibration-SOP.doc&#34;&gt;Iodine Clock Reaction&lt;/a&gt;&lt;/h2&gt;
 
 &lt;hr /&gt;
 </description>
