@@ -6,7 +6,7 @@
 <div id="molsonData"></div>
 <script type="text/javascript">
   $(function() {
-    $.get( "molson.ubcchemecar.com/api", function( data ) {
+    $.get( "http://molson.ubcchemecar.com/api", function( data ) {
       $( "#molsonData" ).html( data );
       alert( "loaded data." );
     });
