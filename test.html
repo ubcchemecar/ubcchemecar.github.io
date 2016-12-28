@@ -1,0 +1,17 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+<h1 id="molsonData">Grabbing data...</h1>
+<script type="text/javascript">
+  $(function() {
+    $.get( "http://molson.ubcchemecar.com/api", function( data ) {
+      console.log(data)
+      $("#molsonData").html( data['timestamp'] );
+    });
+});
+
+</script>
+</body>
+</html>
