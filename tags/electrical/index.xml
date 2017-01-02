@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>UBC Chem-E-Car: The University of British Columbia</title>
-    <link>http://www.ubcchemecar.com/categories/design/index.xml</link>
+    <link>http://www.ubcchemecar.com/tags/electrical/index.xml</link>
     <description>Recent content on UBC Chem-E-Car: The University of British Columbia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (C) 2016 UBC Chem-E-Car. All rights reserved.</copyright>
-    <atom:link href="http://www.ubcchemecar.com/categories/design/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://www.ubcchemecar.com/tags/electrical/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Solder Fan System</title>
@@ -37,58 +37,6 @@
 &lt;p&gt;For my perfboard I used two rows of header pins to allow multiple fan systems as well as the connection to the power supply. A set-screw hub enable the switch to be inserted and removed at a moments notice.&lt;/p&gt;
 
 &lt;p&gt;Now I just need to wait for my fans to come in from the internet (that was a pun)!&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>The Importance of Trial and Error</title>
-      <link>http://www.ubcchemecar.com/blog/2016/11/24/trial-and-error/</link>
-      <pubDate>Thu, 24 Nov 2016 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.ubcchemecar.com/blog/2016/11/24/trial-and-error/</guid>
-      <description>
-
-&lt;h3 id=&#34;introduction&#34;&gt;Introduction&lt;/h3&gt;
-
-&lt;p&gt;Welcome everyone to the first of (hopefully) many blog posts for the UBC Chem-E-Car Team. The purpose of these posts is to give you, the reader insight into how our organization is run. Through this we hope to generate interest in our organization and to help get other students involved.&lt;/p&gt;
-
-&lt;p&gt;The topic of our first post is on the importance of trial and error. Most people will look at a finished product and comment on how sleek or amazing it is; while conveniently ignoring that it took years of tinkering and modifications for that item to even function properly!&lt;/p&gt;
-
-&lt;p&gt;First let’s take a look at the first electronic circuit that I ever made for Chem-E-Car:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.ubcchemecar.com/img/blog/trial-and-error/first.jpg&#34; alt=&#34;First&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The entire device is a mess! There are wires everywhere, tons of unused board real estate, and parts that have to be tied together to fit on the board. Likewise, unsecured parts have a very unreliable connection and break off easily.&lt;/p&gt;
-
-&lt;p&gt;Over the summer I made a new model with the focus of eliminating loose wires and better utilizing space, this is the result:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.ubcchemecar.com/img/blog/trial-and-error/second.jpg&#34; alt=&#34;Second&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This model utilizes a lot less space, is easy to stack, and most of the components are stabilized on the board itself. However, during assembly I needed a lot of extra parts since directly soldering them often destroyed the part if not done properly. Another issue is that the model needed 4 stacks (making it really tall), and the lights and switches were not necessary. Now let’s look at the second iteration:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.ubcchemecar.com/img/blog/trial-and-error/third.jpg&#34; alt=&#34;Third&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The board is even MORE compact, features detachable modules for easy replacement, and utilizes an SD card and opto-gate for recording data. However, the connectors were unreliable, the copper on the board was unprotected and prone to damage which destroyed the circuit at times, and data could not be read in real time.&lt;/p&gt;
-
-&lt;p&gt;To fix these issues I developed a 4th and final board:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.ubcchemecar.com/img/blog/trial-and-error/fourth.jpg&#34; alt=&#34;Fourth&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This system uses reliable connectors that can only be inserted in one direction, is completely modular (easy to replace destroyed parts), has a silkscreen layer that protects the circuit, only uses one layer, and utilizes a bluetooth system for real time data collection on a mobile phone!&lt;/p&gt;
-
-&lt;p&gt;Here is an image of all the circuits for an overall comparison:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.ubcchemecar.com/img/blog/trial-and-error/comparison.jpg&#34; alt=&#34;Comparison&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;reflections&#34;&gt;Reflections&lt;/h3&gt;
-
-&lt;p&gt;These circuits are 1.5 years of continuous design and iteration, with each model having its flaws analyzed and corrected. They were made by an entry level chemical engineering student with NO prior experience or knowledge of electronics. The moral of the story? Good design is all about making something, figuring out what works and doesn’t work then rebuilding it until it sort of works.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;http://www.ubcchemecar.com/img/blog/trial-and-error/quote.jpg&#34; alt=&#34;Quote&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;So, to any beginner in terms of design, don’t despair! Rather look at what you can learn from your prototype and how it can be improved.&lt;/p&gt;
-
-&lt;p&gt;In that sense it is important to seek the feedback of experienced individuals. Their experience (in how NOT to do things wrong by doing it wrong) is invaluable for any would-be inventor. Look at how others have done things and learn accordingly from it. Finally remember, every master in a subject started from knowing nothing; the difference between them and the amateurs is that they never stopped trying to learn.&lt;/p&gt;
 </description>
     </item>
     

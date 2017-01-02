@@ -7,7 +7,7 @@
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>How To Create Dynamic Org Charts With Google Sheets and Javascript</title>
+  <title>Solder Fan System</title>
 
   <meta name="author" content="" />
   <meta name="keywords" content="">
@@ -53,9 +53,9 @@
   <link rel="alternate" href="http://www.ubcchemecar.com/index.xml" type="application/rss+xml" title="UBC Chem-E-Car: The University of British Columbia">
 
   
-  <meta property="og:title" content="How To Create Dynamic Org Charts With Google Sheets and Javascript" />
+  <meta property="og:title" content="Solder Fan System" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/blog/2016/12/24/orgcharts//" />
+  <meta property="og:url" content="/blog/2017/01/01/solder-fan-system//" />
   <meta property="og:image" content="img/logo2.png" />
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
@@ -78,9 +78,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="http://www.ubcchemecar.com/">
-                    <img src="http://www.ubcchemecar.com/img/logo.png" alt="How To Create Dynamic Org Charts With Google Sheets and Javascript logo" class="hidden-xs hidden-sm">
-                    <img src="http://www.ubcchemecar.com/img/logo-small.png" alt="How To Create Dynamic Org Charts With Google Sheets and Javascript logo" class="visible-xs visible-sm">
-                    <span class="sr-only">How To Create Dynamic Org Charts With Google Sheets and Javascript - go to homepage</span>
+                    <img src="http://www.ubcchemecar.com/img/logo.png" alt="Solder Fan System logo" class="hidden-xs hidden-sm">
+                    <img src="http://www.ubcchemecar.com/img/logo-small.png" alt="Solder Fan System logo" class="visible-xs visible-sm">
+                    <span class="sr-only">Solder Fan System - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -153,7 +153,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>How To Create Dynamic Org Charts With Google Sheets and Javascript</h1>
+                <h1>Solder Fan System</h1>
             </div>
         </div>
     </div>
@@ -169,202 +169,31 @@
 
                     <div class="col-md-9" id="blog-post">
 
-                        <p class="text-muted text-uppercase mb-small text-right">By <a href="http://www.ubcchemecar.com/team">Siang Lim</a> | December 24, 2016</p>
+                        <p class="text-muted text-uppercase mb-small text-right">By <a href="http://www.ubcchemecar.com/team">Ngai To Lo</a> | January 1, 2017</p>
 
                         <div id="post-content">
-                          
+                          <p>Recently, I&rsquo;ve been playing around with old computer power supplies. Naturally, that led me to other components of the computer, namely, the cooling fan. These fans are driven by a brushless DC motor system. This is to achieve a reduced sound and higher efficiency compared to a brushed DC motor system such as those you would see (or hear) in printers, air conditioners and RC cars.</p>
 
-<h2 id="introduction">Introduction</h2>
+<p>Computer fans can range from very simple to kind-of-simple with 2, 3, and 4 wires coming out of it. The 2 wire configuration is the simplest and this is just power and ground. A third wire is introduced to be able to monitor the speed of the fan. This is done most commonly by using a hall sensor to measure the rotations of the rotors around the commutator. The 4th wire adds PWM control to the fan so that consumers can control the speed of the fan.</p>
 
-<p>The <a href="https://developers.google.com/chart/interactive/docs/">Google Chart</a> library provides a convenient way of visualizing datasets using Javascript and embedding them in websites.</p>
+<p><img src="http://www.ubcchemecar.com/img/blog/solder-fan/2wirefan.jpg">
+<i>A two wire fan circuit. Check out <a href="http://pcbheaven.com/wikipages/How_PC_Fans_Work/">PCB Heaven</a> for more info</i></p>
 
-<p>For our <a href="http://www.ubcchemecar.com/team/">team page</a>, we wanted to embed a dynamic orgchart that would be updated automatically using values stored in a Google Docs &lsquo;database&rsquo;. Finding online tutorials for this was a bit challenging, so here&rsquo;s our implementation.</p>
+<p>How useful are these fans? Under normal operating temperatures, the pi typically reaches ~68 C, and ~80 C when performing calculations or running a video. With the fan, the temperature is quickly lowered to ~37 C. Another use for these fans is for soldering. They create a vaccuum to garner the toxic fumes from the solder.</p>
 
-<p>If all goes well, you should get something like this, with the names, roles and relationships defined in a Google Sheet:</p>
+<p>Soldering fumes are bad for you! They are a mix of lead, and rosin evaporated into a gas. Always have good ventilation when you solder. I use my PC fans to create a solder fume extractor that I would otherwise, have to buy commercially <a href="http://www.digikey.ca/product-detail/en/apex-tool-group/WSA350/WSA350-ND/1130559">like this</a>. I created a tiny switch board for my fans and I had them running! This was a good start but it didnt fully solve the problem as the fumes were merely being diluted. To rectify this I bought some carbon filters and attached them onto my fans. The trade-off is that this lowers the volume of air displaced by the fan but fumes actually become trapped by the carbon filter.</p>
 
-<p><img src="http://www.ubcchemecar.com/img/blog/orgcharts/1.png" width="100%"></p>
+<p>The circuit I used was a simple switch inline to a computer power supply to power the fans. I am a large fan (no pun intended) of modularity, the ability to switch and recombine components. Sometimes, I need the power supply for a different task, or I need the fan to be cooling rather than extracting particulates.</p>
 
-<h2 id="how-it-works">How it works</h2>
+<p>My circuit was simple enough that I didnt need a breadboard. I also wanted my circuit to be more permanent and didn&rsquo;t want to spend time or money making a PCB, so I went with a perf board. Perfboards come in many varieties with copper strips exactly like a breadboard or long strips down the board but they are known traditionally as boards with arrays of little holes punched into them and copper vias surrounding them to create a contact for soldering.</p>
 
-<p>We will be using the <code>orgchart</code> package in Google Charts. Our implementation will be somewhat similar to the <a href="https://developers.google.com/chart/interactive/docs/gallery/orgchart">example</a> in the Google Charts documentation, but instead of hardcoding the values in JavaScript, we will grab them dynamically from a Google Sheet data source.</p>
+<p>Perfboards are a step behind making an actual PCB that you would see inside any electronic component but I believe that they are more difficult to make. With CAD software out there such as EAGLECAD or Fritzing, making a PCB is very visual. The graphical interfaces allow you to easily create a route and undo it with a simple click of a button. With a perfboard it is more difficult as there isn&rsquo;t this interface. Planning it becomes a lot more tedious with pencil and paper and having to make iterations</p>
 
-<h2 id="set-up-your-google-sheet">Set up your Google Sheet</h2>
+<p><img src="http://www.ubcchemecar.com/img/blog/solder-fan/circuit.jpg" width="50%"></p>
 
-<ol>
-<li>First, create a new Google Sheet with a title of your choice.</li>
-<li>In the first row, fill in the first 3 columns, A to C, with &lsquo;Role&rsquo;, &lsquo;Reports To&rsquo; and &lsquo;Name&rsquo;.</li>
-<li>Add in your team&rsquo;s roles, names and organizational relationships in the subsequent rows.</li>
-</ol>
+<p>For my perfboard I used two rows of header pins to allow multiple fan systems as well as the connection to the power supply. A set-screw hub enable the switch to be inserted and removed at a moments notice.</p>
 
-<p><strong>Role</strong></p>
-
-<ul>
-<li>The first column contains the role of the team member (i.e. Captain, Treasurer, Secretary). This is the green colored text in the screenshot above. The <strong>roles must be unique</strong> or the orgchart won&rsquo;t work properly. If you have multiple people with the same roles, add numbers or Roman numerals at the end (i.e. Webmaster I, Webmaster II).</li>
-</ul>
-
-<p><strong>Reports To</strong></p>
-
-<ul>
-<li>This column defines the relationships in the orgchart. Fill it up with the <strong>role</strong> that this position reports to. A blank entry will place the box at the very top of the org chart. (i.e. the <strong>Reports To</strong> entry for Captain will be blank).</li>
-</ul>
-
-<p><strong>Name</strong></p>
-
-<ul>
-<li>Self-explanatory, this column contains the names of the team members. This is the black colored text in the screenshot above.</li>
-</ul>
-
-<hr />
-
-<p>Once you&rsquo;re done, your Google Sheet should look something like this:</p>
-
-<p><img src="http://www.ubcchemecar.com/img/blog/orgcharts/2.png" width="50%"></p>
-
-<h3 id="grab-your-google-sheet-data-in-json-format">Grab your Google Sheet data in JSON format</h3>
-
-<ul>
-<li>Once that&rsquo;s done, click the big blue share button on the top right corner of the screen and change the sharing settings to &lsquo;Anyone with the link <strong>Can View</strong>&rsquo;. Copy the URL for your Google Sheet from your browser, it should look something like this:</li>
-</ul>
-
-<p><code>https://docs.google.com/spreadsheets/d/1qImsDykMfz-obbMsOQo6f_IW_xmNdtScByEhcnfU3S8/edit#gid=0</code></p>
-
-<ul>
-<li>To get the data as a JSON file, modify the <code>edit#gid=0</code> part to <code>gviz/tq</code>, as below:</li>
-</ul>
-
-<blockquote>
-<p><strong><code>https://docs.google.com/spreadsheets/d/1qImsDykMfz-obbMsOQo6f_IW_xmNdtScByEhcnfU3S8/gviz/tq</code></strong></p>
-</blockquote>
-
-<p>If you navigate to that link in your browser, you should get a <code>json.txt</code> file. You will need this link for the next step.</p>
-
-<h2 id="javascript-implementation">Javascript Implementation</h2>
-
-<p>Once the Google Sheet &lsquo;database&rsquo; has been set up, create a new <code>orgchart.html</code> (or any other name) file and paste in the following code. We will be using the <a href="https://developers.google.com/chart/interactive/docs/reference#queryobjects">Google Visualization API Query Language</a> to help us grab data from our Google Sheet.</p>
-
-<p>Remember to replace <code>var dataSourceUrl</code> with your own Google Sheet URL. Open the file in your browser, and you should see your orgchart!</p>
-
-<pre><code class="language-html">&lt;html&gt;
-&lt;head&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;div id=&quot;orgchart_admin&quot;&gt;&lt;/div&gt;
-  &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script type=&quot;text/javascript&quot; src=&quot;https://www.gstatic.com/charts/loader.js&quot;&gt;&lt;/script&gt;
-  &lt;script type=&quot;text/javascript&quot;&gt;
-    google.charts.load('current', {'packages' : ['orgchart', 'table']});
-    google.charts.setOnLoadCallback(function() { initialize('') });
-
-    function initialize() {
-      document.getElementById('orgchart_admin').innerHTML = &quot;&lt;i class='fa fa-spinner fa-spin fa-3x fa-fw'&gt;&lt;/i&gt;&quot;;
-      
-      var dataSourceUrl = 'https://docs.google.com/spreadsheets/d/1qImsDykMfz-obbMsOQo6f_IW_xmNdtScByEhcnfU3S8/gviz/tq?';
-
-      // Tells it that the first row contains headers: 'Role', 'Reports To', 'Name'
-      var query = new google.visualization.Query(dataSourceUrl + '&amp;headers=1');
-
-      // Send the query with a callback function.
-      query.send(handleQueryResponse);
-    }
-
-    function handleQueryResponse(response) {
-      // Called when the query response is returned.
-      if (response.isError()) {
-        alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
-        return;
-      }
-
-      var raw_data = response.getDataTable();
-      var data = new google.visualization.DataTable();
-
-      data.addColumn('string', 'Entity');
-      data.addColumn('string', 'ParentEntity');
-      data.addColumn('string', 'ToolTip');
-
-      // Loops through all rows and populates a new DataTable with formatted values for the orgchart
-      var num_rows = raw_data.getNumberOfRows();
-      for (var i = 0; i &lt; num_rows; i++) {
-        var role = raw_data.getValue(i, 0);
-        var reportsTo = raw_data.getValue(i,1);
-        var name = raw_data.getValue(i,2) != null ? raw_data.getValue(i,2) : '';
-
-        data.addRows([[
-          { v: role,
-            f: name + &quot;&lt;div class='role'&gt;&quot; + role + &quot;&lt;/div&gt;&quot;
-          }, 
-          reportsTo, 
-          name]]);
-      }
-
-      // Loops through all rows and populates a new DataTable with formatted values for the orgchart
-      var container = document.getElementById('orgchart_admin');
-      var chart = new google.visualization.OrgChart(container);
-      chart.draw(data, {allowHtml:true, 'size': 'large'});
-    }      
-  &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-
-<h2 id="breaking-down-the-script">Breaking down the script</h2>
-
-<ul>
-<li><p>In the <code>initialize()</code> function, we used the <code>Query</code> class to grab data from our Google Sheet. This is very similar to the <a href="https://developers.google.com/chart/interactive/docs/spreadsheets">example</a> in the documentation.</p></li>
-
-<li><p>In the <code>handleQueryResponse()</code> callback function, if the query is successful, we can get the data as a <a href="https://developers.google.com/chart/interactive/docs/datatables_dataviews">DataTable</a> with <code>raw_data = response.getDataTable()</code>. A DataTable is essentially an array of columns and rows used by Google Charts to represent chart data.</p></li>
-
-<li><p>We then looped through our <code>raw_data</code> and populated a new DataTable, <code>var data = new google.visualization.DataTable()</code>. We did this row by row with the <code>addRows()</code> function. We did this because the <code>orgchart</code> package takes in 3 columns, according to the <a href="https://developers.google.com/chart/interactive/docs/gallery/orgchart">documentation</a> and we want to add formatted values to the first column:</p></li>
-</ul>
-
-<p><strong>First Column</strong>
-The first column is the node ID (each node is a box in the org chart) and as previously mentioned, it should be unique. We can either show the node ID in the box, or use a prettier formatted value, <code>f</code> to show in the box, but the unformatted value, <code>v</code> is still used as the ID. Having formatted values allows us to display the name and role (or optionally, even more data like pictures) in different colors in the same box.</p>
-
-<p>In our orgchart, we want to display both the name and the role, with the role in a different color. So in the code above, we defined the formatted value as follows, with <code>div</code> tags around <code>role</code>:</p>
-
-<pre><code class="language-javascript">f: name + &quot;&lt;div class='role'&gt;&quot; + role + &quot;&lt;/div&gt;&quot;
-</code></pre>
-
-<p><strong>Second Column</strong>
-The second column defines the parent node of the current box (i.e. the relationship data) using the unformatted value, <code>v</code> of the parent node. If this is left blank, the node will be defined as a root node.</p>
-
-<p><strong>Third Column</strong>
-The third and optional column defines the tooltip text, the text that pops up when you hover your mouse over the box.</p>
-
-<ul>
-<li>Finally, in the last part of the script, we made a call to <code>new google.visualization.OrgChart()</code> to display our chart in the web page.</li>
-</ul>
-
-<pre><code class="language-javascript">var container = document.getElementById('orgchart_admin');
-var chart = new google.visualization.OrgChart(container);
-chart.draw(data, {allowHtml:true, 'size': 'large'});
-</code></pre>
-
-<h2 id="styling-the-org-chart">Styling the org chart</h2>
-
-<p>So far, we&rsquo;ve managed to display our org chart, but we haven&rsquo;t added the formatting yet.</p>
-
-<p><img src="http://www.ubcchemecar.com/img/blog/orgcharts/3.png" width="100%"></p>
-
-<p>To change the text color for the roles in the box, we need to add some CSS. Let&rsquo;s modify the head section in the code above:</p>
-
-<pre><code class="language-html">&lt;head&gt;
-  &lt;style&gt;
-  .role{
-      font-size: small;
-      color: #1aa;
-  }   
-  &lt;/style&gt;
-&lt;/head&gt;
-</code></pre>
-
-<p>You should now see the font size and colors updated for the roles if you refresh your page:</p>
-
-<p><img src="http://www.ubcchemecar.com/img/blog/orgcharts/4.png" width="100%"></p>
-
-<p>That&rsquo;s it! Using CSS, you can also style the names by wrapping them with div tags. You can also play around with the box colors, font size and anything else in the org chart. Refer to the Google Charts <a href="https://developers.google.com/chart/interactive/docs/gallery/orgchart">documentation</a> for further information.</p>
-
-<pre><code class="language-javascript">f: &quot;&lt;div class='name'&gt;&quot; + name + &quot;&lt;/div&gt;&quot; + &quot;&lt;div class='role'&gt;&quot; + role + &quot;&lt;/div&gt;&quot;
-</code></pre>
+<p>Now I just need to wait for my fans to come in from the internet (that was a pun)!</p>
 
                         </div>
                         
@@ -373,9 +202,9 @@ chart.draw(data, {allowHtml:true, 'size': 'large'});
                             <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'ubcchemecar';
-    var disqus_identifier = 'http:\/\/www.ubcchemecar.com\/blog\/2016\/12\/24\/orgcharts\/';
-    var disqus_title = 'How To Create Dynamic Org Charts With Google Sheets and Javascript';
-    var disqus_url = 'http:\/\/www.ubcchemecar.com\/blog\/2016\/12\/24\/orgcharts\/';
+    var disqus_identifier = 'http:\/\/www.ubcchemecar.com\/blog\/2017\/01\/01\/solder-fan-system\/';
+    var disqus_title = 'Solder Fan System';
+    var disqus_url = 'http:\/\/www.ubcchemecar.com\/blog\/2017\/01\/01\/solder-fan-system\/';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
