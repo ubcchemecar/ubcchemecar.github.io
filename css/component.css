@@ -194,3 +194,11 @@
 	.og-details { float: none; width: 100%; }
 	
 }
+
+.team-name{
+	margin-top: 20px;
+	font-weight: 300;
+	font-size: 11px;
+	padding: 0px 0 10px;
+	margin-bottom: 10px;	
+}
