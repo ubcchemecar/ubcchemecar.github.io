@@ -100,7 +100,7 @@
 	float: left;
 	height: 100%;
 	overflow: hidden;
-	position: relative;	
+	position: relative;
 	padding: 0 20px 0 50px;
 }
 
@@ -192,7 +192,7 @@
 
 	.og-fullimg { display: none; }
 	.og-details { float: none; width: 100%; }
-	
+
 }
 
 .team-name{
@@ -200,5 +200,5 @@
 	font-weight: 300;
 	font-size: 11px;
 	padding: 0px 0 10px;
-	margin-bottom: 10px;	
+	margin-bottom: 10px;
 }

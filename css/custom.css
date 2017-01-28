@@ -8,3 +8,12 @@
 .box-simple {
   min-height: 230px;
 }
+
+#post-content > p{
+	font-size: 16px;
+  line-height: 30px;
+}
+
+#post-content > h2{
+  line-height: 60px;
+}
