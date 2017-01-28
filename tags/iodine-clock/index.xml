@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>UBC Chem-E-Car: The University of British Columbia</title>
+    <link>http://www.ubcchemecar.com/tags/iodine-clock/index.xml</link>
+    <description>Recent content on UBC Chem-E-Car: The University of British Columbia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (C) 2016 UBC Chem-E-Car. All rights reserved.</copyright>
+    <atom:link href="http://www.ubcchemecar.com/tags/iodine-clock/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Chem-E-Car Reaction Mechanism</title>
+      <link>http://www.ubcchemecar.com/blog/2017/01/27/iodine-clock/</link>
+      <pubDate>Fri, 27 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ubcchemecar.com/blog/2017/01/27/iodine-clock/</guid>
+      <description>
+
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;The Iodine Clock reaction is the official stopping mechanism for the 2016-2017 Junior Chem-E-Car design team. The reaction involves a color change with an Iodine indicator to signal the stopping mechanism, via a light dependent resistor. Through calibration, the reaction time can be determined by the ratio of Potassium Iodide and Sodium Thiosulfate. The correlation between time and ratio is linear; therefore, the Iodine Clock is a simple and effective stopping mechanism for the motor.&lt;/p&gt;
+
+&lt;h2 id=&#34;how-does-it-work&#34;&gt;How does it work?&lt;/h2&gt;
+
+&lt;p&gt;The two simultaneous chemical reactions shown below cause a color change from colorless to dark purple with a transient light blue intermediate stage.&lt;/p&gt;
+
+&lt;h3 id=&#34;1-h-sub-2-sub-o-sub-2-sub-aq-2i-sup-sup-aq-2h-sup-sup-aq-i-sub-2-sub-2h-sub-2-sub-o-aq&#34;&gt;1. H&lt;sub&gt;2&lt;/sub&gt;O&lt;sub&gt;2&lt;/sub&gt; (aq) + 2I&lt;sup&gt;−&lt;/sup&gt;(aq) + 2H&lt;sup&gt;+&lt;/sup&gt;(aq)→ I&lt;sub&gt;2&lt;/sub&gt; + 2H&lt;sub&gt;2&lt;/sub&gt;O (aq)&lt;/h3&gt;
+
+&lt;h3 id=&#34;2-2s-sub-2-sub-o-sub-3-sub-sup-2-sup-aq-i-sub-2-sub-aq-s-sub-4-sub-o-sub-6-sub-sup-2-sup-aq-2i-sup-sup-aq&#34;&gt;2. 2S&lt;sub&gt;2&lt;/sub&gt;O&lt;sub&gt;3&lt;/sub&gt;&lt;sup&gt;2−&lt;/sup&gt;(aq)+ I&lt;sub&gt;2&lt;/sub&gt;(aq)→ S&lt;sub&gt;4&lt;/sub&gt;O&lt;sub&gt;6&lt;/sub&gt;&lt;sup&gt;2−&lt;/sup&gt;(aq) + 2I&lt;sup&gt;−&lt;/sup&gt; (aq)&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.ubcchemecar.com/img/blog/iodine-clock/figure1.png&#34; width=&#34;100%&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Figure 1:&lt;/strong&gt; Color changes during the iodine clock reaction [Ref. 1]&lt;/p&gt;
+
+&lt;p&gt;The first reaction slowly oxidizes iodide ions (I-) into iodine (I2) which has the potential to
+form a blue triiodide – starch complex. The second reaction rapidly reduces the product (I2)
+from the first reaction back into its ionic form (I-). Due to the reaction rate difference, only
+same amount of triiodide exists in the solution which maintains the colorless state of the
+mixture. When thiosulfate ions (2S&lt;sub&gt;2&lt;/sub&gt;O&lt;sub&gt;3&lt;/sub&gt;&lt;sup&gt;2−&lt;/sup&gt;) are exhausted, chemical equilibrium moves to the
+accumulation and the solution turns from colorless into dark blue. In this calibration process, the concentration of thiosulfate ions acts as the limiting reagent.&lt;/p&gt;
+
+&lt;h2 id=&#34;general-procedure&#34;&gt;General Procedure:&lt;/h2&gt;
+
+&lt;p&gt;During the testing process, our team has to prepare multiple solutions with varying concentrations. We begin by preparing solution A and B (explained in detail below), mixing them, observing and recording the color change. After a large enough spread of data points are recorded, we can generate a calibration curve.&lt;/p&gt;
+
+&lt;h2 id=&#34;step-by-step-procedure&#34;&gt;Step-by-step Procedure:&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Preparation of solution A&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Measure 6.0 g Na2S2O3 with an analytic balance and a weighing boat.&lt;/li&gt;
+&lt;li&gt;Dissolve 6.0 g Na2S2O3 in a 250ml volumetric flask. (Note: Dissolve Na2S2O3 within
+the weighing boat first and then transfer the solution into the flask.)&lt;/li&gt;
+&lt;li&gt;Fill in the volumetric flask with DI water up to the graduation marking.&lt;/li&gt;
+&lt;li&gt;Measure 6.0g KI with an analytic balance and a weighing boat.&lt;/li&gt;
+&lt;li&gt;Dissolve 6.0g KI in a 250ml volumetric flask. (Note: Dissolve KI within the
+weighing boat first and then transfer the solution into the flask.)&lt;/li&gt;
+&lt;li&gt;Fill in the volumetric flask with DI water up to the graduation marking.&lt;/li&gt;
+&lt;li&gt;Measure volume of both solutions needed, and mix in a 250 mL beaker.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Preparation of solution B&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Fill in the volumetric flask with distilled water up to the graduation marking.&lt;/li&gt;
+&lt;li&gt;Measure 40 ml 2M H2SO4 with a pipette into the 500ml volumetric flask.&lt;/li&gt;
+&lt;li&gt;Measure 5 ml 30% H2O2 with a pipette into a 500ml volumetric flask.&lt;/li&gt;
+&lt;li&gt;Measure 45ml prepared solution from the volumetric flask with a graduated cylinder as solution B.&lt;/li&gt;
+&lt;li&gt;Transfer solution B from the graduated cylinder into a 50ml beaker as the testing container.&lt;/li&gt;
+&lt;li&gt;Heat up 50 mL of DI water to approximately 45-50 degrees celsius. Measure and dissolve 2g of soluble starch in the water.&lt;/li&gt;
+&lt;li&gt;Transfer 3 mL of the starch solution into the 50mL beaker with solution B.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Mixing Solutions and Data Calibration&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Mix and adjust ratio of KI and Na2S2O3 in Solution A&lt;/li&gt;
+&lt;li&gt;Measure 10 mL of Solution A in syringe&lt;/li&gt;
+&lt;li&gt;Transfer 40 mL of Solution B to beaker&lt;/li&gt;
+&lt;li&gt;Inject Solution A into Solution B to mix and start timing&lt;/li&gt;
+&lt;li&gt;Stop time once color change initiates and record&lt;/li&gt;
+&lt;li&gt;Repeat steps 1-5 for different ratios of KI and Na2S2O3&lt;/li&gt;
+&lt;li&gt;Plot calibration to find relationship between time and ratio&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.ubcchemecar.com/img/blog/iodine-clock/figure2.png&#34; width=&#34;100%&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Figure 2:&lt;/strong&gt; Calibration curve plotting reaction time vs volumetric ratio of solution A to solution B&lt;/p&gt;
+
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;The Iodine clock reaction displays a linear relationship between reaction time and the ratio between the volumes of Potassium Iodide and Sodium Thiosulfate added. As a result, we can manipulate the volume of our Potassium Iodide solution added to interpolate for a specific stopping time. Our goal is to maintain an error of less than 2% for our calibration curve. The Iodine Clock reaction is a reliable and simple method for timing the motor of the car.&lt;/p&gt;
+
+&lt;h2 id=&#34;references&#34;&gt;References:&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;http://img.wonderhowto.com/img/18/99/63483049134215/0/classic-chemistry-colorize-colorless-liquids-with-black-magic-aka-iodine-clock-reaction.1280x600.jpg&#34;&gt;Classic chemistry colorize colorless liquids with black magic&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
