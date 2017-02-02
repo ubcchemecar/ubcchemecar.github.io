@@ -202,3 +202,9 @@
 	padding: 0px 0 10px;
 	margin-bottom: 10px;
 }
+
+.price h1{
+	font-weight: bolder;
+	font-size: 45px;
+	font-family: monospace;
+}
