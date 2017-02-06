@@ -7,7 +7,7 @@
   <meta name="googlebot" content="index,follow,snippet,archive">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Team</title>
+  <title>What&#39;s Brewing* in The Lab?</title>
 
   <meta name="author" content="" />
   <meta name="keywords" content="">
@@ -53,9 +53,9 @@
   <link rel="alternate" href="http://www.ubcchemecar.com/index.xml" type="application/rss+xml" title="UBC Chem-E-Car: The University of British Columbia">
 
   
-  <meta property="og:title" content="Team" />
+  <meta property="og:title" content="What&#39;s Brewing* in The Lab?" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/categories/team//" />
+  <meta property="og:url" content="/blog/2017/02/05/beer2//" />
   <meta property="og:image" content="img/logo2.png" />
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
@@ -78,9 +78,9 @@
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand home" href="http://www.ubcchemecar.com/">
-                    <img src="http://www.ubcchemecar.com/img/logo.png" alt="Team logo" class="hidden-xs hidden-sm">
-                    <img src="http://www.ubcchemecar.com/img/logo-small.png" alt="Team logo" class="visible-xs visible-sm">
-                    <span class="sr-only">Team - go to homepage</span>
+                    <img src="http://www.ubcchemecar.com/img/logo.png" alt="What&#39;s Brewing* in The Lab? logo" class="hidden-xs hidden-sm">
+                    <img src="http://www.ubcchemecar.com/img/logo-small.png" alt="What&#39;s Brewing* in The Lab? logo" class="visible-xs visible-sm">
+                    <span class="sr-only">What&#39;s Brewing* in The Lab? - go to homepage</span>
                 </a>
                 <div class="navbar-buttons">
                     <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -157,7 +157,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Team</h1>
+                <h1>What&#39;s Brewing* in The Lab?</h1>
             </div>
         </div>
     </div>
@@ -166,59 +166,111 @@
 
         <div id="content">
             <div class="container">
+
                 <div class="row">
+
                     
 
-                    <div class="col-md-9" id="blog-listing-medium">
+                    <div class="col-md-9" id="blog-post">
 
+                        <p class="text-muted text-uppercase mb-small text-right">By Ngai To Lo | February 5, 2017</p>
+
+                        <div id="post-content">
+                          
+
+<p><small><strong>*Disclaimer:</strong> What&rsquo;s brewing, figuratively, not literally. The lab is not food safe, NO FOOD OR DRINKS IN THE LAB!</small></p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>As you may have read in part one, our team is working on an app to automate the brewing of craft beer. To understand the homebrewing process we made a batch of Pacific ESB, an ale that is light with a crisp bitter aftertaste. We made a few mistakes throughout the process (<strong>BURNT GRAINS</strong>) but learned from those mistakes to make the second batch better.</p>
+
+<p>What we need to do next is prepare our sensors and electronics. Primarily, the qualities we are looking for are <strong>alcohol content</strong>, acidity, and temperature. We want to ensure that the data we collect is reliable and accurate for our app and future users so we took the time to work with them and learn them!</p>
+
+<h2 id="sensors-and-devices">Sensors and Devices</h2>
+
+<p>First is the DS18b20 temperture sensor from Adafruit. This is a 1-wire temperature sensor that is simple and easy too setup. It requires no external components, can be powered by logic level (5V) and like each and everyone of us, it has unique 64 bit serial code stored into its ROM memory. What this means is that we can connect up to 63 device to 1 arduino port. With this configuration protocol we will be hooking up 4 of these sensors to the arduino to measure ambient temperature, the temperature of our cooling device, and the temperature of the brew.</p>
+
+<p><img src="http://www.ubcchemecar.com/img/blog/beer2/tempsen.jpg" alt="Temperature sensor" /></p>
+
+<p><em>Adafruit&rsquo;s temperature sensor</em></p>
+
+<p>Next we want to measure alcohol content, homebrewers measure the specific gravity of the batch. Since alcohol is less dense than water the specific gravity measurement will be lower after the fermentation process. Our goal will to measure the change in weight of a suspended mass inside the batch. To do so we want a device that measure force applied i.e weight. This is our load cell.</p>
+
+<p><img src="http://www.ubcchemecar.com/img/blog/beer2/loadcell.jpg" alt="Load cell" /></p>
+
+<p><em>Sparkfun load cell</em></p>
+
+<p>Last device in this set is a Thermoelectric cooler, otherwise known as the Peltier plate. A temperature difference between two different metals will create a voltage difference and the converse is true as well. That means, by pumping electricity, we can reach teamperatures as low as -5C and 60C at once. For us this means a system that can heat and cool.</p>
+
+<p><img src="http://www.ubcchemecar.com/img/blog/beer2/peltier.jpg" alt="Peltier plate" /></p>
+
+<p><em>Peltier Plate</em></p>
+
+<h2 id="testing">Testing</h2>
+
+<p>Our goal was to make sure all of our equipment was working and seeing if anything needed calibration. Then we wanted to create a test situation where we would use the peltier plate to cool water while wew measured the temperature and weight of the water.</p>
+
+<p>One of the first drawbacks is that the Load cell did not work. Data was not being sent and the values we had were ridiculous.</p>
+
+<p><img src="http://www.ubcchemecar.com/img/blog/beer2/test1.jpg" width="80%"></p>
+
+<p><em>Load Cell Wiring</em></p>
+
+<p>The temperature sensors went much better.  The design of the sensor was plug &amp; play and we were getting data fast and accurately in minutes. Chaining them in series took some time. We had to get to know each and everyone of them and their adresses but it worked and worked without a hitch it did.</p>
+
+<p><img src="http://www.ubcchemecar.com/img/blog/beer2/test2.jpg" width="80%"></p>
+
+<p><em>Two temperature sensors here measure ambient temperature and water temperature</em></p>
+
+<p>So when you have a pelteir plate one side heats up and the other side cools. So one issue is that the heat from the hot side will seep into the cold side thus losing efficiency. To rectify that we added a heatsinkand a fan to the hot side so the heat dissapates faster. On the other side we had it hooked up to a small container of water in which we ran through a pump.</p>
+
+<p><img src="http://www.ubcchemecar.com/img/blog/beer2/peltierconfig.jpg" width="80%"></p>
+
+<p><em>The system here shows the heatsink, fan and peltier and water unit.</em></p>
+
+<p>This is the full setup that we have:</p>
+
+<p><img src="http://www.ubcchemecar.com/img/blog/beer2/fullsetup.jpg" width="80%"></p>
+
+<p><em>Complete configuration</em></p>
+
+<p>We run water through a small tank that gets cooled by the peliter plate. Simple! Well it rarely is.  The water wasn&rsquo;t cooling. With numerous factors.</p>
+
+<p>Our peltier plate wasnt heating at it maximum potential. The power supply we used is only rated for maximum of 3 amps. This only lowered our temperature on the cold side of the pletier plate to about 10°C</p>
+
+<p><img src="http://www.ubcchemecar.com/img/blog/beer2/voltage.jpg" width="80%"></p>
+
+<p><em>Current limitations</em></p>
+
+<p>In our preliminary test we simply put the heatsink on top of the peltier plate and the plate to the water tank. This configuration does not transfer heat well at all due to the uneven surfaces.
+Lastly, The water cooling tank was too small for a flowrate that was too fast. The water didn&rsquo;t have time to actually get cold before moving out of the tank.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>All in all the goal of testing or sensors was done. We are going to need a new laod cell or figure out whats wrong with this one. The temperature sensors work well. We just need to figure out some more design parameters before we make the real thing.</p>
+
+                        </div>
                         
                         
-                        <section class="post">
-                            <div class="row">
-                                <div class="col-md-4">
-                                  <div class="image">
-                                      <a href="http://www.ubcchemecar.com/blog/2017/01/31/awards/">
-                                          
-                                          <img src="http://www.ubcchemecar.com//img/team/2015/admin.jpg" class="img-responsive" alt="">
-                                          
-                                      </a>
-                                  </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <h2><a href="http://www.ubcchemecar.com/blog/2017/01/31/awards/">2016: A year in review</a></h2>
-                                    <div class="clearfix">
-                                        <p class="author-category">
-                                          
-                                          By Siang Lim and Athanasios Kritharis 
-                                          
-                                          
-                                          
-                                          in <a href="http://www.ubcchemecar.com/categories/team">team</a>
-                                          
-                                          
+                        <div id="comments">
+                            <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'ubcchemecar';
+    var disqus_identifier = 'http:\/\/www.ubcchemecar.com\/blog\/2017\/02\/05\/beer2\/';
+    var disqus_title = 'What\x27s Brewing* in The Lab?';
+    var disqus_url = 'http:\/\/www.ubcchemecar.com\/blog\/2017\/02\/05\/beer2\/';
 
-                                        </p>
-                                        <p class="date-comments">
-                                            <a href="http://www.ubcchemecar.com/blog/2017/01/31/awards/"><i class="fa fa-calendar-o"></i> January 31, 2017</a>
-                                        </p>
-                                    </div>
-                                    <p class="intro">Reflections 2016 has been a very exciting year for the Chem-E-Car team. We have presented our work in more than 7 conferences, with topics ranging from the clean energy industry (Generate 2016) to chemical engineering innovation (CHBE Engineering Research Day). From these events, we have won 5 different awards. Notably, we placed 1st among 41 teams from all over the world for our poster presentation at the American Institute of Chemical Engineers (AIChE) 2016 Student Conference in San Francisco.</p>
-                                    <p class="read-more"><a href="http://www.ubcchemecar.com/blog/2017/01/31/awards/" class="btn btn-template-main">Continue reading</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                        </div>
                         
 
-                        <ul class="pager">
-                            
-                            <li class="previous disabled"><a href="#">&larr; Newer</a></li>
-                            
-
-                            
-                            <li class="next disabled"><a href="#">Older &rarr;</a></li>
-                            
-                        </ul>
                     </div>
                     
 
@@ -348,6 +400,7 @@
 
                 </div>
                 
+
             </div>
             
         </div>
