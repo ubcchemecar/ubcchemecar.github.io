@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>UBC Chem-E-Car: The University of British Columbia</title>
+    <link>http://www.ubcchemecar.com/tags/circuits/index.xml</link>
+    <description>Recent content on UBC Chem-E-Car: The University of British Columbia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (C) 2017 UBC Chem-E-Car. All rights reserved.</copyright>
+    <atom:link href="http://www.ubcchemecar.com/tags/circuits/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Chem-E-Car Electrical System</title>
+      <link>http://www.ubcchemecar.com/blog/2017/02/11/elecsystem/</link>
+      <pubDate>Sat, 11 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ubcchemecar.com/blog/2017/02/11/elecsystem/</guid>
+      <description>
+
+&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;In the “Chem-E-Car Reaction Mechanism” article, Jayg and Josh talk about the iodine clock reaction and how a light-dependent resistor (LDR) is part of the stopping mechanism. The LDR changes electrical resistance depending on how much light is hitting it; as light intensity increases, resistance drops, and vice versa. Theoretically, if we shone light on an LDR in an iodine solution as its colour went dark, light intensity as measured at the LDR’s surface would fall. This is the basis of our stopping mechanism.&lt;/p&gt;
+
+&lt;h2 id=&#34;system-overview&#34;&gt;System Overview&lt;/h2&gt;
+
+&lt;p&gt;Our system consists of two main circuits, a MOSFET (N-channel transistor) circuit and an LDR circuit. The transistor circuit is used to control LEDs that are held in place within the reaction vessel, and the LDR circuit controls LDRs used for the stopping mechanism. Both circuits are connected to our Arduino microcontroller, which is central to the electrical system. Below is a basic diagram for the system:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://www.ubcchemecar.com/img/blog/elecsystem/elec1.png&#34; width=&#34;80%&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; the Arduino board is also connected to the motor of the car via another MOSFET, which is not shown in the circuit diagram.&lt;/p&gt;
+
+&lt;p&gt;In terms of software, our team mostly used Arduino to generate and test the codes for the car. I also used Eagle software to design the circuit diagram above, and to create an effective circuit that can be printed on a circuit board.&lt;/p&gt;
+
+&lt;h2 id=&#34;mosfet-circuit&#34;&gt;MOSFET Circuit&lt;/h2&gt;
+
+&lt;p&gt;The MOSFET circuit connects our LEDs to the Arduino. The Arduino board works with a fairly small current, and so when the voltage across the LDRs changes during the stopping mechanism, the difference between voltage readings is small. We can amplify these signals by using a MOSFET, which is the whole idea behind having it in the circuit. With a big enough voltage difference, the risk of stopping at the wrong time is greatly reduced.&lt;/p&gt;
+
+&lt;p&gt;As shown in the diagram, the MOSFET has its gate pin connected to an Arduino digital pin (D9-1), its source pin connected to the wire coming from LED1 and LED2, and its drain pin connected to the 5V supply from the Arduino. Physically, the circuit will be on a printed circuit board made in the workshop used by Chem-E-Car, and will be separated from the LDRs as explained below.&lt;/p&gt;
+
+&lt;h2 id=&#34;ldr-circuit&#34;&gt;LDR Circuit&lt;/h2&gt;
+
+&lt;p&gt;Our LDR circuit connects the Arduino to the 2 LDRs, and allows the Arduino to record the voltages across them using its built-in analog pins. Using the analog pins, we set threshold values of voltage which, when crossed, enable the Arduino to cut off power to the motor, which will stop the car.&lt;/p&gt;
+
+&lt;p&gt;The LDRs are placed across from the LEDs in the reaction vessel. This is to allow maximum light exposure from the LEDs, and so the LDRs need to be physically separated from the circuit board.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
