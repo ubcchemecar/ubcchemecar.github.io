@@ -7,8 +7,62 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (C) 2017 UBC Chem-E-Car. All rights reserved.</copyright>
-    <lastBuildDate>Sat, 11 Feb 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 Feb 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://www.ubcchemecar.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Do You Even Budget?</title>
+      <link>http://www.ubcchemecar.com/blog/2017/02/12/finance/</link>
+      <pubDate>Sun, 12 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.ubcchemecar.com/blog/2017/02/12/finance/</guid>
+      <description>
+
+&lt;p&gt;&lt;em&gt;Open positions: We are looking for enthusiastic UBC students to help with the team&amp;rsquo;s finances and sponsorship activities. Email us and let&amp;rsquo;s chat! captain@ubcchemecar.com&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;backstory&#34;&gt;Backstory&lt;/h1&gt;
+
+&lt;p&gt;Last summer, we received an interesting e-mail from the &lt;a href=&#34;http://uoftchemecar.com&#34;&gt;UofT Chem-E-Car&lt;/a&gt; team. They&amp;rsquo;ve just officially launched as a design team and wanted to know more about our team&amp;rsquo;s financial structure. Here&amp;rsquo;s what we shared with them.&lt;/p&gt;
+
+&lt;h2 id=&#34;department-funding&#34;&gt;Department Funding&lt;/h2&gt;
+
+&lt;p&gt;We maintain a very close and important relationship with UBC&amp;rsquo;s Chemical &amp;amp; Biological Engineering department. They provide us with lab space and machine shop services and with our delivery/storage logistics and financial accounts. Occasionally, we borrow small quantities of chemicals and use equipment in department labs. As a team, we contribute back to the department by maintaining a strong and active presence at various department events, i.e. orientation day, annual engineering open house or department-hosted high school outreach programs. We receive ad hoc department funding for certain events (i.e. materials or posters for open houses, occasional travel funding and assistance) but that is currently not a significant portion of our operating budget.&lt;/p&gt;
+
+&lt;h2 id=&#34;paf-funding&#34;&gt;PAF Funding&lt;/h2&gt;
+
+&lt;p&gt;As with all engineering teams on campus, our activities are primarily funded by the UBC Faculty of Applied Science&amp;rsquo;s &lt;a href=&#34;http://paf.engineering.ubc.ca/&#34;&gt;Professional Activities Fund (PAF)&lt;/a&gt;. Aside from PAF, we do receive funding from several other UBC sources, namely:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://amssustainability.ca/&#34;&gt;AMS Sustainability Fund&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://students.engineering.ubc.ca/career/professional-development/self/&#34;&gt;Shell Canada Experiential Learning Fund&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://vpstudents.ubc.ca/walter-gage&#34;&gt;UBC Walter Gage fund&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We always keep an eye out for any other possible funding opportunities from UBC. It&amp;rsquo;s also a good idea to make a note of deadlines for UBC funding sources, several of them operate on a monthly/biweekly application cycle, and some have a strict annual deadline. You should also start early in preparing your funding applications. Our team&amp;rsquo;s funding paperwork preparation (i.e. proposal writing, budgets and annual reporting) takes up a significant amount of time from our main activities.&lt;/p&gt;
+
+&lt;h2 id=&#34;sponsorship&#34;&gt;Sponsorship&lt;/h2&gt;
+
+&lt;p&gt;From our experience, we find that businesses are usually reluctant to provide cash contributions, but will be more receptive to in-kind contributions and requests for specific items. Cold emailing and cold calls usually don&amp;rsquo;t work for us (as of February 2017, but we are trying some new strategies this term!). We also find that our sponsorship requests are usually most successful when we get a chance to talk to the company&amp;rsquo;s representatives face-to-face at conferences or local exhibitions (i.e. Maker Faire).&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;d recommend preparing a sponsorship package before approaching businesses (&lt;a href=&#34;http://www.ubcchemecar.com/sponsors/&#34;&gt;http://www.ubcchemecar.com/sponsors/&lt;/a&gt;). Big thanks to our APSC Development and Alumni Relations Office. They help us with sponsorship strategies and prepare official tax receipts, business acknowledgement letters and donor thank you messages: &lt;a href=&#34;https://apsc.ubc.ca/giving/contact-us&#34;&gt;https://apsc.ubc.ca/giving/contact-us&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A big thanks to our awesome corporate sponsors this year:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.botfeeder.ca/&#34;&gt;BotFeeder&lt;/a&gt; for giving us enough 3D printing filaments to last a whole year&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.mgchemicals.com&#34;&gt;MG Chemicals&lt;/a&gt; for providing coatings, sprays and epoxy etc. for our projects&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.digitalocean.com/&#34;&gt;DigitalOcean&lt;/a&gt; for providing server credits for our software and web-based projects&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Special thanks to our biggest supporter and Exclusive Diamond Sponsor, the &lt;a href=&#34;https://www.facebook.com/danielfamilyfoundation/&#34;&gt;Daniel Family Foundation&lt;/a&gt; for funding our energy projects.&lt;/p&gt;
+
+&lt;h2 id=&#34;finance-app&#34;&gt;Finance App&lt;/h2&gt;
+
+&lt;p&gt;Our home department suggested that we make our expenses available to the public for great transparency and accountability. We launched a &lt;a href=&#34;http://finance.ubcchemecar.com&#34;&gt;Rails web app&lt;/a&gt; for tracking purchases. There&amp;rsquo;s still a lot of work to be done on improving the app, especially on the data visualization part but it&amp;rsquo;s a good start!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Chem-E-Car Electrical System</title>
@@ -949,18 +1003,6 @@ chart.draw(data, {allowHtml:true, &#39;size&#39;: &#39;large&#39;});
       <description>
 
 &lt;h2 id=&#34;2016-2017-sponsorship-package-docs-ubc-chem-e-car-2016-2017-pdf&#34;&gt;&lt;a href=&#34;http://www.ubcchemecar.com/docs/UBC_Chem-E-Car_2016-2017.pdf&#34;&gt;2016-2017 Sponsorship Package&lt;/a&gt;&lt;/h2&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Team</title>
-      <link>http://www.ubcchemecar.com/team/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.ubcchemecar.com/team/</guid>
-      <description>
-
-&lt;h2 id=&#34;view-orgchart-orgchart&#34;&gt;&lt;a href=&#34;http://www.ubcchemecar.com/orgchart/&#34;&gt;View Orgchart&lt;/a&gt;&lt;/h2&gt;
 </description>
     </item>
     
