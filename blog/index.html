@@ -62,6 +62,35 @@
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/agate.min.css">
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
+
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      
+      
+      
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i = 0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+  </script>
+    
 </head>
 
 
@@ -172,6 +201,42 @@
                     <div class="col-md-9" id="blog-listing-medium">
 
                         
+                        
+                        <section class="post">
+                            <div class="row">
+                                <div class="col-md-4">
+                                  <div class="image">
+                                      <a href="http://www.ubcchemecar.com/blog/2017/02/28/fuelcell/">
+                                          
+                                          <img src="http://www.ubcchemecar.com//img/blog/fuelcell/image00.jpg" class="img-responsive" alt="">
+                                          
+                                      </a>
+                                  </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <h2><a href="http://www.ubcchemecar.com/blog/2017/02/28/fuelcell/">Powering The Future (Or just the Chem-E-Car)</a></h2>
+                                    <div class="clearfix">
+                                        <p class="author-category">
+                                          
+                                          By Fiona Abigail D'Silva, Stuthi Hegde and Jeffery Kung 
+                                          
+                                          
+                                          
+                                          in <a href="http://www.ubcchemecar.com/categories/batteries">Batteries</a>
+                                          
+                                          
+
+                                        </p>
+                                        <p class="date-comments">
+                                            <a href="http://www.ubcchemecar.com/blog/2017/02/28/fuelcell/"><i class="fa fa-calendar-o"></i> February 28, 2017</a>
+                                        </p>
+                                    </div>
+                                    <p class="intro">Chem-E-Car’s New Fuel Cell Division While the chemical team is building clocks and electrical team is making a new stopping mechanism, the fuel cell team is here to ensure that the car has the power to move! This year, UBC Chem-E-Car’s Junior Battery team has expanded to incorporate a new fuel cell division. Several universities have had overwhelming success using fuel cells in their cars, and we’re hoping to cash in on this as well.</p>
+                                    <p class="read-more"><a href="http://www.ubcchemecar.com/blog/2017/02/28/fuelcell/" class="btn btn-template-main">Continue reading</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
                         
                         <section class="post">
                             <div class="row">
@@ -503,43 +568,6 @@ If all goes well, you should get something like this, with the names, roles and 
                             </div>
                         </section>
                         
-                        <section class="post">
-                            <div class="row">
-                                <div class="col-md-4">
-                                  <div class="image">
-                                      <a href="http://www.ubcchemecar.com/blog/2016/11/24/trial-and-error/">
-                                          
-                                          <img src="http://www.ubcchemecar.com/img/banners/banner-trial.jpg" class="img-responsive" alt="">
-                                          
-                                      </a>
-                                  </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <h2><a href="http://www.ubcchemecar.com/blog/2016/11/24/trial-and-error/">The Importance of Trial and Error</a></h2>
-                                    <div class="clearfix">
-                                        <p class="author-category">
-                                          
-                                          By Athanasios Kritharis 
-                                          
-                                          
-                                          
-                                          in <a href="http://www.ubcchemecar.com/categories/design">Design</a>
-                                          
-                                          
-
-                                        </p>
-                                        <p class="date-comments">
-                                            <a href="http://www.ubcchemecar.com/blog/2016/11/24/trial-and-error/"><i class="fa fa-calendar-o"></i> November 24, 2016</a>
-                                        </p>
-                                    </div>
-                                    <p class="intro">Introduction Welcome everyone to the first of (hopefully) many blog posts for the UBC Chem-E-Car Team. The purpose of these posts is to give you, the reader insight into how our organization is run. Through this we hope to generate interest in our organization and to help get other students involved.
-The topic of our first post is on the importance of trial and error. Most people will look at a finished product and comment on how sleek or amazing it is; while conveniently ignoring that it took years of tinkering and modifications for that item to even function properly!</p>
-                                    <p class="read-more"><a href="http://www.ubcchemecar.com/blog/2016/11/24/trial-and-error/" class="btn btn-template-main">Continue reading</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                        
 
                         <ul class="pager">
                             
@@ -547,7 +575,7 @@ The topic of our first post is on the importance of trial and error. Most people
                             
 
                             
-                            <li class="next disabled"><a href="#">Older &rarr;</a></li>
+                            <li class="next"><a href="http://www.ubcchemecar.com//blog/page/2/">Older &rarr;</a></li>
                             
                         </ul>
                     </div>
@@ -598,6 +626,9 @@ The topic of our first post is on the importance of trial and error. Most people
         <ul class="nav nav-pills nav-stacked">
             
             <li><a href="http://www.ubcchemecar.com/categories/automation">automation (2)</a>
+            </li>
+            
+            <li><a href="http://www.ubcchemecar.com/categories/batteries">batteries (1)</a>
             </li>
             
             <li><a href="http://www.ubcchemecar.com/categories/chemical">chemical (1)</a>
@@ -664,6 +695,12 @@ The topic of our first post is on the importance of trial and error. Most people
             <li><a href="http://www.ubcchemecar.com/tags/finance"><i class="fa fa-tags"></i> finance</a>
             </li>
             
+            <li><a href="http://www.ubcchemecar.com/tags/fuel-cells"><i class="fa fa-tags"></i> fuel-cells</a>
+            </li>
+            
+            <li><a href="http://www.ubcchemecar.com/tags/hydrogen"><i class="fa fa-tags"></i> hydrogen</a>
+            </li>
+            
             <li><a href="http://www.ubcchemecar.com/tags/iodine-clock"><i class="fa fa-tags"></i> iodine-clock</a>
             </li>
             
@@ -718,6 +755,19 @@ The topic of our first post is on the importance of trial and error. Most people
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
+                        <a href="http://www.ubcchemecar.com/blog/2017/02/28/fuelcell/">
+                          
+                            <img src="http://www.ubcchemecar.com//img/blog/fuelcell/image00.jpg" class="img-responsive" alt="">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="http://www.ubcchemecar.com/blog/2017/02/28/fuelcell/">Powering The Future (Or just the Chem-E-Car)</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
                         <a href="http://www.ubcchemecar.com/blog/2017/02/12/finance/">
                           
                             <img src="http://www.ubcchemecar.com//img/carousel/sponsorship.png" class="img-responsive" alt="">
@@ -739,19 +789,6 @@ The topic of our first post is on the importance of trial and error. Most people
                     </div>
                     <div class="name same-height-always">
                         <h5><a href="http://www.ubcchemecar.com/blog/2017/02/11/elecsystem/">Chem-E-Car Electrical System</a></h5>
-                    </div>
-                </div>
-                
-                <div class="item same-height-row clearfix">
-                    <div class="image same-height-always">
-                        <a href="http://www.ubcchemecar.com/blog/2017/02/05/beer2/">
-                          
-                            <img src="http://www.ubcchemecar.com//img/blog/beer2/peltier.jpg" class="img-responsive" alt="">
-                          
-                        </a>
-                    </div>
-                    <div class="name same-height-always">
-                        <h5><a href="http://www.ubcchemecar.com/blog/2017/02/05/beer2/">What&#39;s Brewing* in The Lab?</a></h5>
                     </div>
                 </div>
                 

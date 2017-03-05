@@ -62,6 +62,35 @@
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/agate.min.css">
   <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
+
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      displayMath: [['$$','$$'], ['\[','\]']],
+      processEscapes: true,
+      processEnvironments: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      TeX: { equationNumbers: { autoNumber: "AMS" },
+           extensions: ["AMSmath.js", "AMSsymbols.js"] }
+    }
+  });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      
+      
+      
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i = 0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+  </script>
+    
 </head>
 
 
@@ -307,6 +336,9 @@ Department Funding We maintain a very close and important relationship with UBC&
             <li><a href="http://www.ubcchemecar.com/categories/automation">automation (2)</a>
             </li>
             
+            <li><a href="http://www.ubcchemecar.com/categories/batteries">batteries (1)</a>
+            </li>
+            
             <li><a href="http://www.ubcchemecar.com/categories/chemical">chemical (1)</a>
             </li>
             
@@ -371,6 +403,12 @@ Department Funding We maintain a very close and important relationship with UBC&
             <li><a href="http://www.ubcchemecar.com/tags/finance"><i class="fa fa-tags"></i> finance</a>
             </li>
             
+            <li><a href="http://www.ubcchemecar.com/tags/fuel-cells"><i class="fa fa-tags"></i> fuel-cells</a>
+            </li>
+            
+            <li><a href="http://www.ubcchemecar.com/tags/hydrogen"><i class="fa fa-tags"></i> hydrogen</a>
+            </li>
+            
             <li><a href="http://www.ubcchemecar.com/tags/iodine-clock"><i class="fa fa-tags"></i> iodine-clock</a>
             </li>
             
@@ -425,6 +463,19 @@ Department Funding We maintain a very close and important relationship with UBC&
                 
                 <div class="item same-height-row clearfix">
                     <div class="image same-height-always">
+                        <a href="http://www.ubcchemecar.com/blog/2017/02/28/fuelcell/">
+                          
+                            <img src="http://www.ubcchemecar.com//img/blog/fuelcell/image00.jpg" class="img-responsive" alt="">
+                          
+                        </a>
+                    </div>
+                    <div class="name same-height-always">
+                        <h5><a href="http://www.ubcchemecar.com/blog/2017/02/28/fuelcell/">Powering The Future (Or just the Chem-E-Car)</a></h5>
+                    </div>
+                </div>
+                
+                <div class="item same-height-row clearfix">
+                    <div class="image same-height-always">
                         <a href="http://www.ubcchemecar.com/blog/2017/02/12/finance/">
                           
                             <img src="http://www.ubcchemecar.com//img/carousel/sponsorship.png" class="img-responsive" alt="">
@@ -446,19 +497,6 @@ Department Funding We maintain a very close and important relationship with UBC&
                     </div>
                     <div class="name same-height-always">
                         <h5><a href="http://www.ubcchemecar.com/blog/2017/02/11/elecsystem/">Chem-E-Car Electrical System</a></h5>
-                    </div>
-                </div>
-                
-                <div class="item same-height-row clearfix">
-                    <div class="image same-height-always">
-                        <a href="http://www.ubcchemecar.com/blog/2017/02/05/beer2/">
-                          
-                            <img src="http://www.ubcchemecar.com//img/blog/beer2/peltier.jpg" class="img-responsive" alt="">
-                          
-                        </a>
-                    </div>
-                    <div class="name same-height-always">
-                        <h5><a href="http://www.ubcchemecar.com/blog/2017/02/05/beer2/">What&#39;s Brewing* in The Lab?</a></h5>
                     </div>
                 </div>
                 
