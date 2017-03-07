@@ -2052,22 +2052,24 @@ fieldset[disabled] .btn-template-primary.active {
 #blog-listing-medium .post h2 {
   text-transform: uppercase;
   margin: 0 0 10px;
-  font-size: 24px;
-  letter-spacing: 0.08em;
+  font-size: 28px;
+  letter-spacing: 0.05em;
 }
 #blog-listing-medium .post h2 a {
-  color: #555555;
+  color: #222222;
 }
 #blog-listing-medium .post h2 a:hover {
   color: #467fbf;
 }
 #blog-listing-medium .post .author-category {
   float: left;
-  color: #999999;
+  color: #222222;
   text-transform: uppercase;
-  font-weight: 300;
-  font-size: 12px;
-  letter-spacing: 0.08em;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.12em;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 #blog-listing-medium .post .author-category a {
   font-weight: 500;
@@ -2075,6 +2077,8 @@ fieldset[disabled] .btn-template-primary.active {
 #blog-listing-medium .post .date-comments {
   float: right;
   font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 #blog-listing-medium .post .date-comments a {
   color: #999999;
@@ -2089,6 +2093,8 @@ fieldset[disabled] .btn-template-primary.active {
   }
 }
 #blog-listing-medium .post .intro {
+  font-size: 18px;
+  line-height: 1.8;
   text-align: left;
 }
 #blog-listing-medium .post .clearfix:before,
@@ -3529,7 +3535,7 @@ a.list-group-item.active > .badge,
 /*!
  * Yamm!3 - Yet another megamenu for Bootstrap 3
  * http://geedmo.github.com/yamm3
- * 
+ *
  * @geedmo - Licensed under the MIT license
  */
 .yamm .nav,

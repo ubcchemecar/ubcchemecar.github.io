@@ -1,4 +1,7 @@
 /* your styles go here */
+.font-roboto{
+  font-family: 'Roboto', sans-serif !important;
+}
 
 .box-image-text .image {
   min-height: 200px;
@@ -9,11 +12,73 @@
   min-height: 230px;
 }
 
+.author-blog-post {
+  margin-bottom: 50px;
+}
+
+.has-jax{
+  font-size: 20px;
+}
+
 #post-content > p{
-	font-size: 16px;
-  line-height: 30px;
+	font-size: 20px;
+  line-height: 2;
+}
+
+#post-content ol{
+  margin-top: 25px;
+  margin-bottom: 25px;
+	font-size: 20px;
+  line-height: 2;
+}
+
+#post-content ul{
+  margin-top: 25px;
+  margin-bottom: 25px;
+	font-size: 20px;
+  line-height: 2;
+}
+
+#post-content pre{
+	font-size: 17px;
+}
+
+#post-content img{
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 #post-content > h2{
-  line-height: 60px;
+  line-height: 50px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+#post-content > h1{
+  line-height: 50px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+#post-headers > h1 {
+  color: #043064;
+  font-size: 48px;
+}
+
+#post-headers > p {
+  color: #073873;
+  font-size: 18px;
+  font-weight:350;
+}
+
+#post-headers b{
+  font-weight:500;
+}
+
+#blog-listing-medium .post h2 a{
+  color: #043064;
+}
+
+#blog-listing-medium .post .author-category{
+  color: #073873;
 }
